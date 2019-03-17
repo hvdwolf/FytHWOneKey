@@ -17,10 +17,10 @@ The apk can be downloaded from the [Releases](https://github.com/hvdwolf/FytHWOn
 **Specify the apk by package name**<br>
 *(Here in the "Configure the Media Button")*<br>
 ![specifyappbypackagename](https://github.com/hvdwolf/FytHWOneKey/blob/master/images/specifyappbypackagename.jpg)
-<br>
-2. Exit the app. This is important otherwise the key capture does not work correctly!<br>
-3. Press the hardware button on your unit.<br>
-4. The first time you press the hardware button, for example the Media button, it will present you with 2 options: Complete action with "Music Player" or "FYT HW OneKey Media button". If you select the second option, you will get the option "Once" and "Always".
+<br><br>
+2. Exit the app. This is important otherwise the key capture does not work correctly!<br><br>
+3. Press the hardware button on your unit.<br><br>
+4. The first time you press the hardware button, for example the Media button, it will present you with 2 options: Complete action using "Music Player" or "FYT HW OneKey Media button". If you select the second option, you will get the option "Just Once" and "Always".<br><br>
 **First time push of hardware button**<br>
 ![selectonceoralways](https://github.com/hvdwolf/FytHWOneKey/blob/master/images/selectoncealways.jpg)
 <br><br>
