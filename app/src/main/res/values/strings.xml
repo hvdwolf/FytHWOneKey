@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name" translatable="false">FYT HW OneKey</string>
+    <string name="dvd_alias" translatable="false">FYT HW OneKey DVD button</string>
+    <string name="media_alias" translatable="false">FYT HW OneKey Media button</string>
+    <string name="eq_alias" translatable="false">FYT HW OneKey EQ button</string>
+    <string name="band_alias" translatable="false">FYT HW OneKey BAND button</string>
+
+    <string name="settings_screen">FYT HW OneKey Configuration screen</string>
+<!--    <string name="dvd_settings">The several options for the DVD button</string>
+    <string name="media_settings">The several options for the Media button</string>
+    <string name="eq_settings">The several options for the EQ button</string>
+    <string name="band_settings">The several options for the BAND button</string> -->
+    <string name="dvd_settings">Configure the DVD button</string>
+    <string name="media_settings">Configure the Media button</string>
+    <string name="eq_settings">Configure the EQ button</string>
+    <string name="band_settings">Configure the BAND button</string>
+
+    <string name="packagename">Start apk by package name.</string>
+    <string name="packagename_summary">Separate multiple package names with a semicolon (;)</string>
+    <string name="intent">Start apk by intent.</string>
+    <string name="intent_summary">Separate multiple intents with a semicolon (;)</string>
+    <string name="syscall">Execute system call(s) to execute linux command/script.</string>
+    <string name="syscall_summary">Separate multiple calls with a semicolon (;)</string>
+
+    <string name="list_apps">Display installed Apks (with package names)</string>
+    <string name="listapps_title">List all installed apps (with package names)</string>
+    <string name="listapps_summary">Retrieves information on the application packages that are currently installed on the head unit.</string>
+    <string name="listapps_appname">App Name: </string> <!-- add a space behind -->
+    <string name="listapps_pkgname">Package Name: </string> <!-- add a space behind -->
+
+    <string name="pkg_notconfigured_short">No package configured</string>
+    <string name="pkg_notconfigured_long">No package configured, starting Config screen for setup.</string>
+    <string name="pkg_configured_short">Configured package:</string>
+
+</resources>

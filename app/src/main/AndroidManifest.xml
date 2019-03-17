@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" package="org.hvdw.fythwonekey">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".SettingsActivity" android:label="@string/settings_screen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity-alias android:label="@string/settings_screen" android:name="org.hvdw.fythwonekey.SettingsActivityAlias" android:enabled="true" android:targetActivity="org.hvdw.fythwonekey.SettingsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+
+        <activity
+                android:name=".ListInstalledApps"
+                android:label="@string/list_apps">
+                <intent-filter>
+                    <action android:name="org.hvdw.fythwonekey.Help" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                </intent-filter>
+            </activity>
+
+<!-- ==================================================================================== -->
+<!-- Below are the several aliases we need for the Joying/FYT apps -->
+<!-- ==================================================================================== -->
+
+        <!-- The activity and alias for the BAND button -->
+        <activity android:name=".OneKeyBAND" android:label="@string/band_alias">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:name="com.syu.app.AppRadio"
+            android:targetActivity=".OneKeyBAND"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="radio"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name="com.syu.radio.Launch"
+            android:targetActivity=".OneKeyBAND"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.syu.radio"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+
+        <!-- The activity and alias for the DVD button -->
+        <activity android:name=".OneKeyDVD" android:label="@string/dvd_alias">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:name="com.syu.dvd.act.ActDvd"
+            android:targetActivity=".OneKeyDVD"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name="com.syu.dvd.ActivityLauncher"
+            android:targetActivity=".OneKeyDVD"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.syu.dvd"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+
+        <!-- The aliases for the Media button / Music player -->
+        <activity android:name=".OneKeyMedia" android:label="@string/media_alias">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:name="com.syu.music.act.Act_Music"
+            android:targetActivity=".OneKeyMedia"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name="com.syu.music.MAct"
+            android:targetActivity=".OneKeyMedia"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="content"/>
+                <data android:scheme="file"/>
+                <data android:mimeType="audio/*"/>
+                <data android:mimeType="application/ogg"/>
+                <data android:mimeType="application/x-ogg"/>
+                <data android:mimeType="application/itunes"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.syu.music"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.syu.music.btav"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+
+        <!-- The activity and alias for the EQ button -->
+        <activity android:name=".OneKeyEQ" android:label="@string/eq_alias">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:name="com.syu.eq.Launch"
+            android:targetActivity=".OneKeyEQ"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.syu.eq"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name="com.syu.eq.EQActivity"
+            android:targetActivity=".OneKeyEQ"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity-alias>
+
+        </application>
+</manifest>
