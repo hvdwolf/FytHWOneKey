@@ -8,7 +8,7 @@
                 android:key="band_packagename_entry"
                 android:title="@string/packagename"
                 android:summary="@string/packagename_summary"
-                android:defaultValue="com.syu.band" />
+                android:defaultValue="com.syu.radio" />
 <!--            <EditTextPreference
                 android:key="band_intent_entry"
                 android:title="@string/intent"
