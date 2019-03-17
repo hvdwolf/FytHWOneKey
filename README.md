@@ -5,7 +5,7 @@ It should work on all FYT units running on Android 5.1.1, 6.0.1, 8.0 and 8.1.
 
 ![logo](https://github.com/hvdwolf/FytHWOneKey/blob/master/images/logo.png)
 ## How does it work?
-*(Upon install the package installer will probably mention that it can not check the app, so it might not be safe to install.<br>Upon install the app buttons are configured for the apps that are normally started by the button)*<br>
+*(Upon install the package installer will probably mention that it can not check the app, so it thinks that it might not be safe to install.That is of course for you to decide ;)<br>Upon install the app buttons are configured for the apps that are normally started by the button)*<br>
 1. Open the "Fyt HW OneKey" App and configure the preferred app by its package name.
 
 **General Configuration screen**<br>
