@@ -16,6 +16,8 @@
             android:id="@+id/appIcon"
             android:scaleType="centerCrop"
             android:padding="10dp"
+            android:longClickable="true"
+            android:textIsSelectable="true"
             android:contentDescription="@null"/>
 
         <TextView android:layout_width="wrap_content"
@@ -29,6 +31,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginLeft="0dp"
+            android:longClickable="true"
+            android:textIsSelectable="true"
             android:id="@+id/appName"/>
 
         <TextView android:layout_width="wrap_content"
@@ -42,6 +46,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_marginLeft="0dp"
+            android:longClickable="true"
+            android:textIsSelectable="true"
             android:id="@+id/appPackage"/>
     </LinearLayout>
 
