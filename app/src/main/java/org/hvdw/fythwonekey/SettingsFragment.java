@@ -84,6 +84,18 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
         String additionalText = "";
 
         switch (key) {
+            case MySettings.AV_PACKAGENAME_ENTRY:
+                intent.setAction(MySettings.ACTION_AV_PACKAGENAME_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_AV_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
+            case MySettings.AV_INTENT_ENTRY:
+                intent.setAction(MySettings.ACTION_AV_INTENT_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_AV_INTENT_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
+            case MySettings.AV_SYSCALL_ENTRY:
+                intent.setAction(MySettings.ACTION_AV_SYSCALL_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_AV_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
             case MySettings.BAND_PACKAGENAME_ENTRY:
                 intent.setAction(MySettings.ACTION_BAND_PACKAGENAME_ENTRY_CHANGED);
                 intent.putExtra(MySettings.EXTRA_BAND_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
@@ -95,6 +107,30 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
             case MySettings.BAND_SYSCALL_ENTRY:
                 intent.setAction(MySettings.ACTION_BAND_SYSCALL_ENTRY_CHANGED);
                 intent.putExtra(MySettings.EXTRA_BAND_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
+            case MySettings.BTAV_PACKAGENAME_ENTRY:
+                intent.setAction(MySettings.ACTION_BTAV_PACKAGENAME_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_BTAV_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
+            case MySettings.BTAV_INTENT_ENTRY:
+                intent.setAction(MySettings.ACTION_BTAV_INTENT_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_BTAV_INTENT_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
+            case MySettings.BTAV_SYSCALL_ENTRY:
+                intent.setAction(MySettings.ACTION_BTAV_SYSCALL_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_BTAV_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
+            case MySettings.BTPHONE_PACKAGENAME_ENTRY:
+                intent.setAction(MySettings.ACTION_BTPHONE_PACKAGENAME_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_BTPHONE_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
+            case MySettings.BTPHONE_INTENT_ENTRY:
+                intent.setAction(MySettings.ACTION_BTPHONE_INTENT_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_BTPHONE_INTENT_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
+            case MySettings.BTPHONE_SYSCALL_ENTRY:
+                intent.setAction(MySettings.ACTION_BTPHONE_SYSCALL_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_BTPHONE_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
             case MySettings.DVD_PACKAGENAME_ENTRY:
                 intent.setAction(MySettings.ACTION_DVD_PACKAGENAME_ENTRY_CHANGED);
@@ -131,6 +167,18 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
             case MySettings.MEDIA_SYSCALL_ENTRY:
                 intent.setAction(MySettings.ACTION_MEDIA_SYSCALL_ENTRY_CHANGED);
                 intent.putExtra(MySettings.EXTRA_MEDIA_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
+            case MySettings.VIDEO_PACKAGENAME_ENTRY:
+                intent.setAction(MySettings.ACTION_VIDEO_PACKAGENAME_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_VIDEO_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
+            case MySettings.VIDEO_INTENT_ENTRY:
+                intent.setAction(MySettings.ACTION_VIDEO_INTENT_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_VIDEO_INTENT_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
+            case MySettings.VIDEO_SYSCALL_ENTRY:
+                intent.setAction(MySettings.ACTION_VIDEO_SYSCALL_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_VIDEO_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
             default:
                 Log.d(TAG, "Invalid setting encountered");

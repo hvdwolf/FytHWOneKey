@@ -105,7 +105,6 @@
                     android:summary="@string/syscall_summary"
                     android:defaultValue="" /> -->
         </PreferenceScreen>
-
         <PreferenceScreen
                 android:title="@string/btphone_settings"
                 android:key="btphone_settings">
@@ -121,6 +120,44 @@
                     android:defaultValue="" />
                 <EditTextPreference
                     android:key="btphone_intent_syscall"
+                    android:title="@string/syscall"
+                    android:summary="@string/syscall_summary"
+                    android:defaultValue="" /> -->
+        </PreferenceScreen>
+        <PreferenceScreen
+                android:title="@string/av_settings"
+                android:key="av_settings">
+                <EditTextPreference
+                    android:key="av_packagename_entry"
+                    android:title="@string/packagename"
+                    android:summary="@string/packagename_summary"
+                    android:defaultValue="com.syu.av" />
+<!--                <EditTextPreference
+                    android:key="av_intent_entry"
+                    android:title="@string/intent"
+                    android:summary="@string/intent_summary"
+                    android:defaultValue="" />
+                <EditTextPreference
+                    android:key="av_intent_syscall"
+                    android:title="@string/syscall"
+                    android:summary="@string/syscall_summary"
+                    android:defaultValue="" /> -->
+        </PreferenceScreen>
+        <PreferenceScreen
+                android:title="@string/video_settings"
+                android:key="video_settings">
+                <EditTextPreference
+                    android:key="video_packagename_entry"
+                    android:title="@string/packagename"
+                    android:summary="@string/packagename_summary"
+                    android:defaultValue="com.syu.video" />
+<!--                <EditTextPreference
+                    android:key="video_intent_entry"
+                    android:title="@string/intent"
+                    android:summary="@string/intent_summary"
+                    android:defaultValue="" />
+                <EditTextPreference
+                    android:key="video_intent_syscall"
                     android:title="@string/syscall"
                     android:summary="@string/syscall_summary"
                     android:defaultValue="" /> -->

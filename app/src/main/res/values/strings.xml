@@ -7,6 +7,8 @@
     <string name="mode_alias" translatable="false">FYT HW OneKey MODE "carrousel" button options</string>
     <string name="btav_alias" translatable="false">FYT HW OneKey BT AV options (derived from the MODE button)</string>
     <string name="btphone_alias" translatable="false">FYT HW OneKey BT phone options (derived from the MODE button)</string>
+    <string name="av_alias" translatable="false">FYT HW OneKey AV options (derived from the MODE button)</string>
+    <string name="video_alias" translatable="false">FYT HW OneKey Video options (derived from the MODE button)</string>
 
     <string name="settings_screen">FYT HW OneKey Configuration screen</string>
 <!--    <string name="dvd_settings">The several options for the DVD button</string>
@@ -20,6 +22,8 @@
     <string name="mode_settings">Configure the options for the MODE "carrousel" HW button</string>
     <string name="btav_settings">Configure the BT AV option (derived from the MODE button)</string>
     <string name="btphone_settings">Configure the BT Phone option (derived from the MODE button)</string>
+    <string name="av_settings">Configure the AV option (derived from the MODE button)</string>
+    <string name="video_settings">Configure the Video option (derived from the MODE button)</string>
 
     <string name="packagename">Start apk by package name.</string>
     <string name="packagename_summary">Separate multiple package names with a semicolon (;)</string>

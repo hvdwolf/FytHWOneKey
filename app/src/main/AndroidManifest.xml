@@ -159,7 +159,7 @@
             </intent-filter>
         </activity-alias>
 
-        <!-- The activity and alias for the BT Phone option; either the button or the from the MODE carrousel -->
+        <!-- The activity and alias for the BT Phone option; derived from the MODE carrousel button -->
         <activity android:name=".OneKeyBTPhone" android:label="@string/btphone_alias">
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
@@ -176,7 +176,7 @@
             </intent-filter>
         </activity-alias>
 
-        <!-- The activity and alias for the BT AV option; either the button or the from the MODE carrousel -->
+        <!-- The activity and alias for the BT AV option; derived from the MODE carrousel button-->
         <activity android:name=".OneKeyBTAV" android:label="@string/btav_alias">
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
@@ -188,6 +188,57 @@
             android:exported="true" >
             <intent-filter>
                 <action android:name="com.syu.bt"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+
+        <!-- The activity and alias for the Video option; derived from the MODE carrousel button-->
+        <activity android:name=".OneKeyVIDEO" android:label="@string/video_alias">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:name="com.syu.video.main.VideoListActivity"
+            android:targetActivity=".OneKeyVIDEO"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.syu.video"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name="com.syu.media.act.ActPlayer"
+            android:targetActivity=".OneKeyVIDEO"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.syu.video"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+
+        <!-- The activity and alias for the AV option; derived from the MODE carrousel button-->
+        <activity android:name=".OneKeyAV" android:label="@string/av_alias">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:name="com.syu.av.ActivityLaunch"
+            android:targetActivity=".OneKeyAV"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.syu.av"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name="com.syu.av.act.ActAv"
+            android:targetActivity=".OneKeyAV"
+            android:exported="true" >
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
