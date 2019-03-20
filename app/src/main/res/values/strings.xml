@@ -4,6 +4,9 @@
     <string name="media_alias" translatable="false">FYT HW OneKey Media button</string>
     <string name="eq_alias" translatable="false">FYT HW OneKey EQ button</string>
     <string name="band_alias" translatable="false">FYT HW OneKey BAND button</string>
+    <string name="mode_alias" translatable="false">FYT HW OneKey MODE "carrousel" button options</string>
+    <string name="btav_alias" translatable="false">FYT HW OneKey BT AV options (derived from the MODE button)</string>
+    <string name="btphone_alias" translatable="false">FYT HW OneKey BT phone options (derived from the MODE button)</string>
 
     <string name="settings_screen">FYT HW OneKey Configuration screen</string>
 <!--    <string name="dvd_settings">The several options for the DVD button</string>
@@ -14,6 +17,9 @@
     <string name="media_settings">Configure the Media button</string>
     <string name="eq_settings">Configure the EQ button</string>
     <string name="band_settings">Configure the BAND button</string>
+    <string name="mode_settings">Configure the options for the MODE "carrousel" HW button</string>
+    <string name="btav_settings">Configure the BT AV option (derived from the MODE button)</string>
+    <string name="btphone_settings">Configure the BT Phone option (derived from the MODE button)</string>
 
     <string name="packagename">Start apk by package name.</string>
     <string name="packagename_summary">Separate multiple package names with a semicolon (;)</string>

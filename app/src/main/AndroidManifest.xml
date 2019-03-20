@@ -159,5 +159,39 @@
             </intent-filter>
         </activity-alias>
 
+        <!-- The activity and alias for the BT Phone option; either the button or the from the MODE carrousel -->
+        <activity android:name=".OneKeyBTPhone" android:label="@string/btphone_alias">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:name="com.syu.bt.act.ActBt"
+            android:targetActivity=".OneKeyBTPhone"
+            android:exported="true" >            
+            <intent-filter>
+                <action android:name="com.syu.bt"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+
+        <!-- The activity and alias for the BT AV option; either the button or the from the MODE carrousel -->
+        <activity android:name=".OneKeyBTAV" android:label="@string/btav_alias">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:name="com.syu.bt.act.ActBtAvStart"
+            android:targetActivity=".OneKeyBTAV"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.syu.bt"/>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+
         </application>
 </manifest>

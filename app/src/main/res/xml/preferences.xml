@@ -21,6 +21,7 @@
                 android:defaultValue="" /> -->
     </PreferenceScreen>
 
+
     <PreferenceScreen
             android:title="@string/dvd_settings"
             android:key="dvd_settings">
@@ -80,6 +81,52 @@
                 android:summary="@string/syscall_summary"
                 android:defaultValue="" /> -->
     </PreferenceScreen>
+
+ <!-- Separate screen for options from the MODE button -->
+    <PreferenceScreen
+            android:title="@string/mode_settings"
+            android:key="mode_settings">
+        <PreferenceScreen
+                android:title="@string/btav_settings"
+                android:key="btav_settings">
+                <EditTextPreference
+                    android:key="btav_packagename_entry"
+                    android:title="@string/packagename"
+                    android:summary="@string/packagename_summary"
+                    android:defaultValue="com.syu.bt" />
+<!--                <EditTextPreference
+                    android:key="btav_intent_entry"
+                    android:title="@string/intent"
+                    android:summary="@string/intent_summary"
+                    android:defaultValue="" />
+                <EditTextPreference
+                    android:key="btav_intent_syscall"
+                    android:title="@string/syscall"
+                    android:summary="@string/syscall_summary"
+                    android:defaultValue="" /> -->
+        </PreferenceScreen>
+
+        <PreferenceScreen
+                android:title="@string/btphone_settings"
+                android:key="btphone_settings">
+                <EditTextPreference
+                    android:key="btphone_packagename_entry"
+                    android:title="@string/packagename"
+                    android:summary="@string/packagename_summary"
+                    android:defaultValue="com.syu.bt" />
+<!--                <EditTextPreference
+                    android:key="btphone_intent_entry"
+                    android:title="@string/intent"
+                    android:summary="@string/intent_summary"
+                    android:defaultValue="" />
+                <EditTextPreference
+                    android:key="btphone_intent_syscall"
+                    android:title="@string/syscall"
+                    android:summary="@string/syscall_summary"
+                    android:defaultValue="" /> -->
+        </PreferenceScreen>
+    </PreferenceScreen>
+ <!-- End of separate screen for options from the MODE button -->
 
     <Preference
         android:key="listapps"

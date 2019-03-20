@@ -16,6 +16,26 @@ class MySettings {
     public static final String ACTION_BAND_SYSCALL_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_BAND_SYSCALL_ENTRY_CHANGED";
     public static final String EXTRA_BAND_SYSCALL_ENTRY_STRING = "org.hvdw.fythwonekey.extra.PREF_BAND_SYSCALL_ENTRY_STRING";
 
+    public static final String BTAV_PACKAGENAME_ENTRY = "btav_packagename_entry";
+    public static final String ACTION_BTAV_PACKAGENAME_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_BTAV_PACKAGENAME_ENTRY_CHANGED";
+    public static final String EXTRA_BTAV_PACKAGENAME_ENTRY_STRING = "org.hvdw.fythwonekey.extra.PREF_BTAV_PACKAGENAME_ENTRY_STRING";
+    public static final String BTAV_INTENT_ENTRY = "btav_intent_entry";
+    public static final String ACTION_BTAV_INTENT_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_BTAV_INTENT_ENTRY_CHANGED";
+    public static final String EXTRA_BTAV_INTENT_ENTRY_STRING = "org.hvdw.fythwonekey.extra.PREF_BTAV_INTENT_ENTRY_STRING";
+    public static final String BTAV_SYSCALL_ENTRY = "btav_syscall_entry";
+    public static final String ACTION_BTAV_SYSCALL_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_BTAV_SYSCALL_ENTRY_CHANGED";
+    public static final String EXTRA_BTAV_SYSCALL_ENTRY_STRING = "org.hvdw.fythwonekey.extra.PREF_BTAV_SYSCALL_ENTRY_STRING";
+
+    public static final String BTPHONE_PACKAGENAME_ENTRY = "btphone_packagename_entry";
+    public static final String ACTION_BTPHONE_PACKAGENAME_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_BTPHONE_PACKAGENAME_ENTRY_CHANGED";
+    public static final String EXTRA_BTPHONE_PACKAGENAME_ENTRY_STRING = "org.hvdw.fythwonekey.extra.PREF_BTPHONE_PACKAGENAME_ENTRY_STRING";
+    public static final String BTPHONE_INTENT_ENTRY = "btphone_intent_entry";
+    public static final String ACTION_BTPHONE_INTENT_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_BTPHONE_INTENT_ENTRY_CHANGED";
+    public static final String EXTRA_BTPHONE_INTENT_ENTRY_STRING = "org.hvdw.fythwonekey.extra.PREF_BTPHONE_INTENT_ENTRY_STRING";
+    public static final String BTPHONE_SYSCALL_ENTRY = "btphone_syscall_entry";
+    public static final String ACTION_BTPHONE_SYSCALL_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_BTPHONE_SYSCALL_ENTRY_CHANGED";
+    public static final String EXTRA_BTPHONE_SYSCALL_ENTRY_STRING = "org.hvdw.fythwonekey.extra.PREF_BTPHONE_SYSCALL_ENTRY_STRING";
+
     public static final String DVD_PACKAGENAME_ENTRY = "dvd_packagename_entry";
     public static final String ACTION_DVD_PACKAGENAME_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_DVD_PACKAGENAME_ENTRY_CHANGED";
     public static final String EXTRA_DVD_PACKAGENAME_ENTRY_STRING = "org.hvdw.fythwonekey.extra.PREF_DVD_PACKAGENAME_ENTRY_STRING";
