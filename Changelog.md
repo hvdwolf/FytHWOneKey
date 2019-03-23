@@ -1,6 +1,6 @@
-#Changelog Fyt HW OneKey
+# Changelog Fyt HW OneKey
 
-##Version 1.1
+## Version 1.1
 *not released yet. In development*
 * Make copy & paste possible for package names (List apps screen to settings fields)
 * Add MODE/SRC button capture. The defaukt functionality of this button shoulkd be:
@@ -15,6 +15,6 @@
   8. ??? (depending on device and configured external options?)
   Aux and iPod can't be captured.
 
-##Version 1.0
+## Version 1.0
 * Initial version
 * Working buttons: BAND(=Radio), MEDIA, DVD.
