@@ -170,8 +170,19 @@
             android:targetActivity=".OneKeyBTPhone"
             android:exported="true" >            
             <intent-filter>
-                <action android:name="com.syu.bt"/>
                 <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name="com.syu.bt.BtAct"
+            android:targetActivity=".OneKeyBTPhone"
+            android:exported="true" >            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.syu.bt"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity-alias>
@@ -187,8 +198,10 @@
             android:targetActivity=".OneKeyBTAV"
             android:exported="true" >
             <intent-filter>
-                <action android:name="com.syu.bt"/>
                 <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.syu.btav"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity-alias>
@@ -204,8 +217,10 @@
             android:targetActivity=".OneKeyVIDEO"
             android:exported="true" >
             <intent-filter>
-                <action android:name="com.syu.video"/>
                 <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.syu.video"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity-alias>
@@ -213,9 +228,9 @@
             android:targetActivity=".OneKeyVIDEO"
             android:exported="true" >
             <intent-filter>
-                <action android:name="com.syu.video"/>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="rtsp"/>
             </intent-filter>
         </activity-alias>
 
@@ -230,8 +245,10 @@
             android:targetActivity=".OneKeyAV"
             android:exported="true" >
             <intent-filter>
-                <action android:name="com.syu.av"/>
                 <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.syu.av"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity-alias>
