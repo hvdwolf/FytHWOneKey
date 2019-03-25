@@ -30,6 +30,8 @@ proguard/
 #android studio files
 .idea/
 *.iml
+ajcore.*.txt
+captures/
 
 #local scripts
 compile
