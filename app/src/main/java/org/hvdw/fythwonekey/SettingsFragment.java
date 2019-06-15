@@ -180,6 +180,33 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
                 intent.setAction(MySettings.ACTION_VIDEO_SYSCALL_ENTRY_CHANGED);
                 intent.putExtra(MySettings.EXTRA_VIDEO_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
+            case MySettings.ACCON_PACKAGENAME_ENTRY:
+                intent.setAction(MySettings.ACTION_ACCON_PACKAGENAME_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_ACCON_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
+            case MySettings.ACCON_INTENT_ENTRY:
+                intent.setAction(MySettings.ACTION_ACCON_INTENT_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_ACCON_INTENT_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
+            case MySettings.ACCON_SYSCALL_ENTRY:
+                intent.setAction(MySettings.ACTION_ACCON_SYSCALL_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_ACCON_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
+                /* ACCOFF settings */
+            case MySettings.SWITCH_WIFI_OFF:
+                intent.setAction(MySettings.ACTION_SWITCH_WIFI_OFF_CHANGED);
+                intent.putExtra(MySettings.EXTRA_SWITCH_WIFI_OFF_ENABLED, sharedPreferences.getBoolean(key, true));
+                toastText = "BOOLEAN_KEY";
+                break;
+            case MySettings.PAUSE_PLAYER:
+                intent.setAction(MySettings.ACTION_PAUSE_PLAYER_CHANGED);
+                intent.putExtra(MySettings.EXTRA_PAUSE_PLAYER_ENABLED, sharedPreferences.getBoolean(key, true));
+                toastText = "BOOLEAN_KEY";
+                break;
+            case MySettings.ACCOFF_SYSCALL_ENTRY:
+                intent.setAction(MySettings.ACTION_ACCOFF_SYSCALL_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_ACCOFF_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
             default:
                 Log.d(TAG, "Invalid setting encountered");
                 break;

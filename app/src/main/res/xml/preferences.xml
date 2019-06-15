@@ -164,7 +164,62 @@
         </PreferenceScreen>
     </PreferenceScreen>
  <!-- End of separate screen for options from the MODE button -->
+ <!-- Start the options for the ACC_ON and ACC_OFF settings for the receiver -->
+    <PreferenceScreen
+            android:title="@string/acc_on_settings"
+            android:key="acc_on_settings">
+            <SwitchPreference
+                android:defaultValue="true"
+                android:key="switch_wifi_on"
+                android:summaryOn="@string/switch_on_wifi_during_accon"
+                android:summaryOff="@string/dont_touch_wifi_during_accon"
+                android:title="@string/switch_on_wifi" />
+            <SwitchPreference
+                android:defaultValue="false"
+                android:key="restart_player"
+                android:summaryOn="@string/restart_player_during_accon"
+                android:summaryOff="@string/dont_restart_player_during_accon"
+                android:title="@string/restart_player" />
+            <EditTextPreference
+                android:key="accon_packagename_entry"
+                android:title="@string/accon_packagename"
+                android:summary="@string/accon_packagename_summary"
+                android:defaultValue="" />
+            <EditTextPreference
+                android:key="accon_intent_entry"
+                android:title="@string/accon_intent"
+                android:summary="@string/accon_intent_summary"
+                android:defaultValue="" />
+            <EditTextPreference
+                android:key="accon_intent_syscall"
+                android:title="@string/accon_syscall"
+                android:summary="@string/accon_syscall_summary"
+                android:defaultValue="" />
+    </PreferenceScreen>
+    <PreferenceScreen
+            android:title="@string/acc_off_settings"
+            android:key="acc_off_settings">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="switch_wifi_off"
+            android:summaryOn="@string/switch_off_wifi_during_accoff"
+            android:summaryOff="@string/dont_touch_wifi_during_accoff"
+            android:title="@string/switch_off_wifi" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="pause_player"
+            android:summaryOn="@string/pause_player_during_accoff"
+            android:summaryOff="@string/dont_pause_player_during_accoff"
+            android:title="@string/pause_player" />
+        /* We will not start apks by packagename or intent when the unit switches off. We might need an extra system call though */
+        <EditTextPreference
+            android:key="accoff_intent_syscall"
+            android:title="@string/accoff_syscall"
+            android:summary="@string/accoff_syscall_summary"
+            android:defaultValue="" />
+    </PreferenceScreen>
 
+ <!-- Finally the "preferece screen" to start the lit apps listactivity -->
     <Preference
         android:key="listapps"
         android:title="@string/listapps_title"

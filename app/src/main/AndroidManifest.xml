@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" package="org.hvdw.fythwonekey">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -166,7 +171,7 @@
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
-        <activity-alias android:name="com.syu.bt.act.ActBt"
+        <activity-alias android:name="com.syu.bt.act.BtAct"
             android:targetActivity=".OneKeyBTPhone"
             android:exported="true" >            
             <intent-filter>
@@ -259,6 +264,59 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity-alias>
+
+<!-- ==================================================================================== -->
+<!-- Below are the several broadcast receivers we need for ACC_ON/ACC_OFF                 -->
+<!-- ==================================================================================== -->
+
+        <!-- Broadcast receivers to catch the ACC_ON and ACC_OFF broadcasts -->
+        <receiver android:name="AccOnReceiver" >
+<!--            <intent-filter>
+                <action android:name="android.intent.action.ACTION_MT_COMMAND_SLEEP_OUT" >
+                </action>
+            </intent-filter> -->
+            <intent-filter>
+                <action android:name="com.fyt.boot.ACCON" >
+                </action>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.glsx.boot.ACCON" >
+                </action>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="AccOffReceiver" >
+            <intent-filter>
+                <action android:name="com.fyt.boot.ACCOFF" >
+                </action>
+            </intent-filter>
+<!--            <intent-filter>
+                <action android:name="com.glsx.boot.ACCOFF" >
+                </action>
+            </intent-filter> -->
+        </receiver>
+
+<!-- ==================================================================================== -->
+<!-- Below are the several broadcast receivers for BTPhone and BTAV for the BT app        -->
+<!-- ==================================================================================== -->
+
+        <!-- Broadcast receivers to catch the BT broadcasts -->
+        <receiver android:name="BTPhoneReceiver" >
+            <intent-filter>
+                <action android:name="com.syu.ms.bt" >
+                </action>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.syu.bt.bykey" >
+                </action>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name="BTPAVReceiver" >
+            <intent-filter>
+                <action android:name="com.syu.bt.byav" >
+                </action>
+            </intent-filter>
+        </receiver>
 
         </application>
 </manifest>

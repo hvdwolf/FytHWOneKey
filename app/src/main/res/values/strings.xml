@@ -42,4 +42,31 @@
     <string name="pkg_notconfigured_long">No package configured, starting Config screen for setup.</string>
     <string name="pkg_configured_short">Configured package:</string>
 
+    <string name="acc_on_off_settings">Define apps or actions when the contact/unit is switched ON or OFF; or when coming out of resume.</string>
+    <string name="acc_on_settings">What to do when contact is switched on (ACC_ON)</string>
+    <string name="switch_on_wifi_during_accon">ON: The WiFi is switched on when the contact is switched on (to overcome PX5 bug)</string>
+    <string name="dont_touch_wifi_during_accon">OFF: Do not touch the WiFi state when contact is switched on</string>
+    <string name="switch_on_wifi">Option to switch on WiFi during acc_on.</string>
+    <string name="restart_player_during_accon">ON: Restart active media player when contact is switched on</string>
+    <string name="dont_restart_player_during_accon">OFF: Do not restart active media player when contact is switched on</string>
+    <string name="restart_player">Option to restart the active media player during acc_on.</string>
+    <string name="accon_packagename">Start apk by package name.</string>
+    <string name="accon_packagename_summary">Separate multiple package names with a semicolon (;)</string>
+    <string name="accon_intent">Start apk by intent.</string>
+    <string name="accon_intent_summary">Separate multiple intents with a semicolon (;)</string>
+    <string name="accon_syscall">Execute system call(s) to execute linux command/script.</string>
+    <string name="accon_syscall_summary">Separate multiple calls with a semicolon (;)</string>
+
+    <string name="acc_off_settings">What to do when contact is switched off (ACC_OFF)</string>
+    <string name="acc_off_call_title">ACC_OFF: Call method</string>
+    <string name="acc_off_text_title">ACC_OFF: String to be used</string>
+    <string name="switch_off_wifi_during_accoff">ON: Switch off WiFi when contact is switched off</string>
+    <string name="dont_touch_wifi_during_accoff">OFF: Do not touch the WiFi state when contact is switched off</string>
+    <string name="switch_off_wifi">Option to switch off WiFi during acc_off.</string>
+    <string name="pause_player_during_accoff">ON: Pause active media player when contact is switched off</string>
+    <string name="dont_pause_player_during_accoff">OFF: Do not pause active media player when contact is switched off</string>
+    <string name="pause_player">Option to pause the active media player during acc_off.</string>
+    <string name="accoff_syscall">Execute system call(s) to execute linux command/script.</string>
+    <string name="accoff_syscall_summary">Separate multiple commands with a semicolon (;)</string>
+
 </resources>
