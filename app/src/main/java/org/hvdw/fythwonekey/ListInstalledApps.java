@@ -2,9 +2,6 @@ package org.hvdw.fythwonekey;
 
 import android.app.ListActivity;
 import android.app.ProgressDialog;
-import android.content.ActivityNotFoundException;
-import android.content.Intent;
-//import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
@@ -19,8 +16,8 @@ public class ListInstalledApps  extends ListActivity {
 //public class ListInstalledApps  extends ListFragment {
 
     private PackageManager packageManager = null;
-    private List<ApplicationInfo> applist=null;
-    private AppAdapter listAdapter=null;
+    List<ApplicationInfo> applist=null;
+    AppAdapter listAdapter=null;
     private ListView list;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

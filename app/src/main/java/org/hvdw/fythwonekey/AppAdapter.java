@@ -18,8 +18,8 @@ public class AppAdapter extends ArrayAdapter<ApplicationInfo> {
 private List<ApplicationInfo> applist = null;
 private Context context;
 private PackageManager packageManager;
-        String appNameV;
-public AppAdapter(Context context, int resource, List<ApplicationInfo> objects) {
+private String appNameV;
+AppAdapter(Context context, int resource, List<ApplicationInfo> objects) {
         super(context, resource,  objects);
 
         this.context=context;
