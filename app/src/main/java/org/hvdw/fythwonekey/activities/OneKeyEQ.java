@@ -12,6 +12,8 @@ import org.hvdw.fythwonekey.MySettings;
 import org.hvdw.fythwonekey.R;
 import org.hvdw.fythwonekey.utils.AppStartUtils;
 
+import static org.hvdw.fythwonekey.utils.ShellUtils.shellExec;
+
 
 public class OneKeyEQ extends Activity {
     public static final String TAG = "OneKeyEQ";
@@ -49,6 +51,11 @@ public class OneKeyEQ extends Activity {
             Log.d(TAG, getString(R.string.pkg_configured_short) + " " + packagename_call);
             //Start EQ app or whatever app the user has configured
             myAppUtils.startActivityByPackageName(mContext, packagename_call);
+        }
+
+        if (sys_call != "") {
+            Log.d(TAG, "do a system call");
+            shellExec(sys_call);
         }
 
         finish();
