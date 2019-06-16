@@ -15,7 +15,7 @@ import static org.hvdw.fythwonekey.utils.ShellUtils.shellExec;
 
 public class AccOnReceiver extends BroadcastReceiver {
     public static final String TAG = "FHWO-AccOnReceiver";
-    private boolean use_root_access;
+    //private boolean use_root_access;
     private boolean switch_wifi_on;
     private boolean restart_player;
     private String packagename_call;
@@ -25,6 +25,8 @@ public class AccOnReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Bundle extras = intent.getExtras();
+
+        AppStartUtils myAppUtils = new AppStartUtils();
 
         //use_root_access = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(MySettings.USE_ROOT_ACCESS, true);
         switch_wifi_on = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(MySettings.SWITCH_WIFI_ON, true);
@@ -47,25 +49,21 @@ public class AccOnReceiver extends BroadcastReceiver {
 
             if (restart_player == true) {
                 Log.d(TAG, "Restart the active default media player");
-                AppStartUtils myAppUtils = new AppStartUtils();
                 shellExec("input keyevent 126");
             }
 
             if (packagename_call != "") {
                 Log.d(TAG, "call apk by packagename");
-                AppStartUtils myAppUtils = new AppStartUtils();
                 myAppUtils.startActivityByPackageName(context, packagename_call);
             }
 
             if (intent_call != "") {
                 Log.d(TAG, "call apk by intent");
-                AppStartUtils myAppUtils = new AppStartUtils();
                 myAppUtils.startActivityByIntentName(context, intent_call);
             }
 
             if (sys_call != "") {
                 Log.d(TAG, "do a system call");
-                AppStartUtils myAppUtils = new AppStartUtils();
                 shellExec(sys_call);
             }
     } /* end of onReceive */

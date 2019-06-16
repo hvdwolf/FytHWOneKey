@@ -16,7 +16,7 @@ import static org.hvdw.fythwonekey.utils.ShellUtils.shellExec;
 
 public class AccOffReceiver extends BroadcastReceiver {
     public static final String TAG = "FHWO-AccOffReceiver";
-    private boolean use_root_access;
+    //private boolean use_root_access;
     private boolean switch_wifi_off;
     private boolean pause_player;
     private String sys_call;
@@ -44,13 +44,11 @@ public class AccOffReceiver extends BroadcastReceiver {
 
         if (pause_player == true) {
             Log.d(TAG, "Pause the active media player");
-            AppStartUtils myAppUtils = new AppStartUtils();
             shellExec("input keyevent 127");
         }
 
         if (sys_call != "") {
             Log.d(TAG, "do a system call");
-            AppStartUtils myAppUtils = new AppStartUtils();
             shellExec(sys_call);
         }
     }
