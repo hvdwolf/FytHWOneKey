@@ -8,8 +8,10 @@ import android.content.ComponentName;
 import android.content.pm.PackageManager;
 import android.content.SharedPreferences;
 
+import android.content.res.Resources;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.widget.Toast;
 
 /* shellExec and rootExec methods */
 import java.io.DataOutputStream;
@@ -23,6 +25,7 @@ class Utils {
     public static final String TAG = "FFE-Utils";
     private boolean use_root_access;
     private static SharedPreferences sharedprefs = null;
+    private Toast mToast;
 
 
     public static void init (Context context) {
@@ -56,9 +59,24 @@ class Utils {
         }
     };
 
+    //public void checkAndRunOptions(Context context, String packageName_Call, String intent_call, final String sys_Call) {
+    public void checkAndRunOptions(Context context, String packageName_Call) {
+        if ("".equals(packageName_Call)) {
+            //packagename_call unknown, start setup
+            Log.d(TAG, Resources.getSystem().getString(R.string.pkg_notconfigured_short));
+            mToast = Toast.makeText(context, Resources.getSystem().getString(R.string.pkg_notconfigured_long), Toast.LENGTH_SHORT);
+            mToast.show();
+            startActivityByPackageName(context, "org.hvdw.fythwonekey");
+        } else {
+            Log.d(TAG, Resources.getSystem().getString(R.string.pkg_configured_short) + " " + packageName_Call);
+            //Start AV app or whatever app the user has configured
+            startActivityByPackageName(context, packageName_Call);
+        }
+    }
 
 
-/*  Copied from https://stackoverflow.com/questions/20932102/execute-shell-command-from-android/26654728
+
+    /*  Copied from https://stackoverflow.com/questions/20932102/execute-shell-command-from-android/26654728
     from the code of CarloCannas
 */
     public static String shellExec(String... strings) {

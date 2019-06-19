@@ -4,8 +4,8 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "org.hvdw.fythwonekey"
-        minSdkVersion 16
-        targetSdkVersion 21
+        minSdkVersion 21
+        targetSdkVersion 27
         versionCode 3
         versionName "1.2"
     }

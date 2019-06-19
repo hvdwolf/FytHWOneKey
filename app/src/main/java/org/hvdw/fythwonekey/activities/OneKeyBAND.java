@@ -13,6 +13,7 @@ import android.preference.PreferenceManager;
 import android.widget.Toast;
 
 
+
 public class OneKeyBAND extends Activity {
     public static final String TAG = "OneKeyBAND";
     public static Context mContext;
@@ -38,6 +39,7 @@ public class OneKeyBAND extends Activity {
         //Toast mToast = Toast.makeText(OneKeyBAND.this, "In On Create", Toast.LENGTH_LONG);
         //mToast.show();
         Utils myUtils = new Utils();
+        //myUtils.checkAndRunOptions(mContext, packagename_call);
 
         if ("".equals(packagename_call)) {
             //packagename_call unknown, start setup
