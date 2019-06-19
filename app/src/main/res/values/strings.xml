@@ -43,7 +43,7 @@
     <string name="pkg_configured_short">Configured package:</string>
 
     <string name="acc_on_off_settings">Define apps or actions when the contact/unit is switched ON or OFF; or when coming out of resume.</string>
-    <string name="acc_on_settings">What to do when contact is switched on (ACC_ON)</string>
+    <string name="acc_on_settings">What to do when contact is switched on (ACC_ON); Only works with nokill main server mod</string>
     <string name="switch_on_wifi_during_accon">ON: The WiFi is switched on when the contact is switched on (to overcome PX5 bug)</string>
     <string name="dont_touch_wifi_during_accon">OFF: Do not touch the WiFi state when contact is switched on</string>
     <string name="switch_on_wifi">Option to switch on WiFi during acc_on.</string>
