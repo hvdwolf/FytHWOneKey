@@ -13,12 +13,12 @@
                 android:key="band_intent_entry"
                 android:title="@string/intent"
                 android:summary="@string/intent_summary"
-                android:defaultValue="" /> -->
+                android:defaultValue="" />
             <EditTextPreference
                 android:key="band_intent_syscall"
                 android:title="@string/syscall"
                 android:summary="@string/syscall_summary"
-                android:defaultValue="" />
+                android:defaultValue="" /> -->
     </PreferenceScreen>
 
 
@@ -34,8 +34,8 @@
                 android:key="dvd_intent_entry"
                 android:title="@string/intent"
                 android:summary="@string/intent_summary"
-                android:defaultValue="" /> -->
-           <EditTextPreference
+                android:defaultValue="" />
+            <EditTextPreference
                 android:key="dvd_intent_syscall"
                 android:title="@string/syscall"
                 android:summary="@string/syscall_summary"
@@ -54,12 +54,12 @@
                 android:key="media_intent_entry"
                 android:title="@string/intent"
                 android:summary="@string/intent_summary"
-                android:defaultValue="" /> -->
+                android:defaultValue="" />
             <EditTextPreference
                 android:key="media_intent_syscall"
                 android:title="@string/syscall"
                 android:summary="@string/syscall_summary"
-                android:defaultValue="" />
+                android:defaultValue="" /> -->
     </PreferenceScreen>
 
     <PreferenceScreen
@@ -74,12 +74,12 @@
                 android:key="eq_intent_entry"
                 android:title="@string/intent"
                 android:summary="@string/intent_summary"
-                android:defaultValue="" /> -->
+                android:defaultValue="" />
             <EditTextPreference
                 android:key="eq_intent_syscall"
                 android:title="@string/syscall"
                 android:summary="@string/syscall_summary"
-                android:defaultValue="" />
+                android:defaultValue="" /> -->
     </PreferenceScreen>
 
  <!-- Separate screen for options from the MODE button -->
@@ -98,12 +98,12 @@
                     android:key="btav_intent_entry"
                     android:title="@string/intent"
                     android:summary="@string/intent_summary"
-                    android:defaultValue="" /> -->
+                    android:defaultValue="" />
                 <EditTextPreference
                     android:key="btav_intent_syscall"
                     android:title="@string/syscall"
                     android:summary="@string/syscall_summary"
-                    android:defaultValue="" />
+                    android:defaultValue="" /> -->
         </PreferenceScreen>
         <PreferenceScreen
                 android:title="@string/btphone_settings"
@@ -117,12 +117,12 @@
                     android:key="btphone_intent_entry"
                     android:title="@string/intent"
                     android:summary="@string/intent_summary"
-                    android:defaultValue="" /> -->
+                    android:defaultValue="" />
                 <EditTextPreference
                     android:key="btphone_intent_syscall"
                     android:title="@string/syscall"
                     android:summary="@string/syscall_summary"
-                    android:defaultValue="" />
+                    android:defaultValue="" /> -->
         </PreferenceScreen>
         <PreferenceScreen
                 android:title="@string/av_settings"
@@ -136,12 +136,12 @@
                     android:key="av_intent_entry"
                     android:title="@string/intent"
                     android:summary="@string/intent_summary"
-                    android:defaultValue="" /> -->
+                    android:defaultValue="" />
                 <EditTextPreference
                     android:key="av_intent_syscall"
                     android:title="@string/syscall"
                     android:summary="@string/syscall_summary"
-                    android:defaultValue="" />
+                    android:defaultValue="" /> -->
         </PreferenceScreen>
         <PreferenceScreen
                 android:title="@string/video_settings"
@@ -155,12 +155,12 @@
                     android:key="video_intent_entry"
                     android:title="@string/intent"
                     android:summary="@string/intent_summary"
-                    android:defaultValue="" /> -->
+                    android:defaultValue="" />
                 <EditTextPreference
                     android:key="video_intent_syscall"
                     android:title="@string/syscall"
                     android:summary="@string/syscall_summary"
-                    android:defaultValue="" />
+                    android:defaultValue="" /> -->
         </PreferenceScreen>
     </PreferenceScreen>
  <!-- End of separate screen for options from the MODE button -->

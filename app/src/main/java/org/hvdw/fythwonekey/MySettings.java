@@ -1,6 +1,6 @@
 package org.hvdw.fythwonekey;
 
-public class MySettings {
+class MySettings {
 
     public static final String PACKAGE_APP = "org.hvdw.fythwonekey";
     public static final String SHARED_PREFS_FILENAME = PACKAGE_APP + "_preferences";
