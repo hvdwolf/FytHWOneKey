@@ -31,13 +31,13 @@ public class OneKeyEQ extends Activity {
 
         Log.d(TAG, "Started OneKeyEQ; in OnCreate void");
 
+        Utils myUtils = new Utils();
         packagename_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.EQ_PACKAGENAME_ENTRY, "");
         intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.EQ_INTENT_ENTRY, "");
         sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.EQ_SYSCALL_ENTRY, "");
 
         //Toast mToast = Toast.makeText(OneKeyEQ.this, "In On Create", Toast.LENGTH_LONG);
         //mToast.show();
-        Utils myUtils = new Utils();
 
         if ("".equals(packagename_call)) {
             //packagename_call unknown, start setup
@@ -50,6 +50,16 @@ public class OneKeyEQ extends Activity {
             //Start EQ app or whatever app the user has configured
             myUtils.startActivityByPackageName(mContext, packagename_call);
         }
+
+        /*if (!"".equals(sys_call)) {
+            Log.d(TAG, "do a system call");
+            myUtils.shellExec("input keyevent 87");
+        }*/
+        //myUtils.checkAndRunOptions(packagename_call, intent_call, sys_call);
+        //Log.d(TAG, "did the myAppUtils.checkAndRunOptions with pkg and syscall: " + packagename_call + " " + sys_call);
+
+        /*Log.d(TAG, "Start myUtils.executeSystemCall with : " + sys_call);
+        myUtils.executeSystemCall(sys_call); */
 
         finish();
     }

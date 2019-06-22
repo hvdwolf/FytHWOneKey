@@ -74,12 +74,12 @@
                 android:key="eq_intent_entry"
                 android:title="@string/intent"
                 android:summary="@string/intent_summary"
-                android:defaultValue="" /> -->
+                android:defaultValue="" />
             <EditTextPreference
                 android:key="eq_syscall_entry"
                 android:title="@string/syscall"
                 android:summary="@string/syscall_summary"
-                android:defaultValue="" />
+                android:defaultValue="" /> -->
     </PreferenceScreen>
 
  <!-- Separate screen for options from the MODE button -->

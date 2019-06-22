@@ -18,11 +18,12 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ByteArrayOutputStream;
+import java.util.concurrent.Executor;
 
 
 class Utils {
     private static Context mContext = null;
-    public static final String TAG = "FFE-Utils";
+    public static final String TAG = "OneKey-Utils";
     private boolean use_root_access;
     private static SharedPreferences sharedprefs = null;
     private Toast mToast;
@@ -74,6 +75,34 @@ class Utils {
         }
     }
 
+    /*public static void executeSystemCall(String input) {
+        //String cmd = input;
+        try {
+            Process p = Runtime.getRuntime().exec(input);
+            Log.d(TAG, input);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }*/
+    public static void executeSystemCall(String input) {
+        final String cmd = input;
+        Log.d(TAG, "Do a executeSystemCall with : " + cmd);
+        Executor executor = java.util.concurrent.Executors.newSingleThreadExecutor();
+        executor.execute(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Process p = Runtime.getRuntime().exec(cmd);
+                    //Process p = Runtime.getRuntime().exec("sh -c \"" + cmd + "\"");
+                    Log.d(TAG, cmd);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+        Log.d(TAG, "Did the executeSystemCall with : " + cmd);
+    }
 
 
     /*  Copied from https://stackoverflow.com/questions/20932102/execute-shell-command-from-android/26654728
