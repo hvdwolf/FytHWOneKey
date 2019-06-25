@@ -289,10 +289,10 @@
                 <action android:name="com.fyt.boot.ACCOFF" >
                 </action>
             </intent-filter>
-<!--            <intent-filter>
+            <intent-filter>
                 <action android:name="com.glsx.boot.ACCOFF" >
                 </action>
-            </intent-filter> -->
+            </intent-filter>
         </receiver>
 
 <!-- ==================================================================================== -->
