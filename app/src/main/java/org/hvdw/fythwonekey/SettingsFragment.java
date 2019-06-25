@@ -180,6 +180,7 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
                 intent.setAction(MySettings.ACTION_VIDEO_SYSCALL_ENTRY_CHANGED);
                 intent.putExtra(MySettings.EXTRA_VIDEO_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
+                /* ACC_ON Settings */
             case MySettings.ACCON_PACKAGENAME_ENTRY:
                 intent.setAction(MySettings.ACTION_ACCON_PACKAGENAME_ENTRY_CHANGED);
                 intent.putExtra(MySettings.EXTRA_ACCON_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
@@ -192,7 +193,18 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
                 intent.setAction(MySettings.ACTION_ACCON_SYSCALL_ENTRY_CHANGED);
                 intent.putExtra(MySettings.EXTRA_ACCON_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
-                /* ACCOFF settings */
+            case MySettings.SWITCH_WIFI_ON:
+                intent.setAction(MySettings.ACTION_SWITCH_WIFI_ON_CHANGED);
+                intent.putExtra(MySettings.EXTRA_SWITCH_WIFI_ON_ENABLED, sharedPreferences.getBoolean(key, true));
+                toastText = "BOOLEAN_KEY";
+                break;
+            case MySettings.RESTART_PLAYER:
+                intent.setAction(MySettings.ACTION_RESTART_PLAYER_CHANGED);
+                intent.putExtra(MySettings.EXTRA_RESTART_PLAYER_ENABLED, sharedPreferences.getBoolean(key, true));
+                toastText = "BOOLEAN_KEY";
+                break;
+
+            /* ACCOFF settings */
             case MySettings.SWITCH_WIFI_OFF:
                 intent.setAction(MySettings.ACTION_SWITCH_WIFI_OFF_CHANGED);
                 intent.putExtra(MySettings.EXTRA_SWITCH_WIFI_OFF_ENABLED, sharedPreferences.getBoolean(key, true));
