@@ -219,7 +219,7 @@
             android:defaultValue="" />
     </PreferenceScreen>
 
- <!-- Finally the "preferece screen" to start the lit apps listactivity -->
+ <!-- Finally the "preference screen" to start the list apps listactivity -->
     <Preference
         android:key="listapps"
         android:title="@string/listapps_title"
@@ -229,5 +229,31 @@
                 android:targetPackage="org.hvdw.fythwonekey"
                 android:targetClass="org.hvdw.fythwonekey.ListInstalledApps" />
     </Preference>
+
+    <!-- About screen -->
+    <PreferenceScreen
+        android:title="@string/about_info_screen"
+        android:key="about_info">
+        <PreferenceCategory
+            android:key="ABOUT"
+            android:title="@string/about">
+            <Preference
+                android:key="xda_discussion"
+                android:title="@string/xda_discussion_title"
+                android:summary="@string/xda_discussion_summary">
+                <intent
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://forum.xda-developers.com/android-auto/android-head-units/fyt-units-rooted-app-to-modify-unit-t3912075" />
+            </Preference>
+            <Preference
+                android:key="github"
+                android:title="@string/github_title"
+                android:summary="@string/github_summary">
+                <intent
+                    android:action="android.intent.action.VIEW"
+                    android:data="https://github.com/hvdwolf/FytHWOnekey" />
+            </Preference>
+        </PreferenceCategory>
+    </PreferenceScreen>
 
 </PreferenceScreen>

@@ -69,4 +69,11 @@
     <string name="accoff_syscall">Execute system call(s) to execute linux command/script.</string>
     <string name="accoff_syscall_summary">Separate multiple commands with a semicolon (;)</string>
 
+    <string name="about_info_screen">Information Screen</string>
+    <string name="about">About</string>
+    <string name="xda_discussion_title">XDA Discussion thread</string>
+    <string name="xda_discussion_summary">Discuss or ask questions about this apk on XDA</string>
+    <string name="github_title">Source code</string>
+    <string name="github_summary">Explore the source code of FytHWOneKey on Github</string>
+
 </resources>
