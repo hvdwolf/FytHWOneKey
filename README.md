@@ -24,10 +24,10 @@ The apk can be downloaded from the [Releases](https://github.com/hvdwolf/FytHWOn
 **First time push of hardware button**<br>
 ![selectonceoralways](https://github.com/hvdwolf/FytHWOneKey/blob/master/images/selectoncealways.jpg)
 <br>If it functions correctly you can select the next time for "Always".<br>
-To undo this "standard action/opening", go to Settings -> App -Settings. Select the app which is now the default and reset the "app standard (opening) values" (has a slightly different name on the several Android versions and implementations).
+To undo this "standard action/opening", go to Settings -> App -> Settings. Select the app which is now the default and reset the "app standard (opening) values" (has a slightly different name on the several Android versions and implementations).
 <br><br>
 **The list installed apps screen**<br>
 *(To be able to select your app by its internal package name)*<br>
 ![selectonceoralways](https://github.com/hvdwolf/FytHWOneKey/blob/master/images/listinstalledapps.jpg)
-<br>You can select and copy the "Package Name" into the Settings field of the your button you want to re-assign.
+<br>You can select and copy the "Package Name" into the Settings field of the button you want to re-assign.
 
