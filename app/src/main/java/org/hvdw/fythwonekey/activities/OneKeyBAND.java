@@ -36,8 +36,6 @@ public class OneKeyBAND extends Activity {
         intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BAND_INTENT_ENTRY, "");
         sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BAND_SYSCALL_ENTRY, "");
 
-        //Toast mToast = Toast.makeText(OneKeyBAND.this, "In On Create", Toast.LENGTH_LONG);
-        //mToast.show();
         Utils myUtils = new Utils();
         //myUtils.checkAndRunOptions(mContext, packagename_call);
 

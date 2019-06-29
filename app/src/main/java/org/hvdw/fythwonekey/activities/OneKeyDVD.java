@@ -37,8 +37,6 @@ public class OneKeyDVD extends Activity {
         intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.DVD_INTENT_ENTRY, "");
         sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.DVD_SYSCALL_ENTRY, "");
 
-        //Toast mToast = Toast.makeText(OneKeyDVD.this, "In On Create", Toast.LENGTH_LONG);
-        //mToast.show();
 
         Utils myUtils = new Utils();
 

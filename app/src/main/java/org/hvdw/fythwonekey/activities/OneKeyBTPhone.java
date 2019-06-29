@@ -35,8 +35,6 @@ public class OneKeyBTPhone extends Activity {
         intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTPHONE_INTENT_ENTRY, "");
         sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTPHONE_SYSCALL_ENTRY, "");
 
-        //Toast mToast = Toast.makeText(OneKeyBTPHONE.this, "In On Create", Toast.LENGTH_LONG);
-        //mToast.show();
         Utils myUtils = new Utils();
 
         if ("".equals(packagename_call)) {

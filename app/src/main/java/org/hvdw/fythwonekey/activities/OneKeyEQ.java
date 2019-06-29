@@ -40,9 +40,6 @@ public class OneKeyEQ extends Activity {
         //sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.EQ_SYSCALL_ENTRY, "");
         media_key_option = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.EQ_MEDIA_KEY_OPTION, "");
 
-        //Log.d(TAG, "Media key option : " + media_key_option);
-        //Toast mToast = Toast.makeText(OneKeyEQ.this, "In On Create", Toast.LENGTH_LONG);
-        //mToast.show();
         Utils myUtils = new Utils();
 
         if ("pkgname".equals(media_key_option)) {

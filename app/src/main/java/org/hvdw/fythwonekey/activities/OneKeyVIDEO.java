@@ -34,9 +34,7 @@ public class OneKeyVIDEO extends Activity {
         packagename_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.VIDEO_PACKAGENAME_ENTRY, "");
         intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.VIDEO_INTENT_ENTRY, "");
         sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.VIDEO_SYSCALL_ENTRY, "");
-
-        //Toast mToast = Toast.makeText(OneKeyVIDEO.this, "In On Create", Toast.LENGTH_LONG);
-        //mToast.show();
+        
         Utils myUtils = new Utils();
 
         if ("".equals(packagename_call)) {
