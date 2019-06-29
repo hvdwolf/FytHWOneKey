@@ -24,8 +24,17 @@ The apk can be downloaded from the [Releases](https://github.com/hvdwolf/FytHWOn
 **First time push of hardware button**<br>
 ![selectonceoralways](https://github.com/hvdwolf/FytHWOneKey/blob/master/images/selectoncealways.jpg)
 <br>If it functions correctly you can select the next time for "Always".<br>
-To undo this "standard action/opening", go to Settings -> App -> Settings. Select the app which is now the default and reset the "app standard (opening) values" (has a slightly different name on the several Android versions and implementations).
+To undo this "standard action/opening", go to Settings -> App Settings. Select the app which now has that default action/opening and reset the "app standard (opening) values" (has a slightly different name on the several Android versions and implementations).
 <br><br>
+## Deviations from Standard Functionality
+**Configure the EQ button**<br>
+If you have a unit with hardware buttons, this EQ button is pretty useless for everyday operation. So I made it possible to assign a "Media Key Event" to it, if you don't want to use it for assigning an app to it (default option). This means you can assign next/previous/play/pause/toggle-playpause to it. Especially on a car without steering wheel keys and with hardware buttons on the unit this is really helpful (that is: to me in my car with my unit)
+<br>**The ACC_OFF and ACC_ON broadcast events**<br>
+*Experimental and partly untested !!*<br>
+This "should" allow for actions to be performed when the contact is switched on or off.<br> Acc off should work for media player action, wifi off action (not necessary) and assigned package name.<br> Acc On does certainly not work on Android 8.x as it is not allowed anymore to use that as broadcast event if not a system signed app. On Android 6.0.1, I have no idea.
+*ToDo: Check if the USB broadcasts can be used. Upon switching on the unit, the usb devices are connected again. This can be monitored. Of course it requires a usb device connected: whatever usb device*<br><br>
+
+___
 **The list installed apps screen**<br>
 *(To be able to select your app by its internal package name)*<br>
 ![selectonceoralways](https://github.com/hvdwolf/FytHWOneKey/blob/master/images/listinstalledapps.jpg)
