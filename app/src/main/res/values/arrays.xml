@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="media_key_entries">
+        <item>No mediakey, use the package name function</item>
+        <item>Next button</item>
+        <item>Previous button</item>
+        <item>Play button</item>
+        <item>Pause button</item>
+        <item>Play/Pause switch button</item>
+    </string-array>
+    <string-array name="media_key_values">
+        <item>pkgname</item>
+        <item>KEYCODE_MEDIA_NEXT</item>
+        <item>KEYCODE_MEDIA_PREVIOUS</item>
+        <item>KEYCODE_MEDIA_PLAY</item>
+        <item>KEYCODE_MEDIA_PAUSE</item>
+        <item>KEYCODE_MEDIA_PLAY_PAUSE</item>
+    </string-array>
+
+</resources>

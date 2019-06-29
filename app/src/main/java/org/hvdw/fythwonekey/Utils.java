@@ -9,8 +9,10 @@ import android.content.pm.PackageManager;
 import android.content.SharedPreferences;
 
 import android.content.res.Resources;
+import android.media.AudioManager;
 import android.preference.PreferenceManager;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.widget.Toast;
 
 /* shellExec and rootExec methods */
@@ -209,6 +211,31 @@ class Utils {
         if (intent != null) {
             context.startActivity(intent);
         }
+    }
+
+    public void sendMediaCommand(Context context, String mediaCommand, boolean down) {
+        KeyEvent event = null;
+        AudioManager am = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
+
+        switch(mediaCommand) {
+            case "KEYCODE_MEDIA_NEXT":
+                event = new KeyEvent(0, 0, down ? KeyEvent.ACTION_DOWN : KeyEvent.ACTION_UP, KeyEvent.KEYCODE_MEDIA_NEXT, 0);
+                break;
+            case "KEYCODE_MEDIA_PREVIOUS":
+                event = new KeyEvent(0, 0, down ? KeyEvent.ACTION_DOWN : KeyEvent.ACTION_UP, KeyEvent.KEYCODE_MEDIA_PREVIOUS, 0);
+                break;
+            case "KEYCODE_MEDIA_PLAY":
+                event = new KeyEvent(0, 0, down ? KeyEvent.ACTION_DOWN : KeyEvent.ACTION_UP, KeyEvent.KEYCODE_MEDIA_PLAY, 0);
+                break;
+            case "KEYCODE_MEDIA_PAUSE":
+                event = new KeyEvent(0, 0, down ? KeyEvent.ACTION_DOWN : KeyEvent.ACTION_UP, KeyEvent.KEYCODE_MEDIA_PAUSE, 0);
+                break;
+            case "KEYCODE_MEDIA_PLAY_PAUSE":
+                event = new KeyEvent(0, 0, down ? KeyEvent.ACTION_DOWN : KeyEvent.ACTION_UP, KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE, 0);
+                break;
+        }
+        am.dispatchMediaKeyEvent(event);
+
     }
 
 }

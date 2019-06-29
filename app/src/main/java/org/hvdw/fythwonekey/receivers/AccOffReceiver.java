@@ -40,7 +40,9 @@ public class AccOffReceiver extends BroadcastReceiver {
 
         if (pause_player == true) {
             Log.d(TAG, "Pause the active media player");
-            myUtils.shellExec("input keyevent 127");
+            //myUtils.shellExec("input keyevent 127");
+            myUtils.sendMediaCommand(context, "KEYCODE_MEDIA_PAUSE", true);
+            myUtils.sendMediaCommand(context, "KEYCODE_MEDIA_PAUSE", false);
         }
 
         if (!"".equals(sys_call)) {

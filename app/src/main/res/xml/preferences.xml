@@ -80,6 +80,12 @@
                 android:title="@string/syscall"
                 android:summary="@string/syscall_summary"
                 android:defaultValue="" /> -->
+            <ListPreference
+                android:key="eq_media_key_option"
+                android:entries="@array/media_key_entries"
+                android:entryValues="@array/media_key_values"
+                android:defaultValue="pkgname"
+                android:title="@string/media_key_title" />
     </PreferenceScreen>
 
  <!-- Separate screen for options from the MODE button -->
@@ -219,7 +225,7 @@
             android:defaultValue="" />
     </PreferenceScreen>
 
- <!-- Finally the "preference screen" to start the list apps listactivity -->
+ <!-- Finally the "preferece screen" to start the lit apps listactivity -->
     <Preference
         android:key="listapps"
         android:title="@string/listapps_title"
@@ -243,7 +249,7 @@
                 android:summary="@string/xda_discussion_summary">
                 <intent
                     android:action="android.intent.action.VIEW"
-                    android:data="https://forum.xda-developers.com/android-auto/android-head-units/fyt-units-rooted-app-to-modify-unit-t3912075" />
+                    android:data="https://forum.xdadevelopers.com/androidauto/androidheadunits/fytunitsrootedapptomodifyunitt3912075" />
             </Preference>
             <Preference
                 android:key="github"

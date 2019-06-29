@@ -44,7 +44,9 @@ public class AccOnReceiver extends BroadcastReceiver {
 
             if (restart_player == true) {
                 Log.d(TAG, "Restart the active default media player");
-                myUtils.shellExec("input keyevent 126");
+                //myUtils.shellExec("input keyevent 126");
+                myUtils.sendMediaCommand(context, "KEYCODE_MEDIA_PLAY", true);
+                myUtils.sendMediaCommand(context, "KEYCODE_MEDIA_PLAY", false);
             }
 
             if (!"".equals(packagename_call)) {

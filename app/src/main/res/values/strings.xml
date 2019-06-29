@@ -76,4 +76,5 @@
     <string name="github_title">Source code</string>
     <string name="github_summary">Explore the source code of FytHWOneKey on Github</string>
 
+    <string name="media_key_title">Which media key command should be send</string>
 </resources>
