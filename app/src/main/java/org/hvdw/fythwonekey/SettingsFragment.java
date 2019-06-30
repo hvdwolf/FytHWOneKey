@@ -196,6 +196,21 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
                 intent.setAction(MySettings.ACTION_ACCON_SYSCALL_ENTRY_CHANGED);
                 intent.putExtra(MySettings.EXTRA_ACCON_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
+            /* USB ON settings. This is when ACC_ON is generated. Available usb devices are reconnected, which gives the
+            usb device attached broadcast. We can't use ACC_ON on Android >=7.0
+             */
+            case MySettings.USBON_PACKAGENAME_ENTRY:
+                intent.setAction(MySettings.ACTION_USBON_PACKAGENAME_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_USBON_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
+            case MySettings.USBON_INTENT_ENTRY:
+                intent.setAction(MySettings.ACTION_USBON_INTENT_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_USBON_INTENT_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
+            case MySettings.USBON_SYSCALL_ENTRY:
+                intent.setAction(MySettings.ACTION_USBON_SYSCALL_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_USBON_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
             case MySettings.SWITCH_WIFI_ON:
                 intent.setAction(MySettings.ACTION_SWITCH_WIFI_ON_CHANGED);
                 intent.putExtra(MySettings.EXTRA_SWITCH_WIFI_ON_ENABLED, sharedPreferences.getBoolean(key, true));
