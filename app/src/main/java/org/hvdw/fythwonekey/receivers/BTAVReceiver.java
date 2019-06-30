@@ -1,4 +1,4 @@
-package org.hvdw.fythwonekey;
+package org.hvdw.fythwonekey.receivers;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import org.hvdw.fythwonekey.MySettings;
 import org.hvdw.fythwonekey.R;
+import org.hvdw.fythwonekey.Utils;
 
 
 public class BTAVReceiver extends BroadcastReceiver {
