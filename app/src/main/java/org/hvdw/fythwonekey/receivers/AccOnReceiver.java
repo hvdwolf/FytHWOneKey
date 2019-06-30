@@ -1,4 +1,4 @@
-package org.hvdw.fythwonekey;
+package org.hvdw.fythwonekey.receivers;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -7,6 +7,9 @@ import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
+
+import org.hvdw.fythwonekey.MySettings;
+import org.hvdw.fythwonekey.Utils;
 
 public class AccOnReceiver extends BroadcastReceiver {
     public static final String TAG = "FHWO-AccOnReceiver";

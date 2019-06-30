@@ -1,4 +1,4 @@
-package org.hvdw.fythwonekey;
+package org.hvdw.fythwonekey.activities;
 
 import android.Manifest;
 import android.app.Activity;
@@ -12,6 +12,9 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.widget.Toast;
 
+import org.hvdw.fythwonekey.MySettings;
+import org.hvdw.fythwonekey.R;
+import org.hvdw.fythwonekey.Utils;
 
 
 public class OneKeyBAND extends Activity {
