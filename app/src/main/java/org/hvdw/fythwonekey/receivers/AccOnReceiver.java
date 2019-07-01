@@ -14,11 +14,6 @@ import org.hvdw.fythwonekey.Utils;
 public class AccOnReceiver extends BroadcastReceiver {
     public static final String TAG = "FHWO-AccOnReceiver";
     //private boolean use_root_access;
-    private boolean switch_wifi_on;
-    private boolean restart_player;
-    private String packagename_call;
-    private String intent_call;
-    private String sys_call;
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -27,11 +22,11 @@ public class AccOnReceiver extends BroadcastReceiver {
         Utils myUtils = new Utils();
 
         //use_root_access = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(MySettings.USE_ROOT_ACCESS, true);
-        switch_wifi_on = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(MySettings.SWITCH_WIFI_ON, true);
-        restart_player = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(MySettings.RESTART_PLAYER, true);
-        packagename_call = PreferenceManager.getDefaultSharedPreferences(context).getString(MySettings.ACCON_PACKAGENAME_ENTRY, "");
-        intent_call = PreferenceManager.getDefaultSharedPreferences(context).getString(MySettings.ACCON_INTENT_ENTRY, "");
-        sys_call = PreferenceManager.getDefaultSharedPreferences(context).getString(MySettings.ACCON_SYSCALL_ENTRY, "");
+        boolean switch_wifi_on = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(MySettings.SWITCH_WIFI_ON, true);
+        boolean restart_player = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(MySettings.RESTART_PLAYER, true);
+        String packagename_call = PreferenceManager.getDefaultSharedPreferences(context).getString(MySettings.ACCON_PACKAGENAME_ENTRY, "");
+        String intent_call = PreferenceManager.getDefaultSharedPreferences(context).getString(MySettings.ACCON_INTENT_ENTRY, "");
+        String sys_call = PreferenceManager.getDefaultSharedPreferences(context).getString(MySettings.ACCON_SYSCALL_ENTRY, "");
 
 
         Log.i(TAG, "Detected an ACCON broadcast");

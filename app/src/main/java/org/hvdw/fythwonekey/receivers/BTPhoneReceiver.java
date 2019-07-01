@@ -17,18 +17,15 @@ import org.hvdw.fythwonekey.Utils;
 public class BTPhoneReceiver extends BroadcastReceiver {
     public static final String TAG = "FHWO-BTPhoneReceiver";
     private static PackageManager pm;
-    private String packagename_call;
-    private String intent_call;
-    private String sys_call;
     Toast mToast;
 
     @Override
     public void onReceive(Context context, Intent intent) {
         Bundle extras = intent.getExtras();
 
-        packagename_call = PreferenceManager.getDefaultSharedPreferences(context).getString(MySettings.BTPHONE_PACKAGENAME_ENTRY, "");
-        intent_call = PreferenceManager.getDefaultSharedPreferences(context).getString(MySettings.BTPHONE_INTENT_ENTRY, "");
-        sys_call = PreferenceManager.getDefaultSharedPreferences(context).getString(MySettings.BTPHONE_SYSCALL_ENTRY, "");
+        String packagename_call = PreferenceManager.getDefaultSharedPreferences(context).getString(MySettings.BTPHONE_PACKAGENAME_ENTRY, "");
+        String intent_call = PreferenceManager.getDefaultSharedPreferences(context).getString(MySettings.BTPHONE_INTENT_ENTRY, "");
+        String sys_call = PreferenceManager.getDefaultSharedPreferences(context).getString(MySettings.BTPHONE_SYSCALL_ENTRY, "");
 
         Utils myUtils = new Utils();
 

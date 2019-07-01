@@ -1,16 +1,11 @@
 package org.hvdw.fythwonekey.activities;
 
-import android.Manifest;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
-import android.content.Intent;
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.content.ComponentName;
-import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.view.KeyEvent;
 import android.widget.Toast;
 
 import android.media.AudioManager;
@@ -24,10 +19,6 @@ public class OneKeyEQ extends Activity {
     public static final String TAG = "OneKeyEQ";
     public static Context mContext;
     private static PackageManager pm;
-    //private String packagename_call;
-    //private String intent_call;
-    //private String sys_call;
-    //private String media_key_option;
     Toast mToast;
 
 

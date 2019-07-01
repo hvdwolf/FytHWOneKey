@@ -1,14 +1,10 @@
 package org.hvdw.fythwonekey.activities;
 
-import android.Manifest;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
-import android.content.Intent;
 import android.content.Context;
 import android.content.pm.PackageManager;
-import android.content.ComponentName;
-import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.widget.Toast;
 
@@ -21,9 +17,6 @@ public class OneKeyBAND extends Activity {
     public static final String TAG = "OneKeyBAND";
     public static Context mContext;
     private static PackageManager pm;
-    //private String packagename_call;
-    //private String intent_call;
-    //private String sys_call;
     Toast mToast;
 
 
