@@ -40,9 +40,6 @@ public class MySettings {
     public static final String EQ_MEDIA_KEY_OPTION = "eq_media_key_option";
     public static final String ACTION_EQ_MEDIA_KEY_OPTION_CHANGED = "org.hvdw.fythwonekey.action.ACTION_MEDIA_KEY_OPTION_CHANGED";
     public static final String EXTRA_EQ_MEDIA_KEY_OPTION_STRING = "org.hvdw.fythwonekey.extra.PREF_MEDIA_KEY_OPTION_STRING";
-/*    public static final String EQ_MEDIA_KEY_ENTRY = "media_key_entry";
-    public static final String ACTION_EQ_MEDIA_KEY_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_MEDIA_KEY_ENTRY_CHANGED";
-    public static final String EXTRA_EQ_MEDIA_KEY_ENTRY_STRING = "org.hvdw.fythwonekey.extra.PREF_MEDIA_KEY_ENTRY_STRING"; */
 
     public static final String MEDIA_PACKAGENAME_ENTRY = "media_packagename_entry";
     public static final String ACTION_MEDIA_PACKAGENAME_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_MEDIA_PACKAGENAME_ENTRY_CHANGED";
