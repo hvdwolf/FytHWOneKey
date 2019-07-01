@@ -304,8 +304,6 @@
             <intent-filter>
                 <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
             </intent-filter>
-            <meta-data
-                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
         </receiver>
 <!-- ==================================================================================== -->
 <!-- Below are the several broadcast receivers for BTPhone and BTAV for the BT app        -->
