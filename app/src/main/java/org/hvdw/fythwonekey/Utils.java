@@ -98,7 +98,7 @@ public class Utils {
                     //Process p = Runtime.getRuntime().exec("sh -c \"" + cmd + "\"");
                     Log.d(TAG, cmd);
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    Log.e(TAG, e.getMessage());
                 }
 
             }
@@ -130,11 +130,11 @@ public class Utils {
             try {
                 sh.waitFor();
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                Log.e(TAG, e.getMessage());
             }
             res = readFully(response);
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e(TAG, e.getMessage());
         } finally {
             Closer.closeSilently(outputStream, response);
         }
@@ -162,11 +162,11 @@ public class Utils {
             try {
                 su.waitFor();
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                Log.e(TAG, e.getMessage());
             }
             res = readFully(response);
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e(TAG, e.getMessage());
         } finally {
             Closer.closeSilently(outputStream, response);
         }
@@ -191,7 +191,7 @@ public class Utils {
             Process p = Runtime.getRuntime().exec(cmd);
             Log.d(TAG, cmd);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, e.getMessage());
         }
     };
 
