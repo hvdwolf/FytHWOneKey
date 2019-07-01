@@ -40,9 +40,6 @@ public class MySettings {
     public static final String EQ_MEDIA_KEY_OPTION = "eq_media_key_option";
     public static final String ACTION_EQ_MEDIA_KEY_OPTION_CHANGED = "org.hvdw.fythwonekey.action.ACTION_MEDIA_KEY_OPTION_CHANGED";
     public static final String EXTRA_EQ_MEDIA_KEY_OPTION_STRING = "org.hvdw.fythwonekey.extra.PREF_MEDIA_KEY_OPTION_STRING";
-/*    public static final String EQ_MEDIA_KEY_ENTRY = "media_key_entry";
-    public static final String ACTION_EQ_MEDIA_KEY_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_MEDIA_KEY_ENTRY_CHANGED";
-    public static final String EXTRA_EQ_MEDIA_KEY_ENTRY_STRING = "org.hvdw.fythwonekey.extra.PREF_MEDIA_KEY_ENTRY_STRING"; */
 
     public static final String MEDIA_PACKAGENAME_ENTRY = "media_packagename_entry";
     public static final String ACTION_MEDIA_PACKAGENAME_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_MEDIA_PACKAGENAME_ENTRY_CHANGED";
@@ -104,6 +101,16 @@ public class MySettings {
     public static final String ACCON_SYSCALL_ENTRY = "accon_syscall_entry";
     public static final String ACTION_ACCON_SYSCALL_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_ACCON_SYSCALL_ENTRY_CHANGED";
     public static final String EXTRA_ACCON_SYSCALL_ENTRY_STRING = "org.hvdw.fythwonekey.extra.PREF_ACCON_SYSCALL_ENTRY_STRING";
+
+    public static final String USBON_PACKAGENAME_ENTRY = "usbon_packagename_entry";
+    public static final String ACTION_USBON_PACKAGENAME_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_USBON_PACKAGENAME_ENTRY_CHANGED";
+    public static final String EXTRA_USBON_PACKAGENAME_ENTRY_STRING = "org.hvdw.fythwonekey.extra.PREF_USBON_PACKAGENAME_ENTRY_STRING";
+    public static final String USBON_INTENT_ENTRY = "usbon_intent_entry";
+    public static final String ACTION_USBON_INTENT_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_USBON_INTENT_ENTRY_CHANGED";
+    public static final String EXTRA_USBON_INTENT_ENTRY_STRING = "org.hvdw.fythwonekey.extra.PREF_USBON_INTENT_ENTRY_STRING";
+    public static final String USBON_SYSCALL_ENTRY = "usbon_syscall_entry";
+    public static final String ACTION_USBON_SYSCALL_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_USBON_SYSCALL_ENTRY_CHANGED";
+    public static final String EXTRA_USBON_SYSCALL_ENTRY_STRING = "org.hvdw.fythwonekey.extra.PREF_USBON_SYSCALL_ENTRY_STRING";
 
     public static final String SWITCH_WIFI_ON = "switch_wifi_on";
     public static final String ACTION_SWITCH_WIFI_ON_CHANGED = "org.hvdw.fythwonekey.action.ACTION_SWITCH_WIFI_ON_CHANGED";

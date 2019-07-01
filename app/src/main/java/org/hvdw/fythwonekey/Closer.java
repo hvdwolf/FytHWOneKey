@@ -1,5 +1,7 @@
 package org.hvdw.fythwonekey;
 
+import android.util.Log;
+
 import java.io.Closeable;
 import java.net.DatagramSocket;
 import java.net.Socket;
@@ -8,7 +10,8 @@ import java.net.Socket;
 // from the code of CarloCannas
 
 public class Closer {
-    // closeAll()
+    public static final String TAG = "OneKey-Closer";
+
     public static void closeSilently(Object... xs) {
         // Note: on Android API levels prior to 19 Socket does not implement Closeable
         for (Object x : xs) {
@@ -26,7 +29,7 @@ public class Closer {
                         throw new RuntimeException("cannot close "+x);
                     }
                 } catch (Throwable e) {
-                    //Log.x(e);
+                    Log.e(TAG, e.getMessage());
                 }
             }
         }

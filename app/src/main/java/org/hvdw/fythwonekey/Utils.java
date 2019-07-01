@@ -1,7 +1,5 @@
 package org.hvdw.fythwonekey;
 
-import android.app.Activity;
-
 import android.content.Intent;
 import android.content.Context;
 import android.content.ComponentName;
@@ -42,7 +40,7 @@ public class Utils {
 
     public void whichActionToPerform (Context context, String callMethod, String actionString) {
         if (callMethod.equals("pkgname")) {
-            //Log.d(TAG, " the callmethond is indeed pkgname");
+            //Log.i(TAG, " the callmethond is indeed pkgname");
             startActivityByPackageName(context, actionString);
         }
         if (callMethod.equals("pkg_intent")) {
@@ -66,12 +64,12 @@ public class Utils {
     public void checkAndRunOptions(Context context, String packageName_Call) {
         if ("".equals(packageName_Call)) {
             //packagename_call unknown, start setup
-            Log.d(TAG, Resources.getSystem().getString(R.string.pkg_notconfigured_short));
+            Log.i(TAG, Resources.getSystem().getString(R.string.pkg_notconfigured_short));
             mToast = Toast.makeText(context, Resources.getSystem().getString(R.string.pkg_notconfigured_long), Toast.LENGTH_SHORT);
             mToast.show();
             startActivityByPackageName(context, "org.hvdw.fythwonekey");
         } else {
-            Log.d(TAG, Resources.getSystem().getString(R.string.pkg_configured_short) + " " + packageName_Call);
+            Log.i(TAG, Resources.getSystem().getString(R.string.pkg_configured_short) + " " + packageName_Call);
             //Start AV app or whatever app the user has configured
             startActivityByPackageName(context, packageName_Call);
         }
@@ -81,14 +79,14 @@ public class Utils {
         //String cmd = input;
         try {
             Process p = Runtime.getRuntime().exec(input);
-            Log.d(TAG, input);
+            Log.i(TAG, input);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }*/
     public static void executeSystemCall(String input) {
         final String cmd = input;
-        Log.d(TAG, "Do a executeSystemCall with : " + cmd);
+        Log.i(TAG, "Do a executeSystemCall with : " + cmd);
         Executor executor = java.util.concurrent.Executors.newSingleThreadExecutor();
         executor.execute(new Runnable() {
             @Override
@@ -96,14 +94,14 @@ public class Utils {
                 try {
                     Process p = Runtime.getRuntime().exec(cmd);
                     //Process p = Runtime.getRuntime().exec("sh -c \"" + cmd + "\"");
-                    Log.d(TAG, cmd);
+                    Log.i(TAG, cmd);
                 } catch (Exception e) {
-                    e.printStackTrace();
+                    Log.e(TAG, e.getMessage());
                 }
 
             }
         });
-        Log.d(TAG, "Did the executeSystemCall with : " + cmd);
+        Log.i(TAG, "Did the executeSystemCall with : " + cmd);
     }
 
 
@@ -130,11 +128,11 @@ public class Utils {
             try {
                 sh.waitFor();
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                Log.e(TAG, e.getMessage());
             }
             res = readFully(response);
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e(TAG, e.getMessage());
         } finally {
             Closer.closeSilently(outputStream, response);
         }
@@ -162,11 +160,11 @@ public class Utils {
             try {
                 su.waitFor();
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                Log.e(TAG, e.getMessage());
             }
             res = readFully(response);
         } catch (IOException e) {
-            e.printStackTrace();
+            Log.e(TAG, e.getMessage());
         } finally {
             Closer.closeSilently(outputStream, response);
         }
@@ -189,9 +187,9 @@ public class Utils {
         String cmd = "am broadcast -a " + input;
         try {
             Process p = Runtime.getRuntime().exec(cmd);
-            Log.d(TAG, cmd);
+            Log.i(TAG, cmd);
         } catch (Exception e) {
-            e.printStackTrace();
+            Log.e(TAG, e.getMessage());
         }
     };
 
@@ -207,7 +205,7 @@ public class Utils {
     public void startActivityByPackageName(Context context, String packageName) {
         PackageManager pManager = context.getPackageManager();
         Intent intent = pManager.getLaunchIntentForPackage(packageName);
-        Log.d(TAG, " startActivityByPackageName: " + packageName);
+        Log.i(TAG, " startActivityByPackageName: " + packageName);
         if (intent != null) {
             context.startActivity(intent);
         }

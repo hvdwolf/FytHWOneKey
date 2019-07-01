@@ -9,6 +9,7 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -22,6 +23,7 @@ public class ListInstalledApps  extends ListActivity {
     private List<ApplicationInfo> applist=null;
     private AppAdapter listAdapter=null;
     private ListView list;
+    public static final String TAG = "OneKey-LIA";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,7 +83,8 @@ public class ListInstalledApps  extends ListActivity {
                     applist.add(info);
                 }
             }catch (Exception e){
-                e.printStackTrace();
+                //e.printStackTrace();
+                Log.e(TAG, e.getMessage());
             }
         }
         return  applist;

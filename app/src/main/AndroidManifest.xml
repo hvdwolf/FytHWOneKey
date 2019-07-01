@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" package="org.hvdw.fythwonekey">
 
+    <uses-feature android:name="android.hardware.usb.host" />
+
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <uses-permission android:name="android.permission.USB_PERMISSION" />
 
     <application
         android:allowBackup="true"
@@ -270,20 +273,20 @@
 <!-- ==================================================================================== -->
 
         <!-- Broadcast receivers to catch the ACC_ON and ACC_OFF broadcasts -->
-        <receiver android:name=".receivers.AccOnReceiver" >
-<!--            <intent-filter>
-                <action android:name="android.intent.action.ACTION_MT_COMMAND_SLEEP_OUT" >
-                </action>
-            </intent-filter> -->
+        <!-- <receiver android:name=".receivers.AccOnReceiver"
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.fyt.boot.ACCON" >
                 </action>
             </intent-filter>
             <intent-filter>
-                <action android:name="com.glsx.boot.ACCON" >
+                <action android:name="com.glsx.boot.ACCON"
+            android:enabled="true"
+            android:exported="true">
                 </action>
             </intent-filter>
-        </receiver>
+        </receiver> -->
         <receiver android:name=".receivers.AccOffReceiver" >
             <intent-filter>
                 <action android:name="com.fyt.boot.ACCOFF" >
@@ -295,6 +298,13 @@
             </intent-filter>
         </receiver>
 
+        <receiver android:name=".receivers.UsbReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+        </receiver>
 <!-- ==================================================================================== -->
 <!-- Below are the several broadcast receivers for BTPhone and BTAV for the BT app        -->
 <!-- ==================================================================================== -->

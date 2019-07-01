@@ -11,8 +11,8 @@ import android.util.Log;
 import org.hvdw.fythwonekey.MySettings;
 import org.hvdw.fythwonekey.Utils;
 
-public class AccOnReceiver extends BroadcastReceiver {
-    public static final String TAG = "FHWO-AccOnReceiver";
+public class UsbReceiver extends BroadcastReceiver {
+    public static final String TAG = "FHWO-UsbReceiver";
     //private boolean use_root_access;
 
     @Override
@@ -24,12 +24,12 @@ public class AccOnReceiver extends BroadcastReceiver {
         //use_root_access = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(MySettings.USE_ROOT_ACCESS, true);
         boolean switch_wifi_on = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(MySettings.SWITCH_WIFI_ON, true);
         boolean restart_player = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(MySettings.RESTART_PLAYER, true);
-        String packagename_call = PreferenceManager.getDefaultSharedPreferences(context).getString(MySettings.ACCON_PACKAGENAME_ENTRY, "");
-        String intent_call = PreferenceManager.getDefaultSharedPreferences(context).getString(MySettings.ACCON_INTENT_ENTRY, "");
-        String sys_call = PreferenceManager.getDefaultSharedPreferences(context).getString(MySettings.ACCON_SYSCALL_ENTRY, "");
+        String packagename_call = PreferenceManager.getDefaultSharedPreferences(context).getString(MySettings.USBON_PACKAGENAME_ENTRY, "");
+        String intent_call = PreferenceManager.getDefaultSharedPreferences(context).getString(MySettings.USBON_INTENT_ENTRY, "");
+        String sys_call = PreferenceManager.getDefaultSharedPreferences(context).getString(MySettings.USBON_SYSCALL_ENTRY, "");
 
 
-        Log.i(TAG, "Detected an ACCON broadcast");
+        Log.i(TAG, "Detected a USB Device connect broadcast");
 
             if (switch_wifi_on == true) {
                 Log.i(TAG, "Switch On WiFi");

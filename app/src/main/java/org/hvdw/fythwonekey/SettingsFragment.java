@@ -45,12 +45,12 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
         setRetainInstance(true);
 
         if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.N){
-            Log.d(TAG, "onCreate: in Sofia 6.0.1 sdk23");
+            Log.i(TAG, "onCreate: in Sofia 6.0.1 sdk23");
             //Running on Sofia 6.0.1 sdk23
             getPreferenceManager().setSharedPreferencesMode(Context.MODE_WORLD_READABLE);
             addPreferencesFromResource(R.xml.preferences);
         } else {
-            Log.d(TAG, "onCreate: Running on Android 8.0.0 sdk26");
+            Log.i(TAG, "onCreate: Running on Android 8.0.0 sdk26");
             getPreferenceManager().setSharedPreferencesMode(Context.MODE_PRIVATE);
             addPreferencesFromResource(R.xml.preferences);
         }
@@ -196,6 +196,21 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
                 intent.setAction(MySettings.ACTION_ACCON_SYSCALL_ENTRY_CHANGED);
                 intent.putExtra(MySettings.EXTRA_ACCON_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
+            /* USB ON settings. This is when ACC_ON is generated. Available usb devices are reconnected, which gives the
+            usb device attached broadcast. We can't use ACC_ON on Android >=7.0
+             */
+            case MySettings.USBON_PACKAGENAME_ENTRY:
+                intent.setAction(MySettings.ACTION_USBON_PACKAGENAME_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_USBON_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
+            case MySettings.USBON_INTENT_ENTRY:
+                intent.setAction(MySettings.ACTION_USBON_INTENT_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_USBON_INTENT_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
+            case MySettings.USBON_SYSCALL_ENTRY:
+                intent.setAction(MySettings.ACTION_USBON_SYSCALL_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_USBON_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
             case MySettings.SWITCH_WIFI_ON:
                 intent.setAction(MySettings.ACTION_SWITCH_WIFI_ON_CHANGED);
                 intent.putExtra(MySettings.EXTRA_SWITCH_WIFI_ON_ENABLED, sharedPreferences.getBoolean(key, true));
@@ -223,15 +238,15 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
                 intent.putExtra(MySettings.EXTRA_ACCOFF_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
             default:
-                Log.d(TAG, "Invalid setting encountered");
+                Log.i(TAG, "Invalid setting encountered");
                 break;
        }
 
-        Log.d(TAG, "updated key is " + key);
+        Log.i(TAG, "updated key is " + key);
         if (toastText.equals("BOOLEAN_KEY")) {
             toastText = "You updated boolean key \"" + (String)key + "\" to \"" + String.valueOf(sharedPreferences.getBoolean(key, false)) + "\"";
         } else {
-            Log.d(TAG, "updated string is " + sharedPreferences.getString(key, ""));
+            Log.i(TAG, "updated string is " + sharedPreferences.getString(key, ""));
             toastText = "You updated key \"" + key + "\" to \"" + sharedPreferences.getString(key, "") + "\"";
         }
         if (additionalText != "") {

@@ -171,7 +171,7 @@
     </PreferenceScreen>
  <!-- End of separate screen for options from the MODE button -->
  <!-- Start the options for the ACC_ON and ACC_OFF settings for the receiver -->
-    <PreferenceScreen
+<!--    <PreferenceScreen
             android:title="@string/acc_on_settings"
             android:key="acc_on_settings">
             <SwitchPreference
@@ -201,7 +201,7 @@
                 android:title="@string/accon_syscall"
                 android:summary="@string/accon_syscall_summary"
                 android:defaultValue="" />
-    </PreferenceScreen>
+    </PreferenceScreen> -->
     <PreferenceScreen
             android:title="@string/acc_off_settings"
             android:key="acc_off_settings">
@@ -224,6 +224,40 @@
             android:summary="@string/accoff_syscall_summary"
             android:defaultValue="" />
     </PreferenceScreen>
+
+    <!-- Start the options for the USB_ON and USB_OFF settings for the receiver -->
+    <PreferenceScreen
+        android:title="@string/usb_on_settings"
+        android:key="usb_on_settings">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="switch_wifi_on"
+            android:summaryOn="@string/switch_on_wifi_during_usbon"
+            android:summaryOff="@string/dont_touch_wifi_during_usbon"
+            android:title="@string/switch_on_wifi" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="restart_player"
+            android:summaryOn="@string/restart_player_during_usbon"
+            android:summaryOff="@string/dont_restart_player_during_usbon"
+            android:title="@string/restart_player" />
+        <EditTextPreference
+            android:key="usbon_packagename_entry"
+            android:title="@string/usbon_packagename"
+            android:summary="@string/usbon_packagename_summary"
+            android:defaultValue="" />
+        <EditTextPreference
+            android:key="usbon_intent_entry"
+            android:title="@string/usbon_intent"
+            android:summary="@string/usbon_intent_summary"
+            android:defaultValue="" />
+        <EditTextPreference
+            android:key="usbon_syscall_entry"
+            android:title="@string/usbon_syscall"
+            android:summary="@string/usbon_syscall_summary"
+            android:defaultValue="" />
+    </PreferenceScreen>
+
 
  <!-- Finally the "preferece screen" to start the lit apps listactivity -->
     <Preference
