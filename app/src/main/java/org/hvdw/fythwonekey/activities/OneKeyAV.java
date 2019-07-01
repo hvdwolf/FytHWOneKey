@@ -33,7 +33,7 @@ public class OneKeyAV extends Activity {
         super.onCreate(savedInstanceState);
         mContext = getApplicationContext();
 
-        Log.d(TAG, "Started OneKeyAV; in OnCreate void");
+        Log.i(TAG, "Started OneKeyAV; in OnCreate void");
 
         packagename_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.AV_PACKAGENAME_ENTRY, "");
         intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.AV_INTENT_ENTRY, "");
@@ -43,12 +43,12 @@ public class OneKeyAV extends Activity {
 
         if ("".equals(packagename_call)) {
             //packagename_call unknown, start setup
-            Log.d(TAG, getString(R.string.pkg_notconfigured_short));
+            Log.i(TAG, getString(R.string.pkg_notconfigured_short));
             mToast = Toast.makeText(OneKeyAV.this, getString(R.string.pkg_notconfigured_long), Toast.LENGTH_SHORT);
             mToast.show();
             myUtils.startActivityByPackageName(mContext, "org.hvdw.fythwonekey");
         } else {
-            Log.d(TAG, getString(R.string.pkg_configured_short) + " " + packagename_call);
+            Log.i(TAG, getString(R.string.pkg_configured_short) + " " + packagename_call);
             //Start AV app or whatever app the user has configured
             myUtils.startActivityByPackageName(mContext, packagename_call);
         }

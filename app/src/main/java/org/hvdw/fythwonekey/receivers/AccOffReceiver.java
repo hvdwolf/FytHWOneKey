@@ -30,26 +30,26 @@ public class AccOffReceiver extends BroadcastReceiver {
         pause_player = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(MySettings.PAUSE_PLAYER, true);
         sys_call = PreferenceManager.getDefaultSharedPreferences(context).getString(MySettings.ACCOFF_SYSCALL_ENTRY, "");
 
-        Log.d(TAG, "Detected an ACCOFF broadcast");
+        Log.i(TAG, "Detected an ACCOFF broadcast");
 
         if (switch_wifi_off == true) {
-            Log.d(TAG, "Switch Off WiFi");
+            Log.i(TAG, "Switch Off WiFi");
             WifiManager wifiManager = (WifiManager) context.getSystemService(context.WIFI_SERVICE);
             wifiManager.setWifiEnabled(false);
-            Log.d(TAG, "Switched Off WiFi");
+            Log.i(TAG, "Switched Off WiFi");
         } else {
-            Log.d(TAG, "It is not requested to switch off WiFi");
+            Log.i(TAG, "It is not requested to switch off WiFi");
         }
 
         if (pause_player == true) {
-            Log.d(TAG, "Pause the active media player");
+            Log.i(TAG, "Pause the active media player");
             //myUtils.shellExec("input keyevent 127");
             myUtils.sendMediaCommand(context, "KEYCODE_MEDIA_PAUSE", true);
             myUtils.sendMediaCommand(context, "KEYCODE_MEDIA_PAUSE", false);
         }
 
         if (!"".equals(sys_call)) {
-            Log.d(TAG, "do a system call");
+            Log.i(TAG, "do a system call");
             myUtils.shellExec(sys_call);
         }
     }

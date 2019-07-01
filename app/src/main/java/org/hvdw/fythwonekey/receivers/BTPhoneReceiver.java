@@ -34,13 +34,13 @@ public class BTPhoneReceiver extends BroadcastReceiver {
 
         if ("".equals(packagename_call)) {
             //packagename_call unknown, start setup
-            Log.d(TAG, context.getResources().getString(R.string.pkg_notconfigured_short));
+            Log.i(TAG, context.getResources().getString(R.string.pkg_notconfigured_short));
             //mToast = Toast.makeText(OneKeyBTPhone.this, context.getResources().getString(R.string.pkg_sys_notconfigured_long), Toast.LENGTH_SHORT);
             mToast = Toast.makeText(context, "BTPhone replacement package not configured", Toast.LENGTH_SHORT);
             mToast.show();
             myUtils.startActivityByPackageName(context, "org.hvdw.fythwonekey");
         } else {
-            Log.d(TAG, context.getResources().getString(R.string.pkg_configured_short) + " " + packagename_call);
+            Log.i(TAG, context.getResources().getString(R.string.pkg_configured_short) + " " + packagename_call);
             //Start BTPHONE app or whatever app the user has configured
             myUtils.startActivityByPackageName(context, packagename_call);
         }

@@ -34,36 +34,36 @@ public class AccOnReceiver extends BroadcastReceiver {
         sys_call = PreferenceManager.getDefaultSharedPreferences(context).getString(MySettings.ACCON_SYSCALL_ENTRY, "");
 
 
-        Log.d(TAG, "Detected an ACCON broadcast");
+        Log.i(TAG, "Detected an ACCON broadcast");
 
             if (switch_wifi_on == true) {
-                Log.d(TAG, "Switch On WiFi");
+                Log.i(TAG, "Switch On WiFi");
                 WifiManager wifiManager = (WifiManager) context.getSystemService(context.WIFI_SERVICE);
                 wifiManager.setWifiEnabled(true);
-                Log.d(TAG, "Switched On WiFi");
+                Log.i(TAG, "Switched On WiFi");
             } else {
-                Log.d(TAG, "It is not requested to switch on WiFi");
+                Log.i(TAG, "It is not requested to switch on WiFi");
             }
 
             if (restart_player == true) {
-                Log.d(TAG, "Restart the active default media player");
+                Log.i(TAG, "Restart the active default media player");
                 //myUtils.shellExec("input keyevent 126");
                 myUtils.sendMediaCommand(context, "KEYCODE_MEDIA_PLAY", true);
                 myUtils.sendMediaCommand(context, "KEYCODE_MEDIA_PLAY", false);
             }
 
             if (!"".equals(packagename_call)) {
-                Log.d(TAG, "call apk by packagename");
+                Log.i(TAG, "call apk by packagename");
                 myUtils.startActivityByPackageName(context, packagename_call);
             }
 
             if (!"".equals(intent_call)) {
-                Log.d(TAG, "call apk by intent");
+                Log.i(TAG, "call apk by intent");
                 myUtils.startActivityByIntentName(context, intent_call);
             }
 
             if (!"".equals(sys_call)) {
-                Log.d(TAG, "do a system call");
+                Log.i(TAG, "do a system call");
                 myUtils.shellExec(sys_call);
             }
     } /* end of onReceive */

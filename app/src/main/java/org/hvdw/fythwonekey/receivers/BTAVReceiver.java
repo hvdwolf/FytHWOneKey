@@ -38,14 +38,14 @@ public class BTAVReceiver extends BroadcastReceiver {
 
         if ("".equals(packagename_call)) {
             //packagename_call unknown, start setup
-            Log.d(TAG, context.getResources().getString(R.string.pkg_notconfigured_short));
+            Log.i(TAG, context.getResources().getString(R.string.pkg_notconfigured_short));
             //String message = extras.getString(R.string.pkg_sys_notconfigured_long);
             //mToast = Toast.makeText(context, getString(R.string.pkg_sys_notconfigured_long), Toast.LENGTH_SHORT);
             mToast = Toast.makeText(context, "BTAV replacement package not configured", Toast.LENGTH_SHORT);
             mToast.show();
             myUtils.startActivityByPackageName(context, "org.hvdw.fythwonekey");
         } else {
-            Log.d(TAG, context.getResources().getString(R.string.pkg_configured_short) + " " + packagename_call);
+            Log.i(TAG, context.getResources().getString(R.string.pkg_configured_short) + " " + packagename_call);
             //Start BTAV app or whatever app the user has configured
             myUtils.startActivityByPackageName(context, packagename_call);
         }

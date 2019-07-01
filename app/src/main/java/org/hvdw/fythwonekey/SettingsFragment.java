@@ -45,12 +45,12 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
         setRetainInstance(true);
 
         if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.N){
-            Log.d(TAG, "onCreate: in Sofia 6.0.1 sdk23");
+            Log.i(TAG, "onCreate: in Sofia 6.0.1 sdk23");
             //Running on Sofia 6.0.1 sdk23
             getPreferenceManager().setSharedPreferencesMode(Context.MODE_WORLD_READABLE);
             addPreferencesFromResource(R.xml.preferences);
         } else {
-            Log.d(TAG, "onCreate: Running on Android 8.0.0 sdk26");
+            Log.i(TAG, "onCreate: Running on Android 8.0.0 sdk26");
             getPreferenceManager().setSharedPreferencesMode(Context.MODE_PRIVATE);
             addPreferencesFromResource(R.xml.preferences);
         }
@@ -238,15 +238,15 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
                 intent.putExtra(MySettings.EXTRA_ACCOFF_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
             default:
-                Log.d(TAG, "Invalid setting encountered");
+                Log.i(TAG, "Invalid setting encountered");
                 break;
        }
 
-        Log.d(TAG, "updated key is " + key);
+        Log.i(TAG, "updated key is " + key);
         if (toastText.equals("BOOLEAN_KEY")) {
             toastText = "You updated boolean key \"" + (String)key + "\" to \"" + String.valueOf(sharedPreferences.getBoolean(key, false)) + "\"";
         } else {
-            Log.d(TAG, "updated string is " + sharedPreferences.getString(key, ""));
+            Log.i(TAG, "updated string is " + sharedPreferences.getString(key, ""));
             toastText = "You updated key \"" + key + "\" to \"" + sharedPreferences.getString(key, "") + "\"";
         }
         if (additionalText != "") {
