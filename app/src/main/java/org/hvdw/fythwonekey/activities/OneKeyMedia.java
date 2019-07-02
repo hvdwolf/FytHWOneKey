@@ -33,18 +33,7 @@ public class OneKeyMedia extends Activity {
         //String sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.MEDIA_SYSCALL_ENTRY, "");
 
         Utils myUtils = new Utils();
-
-        if ("".equals(packagename_call)) {
-            //packagename_call unknown, start setup
-            Log.i(TAG, getString(R.string.pkg_notconfigured_short));
-            mToast = Toast.makeText(OneKeyMedia.this, getString(R.string.pkg_notconfigured_long), Toast.LENGTH_SHORT);
-            mToast.show();
-            myUtils.startActivityByPackageName(mContext, "org.hvdw.fythwonekey");
-        } else {
-            Log.i(TAG, getString(R.string.pkg_configured_short) + " " + packagename_call);
-            //Start music app or whatever app the user has configured
-            myUtils.startActivityByPackageName(mContext, packagename_call);
-        }
+        myUtils.checkAndRunOptions(mContext, packagename_call);
 
         finish();
     }

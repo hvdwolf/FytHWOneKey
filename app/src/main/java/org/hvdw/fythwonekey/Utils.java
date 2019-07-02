@@ -61,17 +61,20 @@ public class Utils {
     };
 
     //public void checkAndRunOptions(Context context, String packageName_Call, String intent_call, final String sys_Call) {
-    public void checkAndRunOptions(Context context, String packageName_Call) {
-        if ("".equals(packageName_Call)) {
+    public void checkAndRunOptions(Context context, String packageName) {
+        if ("".equals(packageName)) {
             //packagename_call unknown, start setup
-            Log.i(TAG, Resources.getSystem().getString(R.string.pkg_notconfigured_short));
-            mToast = Toast.makeText(context, Resources.getSystem().getString(R.string.pkg_notconfigured_long), Toast.LENGTH_SHORT);
+            //Log.i(TAG, Resources.getSystem().getString(R.string.pkg_notconfigured_short));
+            Log.i(TAG, "no package configured");
+            //mToast = Toast.makeText(context, Resources.getSystem().getString(R.string.pkg_notconfigured_long), Toast.LENGTH_SHORT);
+            mToast = Toast.makeText(context, "No package configured, starting Config screen for setup.", mToast.LENGTH_SHORT);
             mToast.show();
             startActivityByPackageName(context, "org.hvdw.fythwonekey");
         } else {
-            Log.i(TAG, Resources.getSystem().getString(R.string.pkg_configured_short) + " " + packageName_Call);
-            //Start AV app or whatever app the user has configured
-            startActivityByPackageName(context, packageName_Call);
+            //Log.i(TAG, Resources.getSystem().getString(R.string.pkg_configured_short) + " " + packageName);
+            Log.i(TAG, "Configured package : " + packageName);
+            //Start whatever app the user has configured
+            startActivityByPackageName(context, packageName);
         }
     }
 

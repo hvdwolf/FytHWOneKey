@@ -31,20 +31,9 @@ public class OneKeyVIDEO extends Activity {
         String packagename_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.VIDEO_PACKAGENAME_ENTRY, "");
         //String intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.VIDEO_INTENT_ENTRY, "");
         //String sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.VIDEO_SYSCALL_ENTRY, "");
-        
-        Utils myUtils = new Utils();
 
-        if ("".equals(packagename_call)) {
-            //packagename_call unknown, start setup
-            Log.i(TAG, getString(R.string.pkg_notconfigured_short));
-            mToast = Toast.makeText(OneKeyVIDEO.this, getString(R.string.pkg_notconfigured_long), Toast.LENGTH_SHORT);
-            mToast.show();
-            myUtils.startActivityByPackageName(mContext, "org.hvdw.fythwonekey");
-        } else {
-            Log.i(TAG, getString(R.string.pkg_configured_short) + " " + packagename_call);
-            //Start VIDEO app or whatever app the user has configured
-            myUtils.startActivityByPackageName(mContext, packagename_call);
-        }
+        Utils myUtils = new Utils();
+        myUtils.checkAndRunOptions(mContext, packagename_call);
 
         finish();
     }
