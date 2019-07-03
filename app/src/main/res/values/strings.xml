@@ -26,7 +26,8 @@
     <string name="video_settings">Configure the Video option (derived from the MODE button)</string>
 
     <string name="packagename">Start apk by package name.</string>
-    <string name="packagename_summary">Separate multiple package names with a semicolon (;)</string>
+    <!-- <string name="packagename_summary">Separate multiple package names with a semicolon (;)</string> -->
+    <string name="packagename_summary">Add the package name</string>
     <string name="intent">Start apk by intent.</string>
     <string name="intent_summary">Separate multiple intents with a semicolon (;)</string>
     <string name="syscall">Execute system call(s) to execute linux command/script.</string>
