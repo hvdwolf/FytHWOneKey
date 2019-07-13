@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" package="org.hvdw.fythwonekey">
 
-    <uses-feature android:name="android.hardware.usb.host" />
+    <!-- <uses-feature android:name="android.hardware.usb.host" /> -->
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
-    <uses-permission android:name="android.permission.USB_PERMISSION" />
+    <!-- <uses-permission android:name="android.permission.USB_PERMISSION" /> -->
 
     <application
         android:allowBackup="true"
@@ -273,7 +273,15 @@
 <!-- ==================================================================================== -->
 
         <!-- Broadcast receivers to catch the ACC_ON and ACC_OFF broadcasts -->
-        <!-- <receiver android:name=".receivers.AccOnReceiver"
+        <!--
+            The Acc_ON and ACC_OFF receivers only work on Android 6 and below.
+            It means that we leve this in here as general starter for Android 6.
+            For Android 8.x we create a Fytacc.apk that mimics the "com.yh.devicehelper" by using that package name.
+            which is used on some Chinese FYT units and which is always(!) started on wake-up.
+            My Fytaccon with package name "com.yh.devicehelper" will start the FytHWOnekey apk
+            by its AccOnReciever intent
+        -->
+        <receiver android:name=".receivers.AccOnReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
@@ -286,7 +294,7 @@
             android:exported="true">
                 </action>
             </intent-filter>
-        </receiver> -->
+        </receiver>
         <receiver android:name=".receivers.AccOffReceiver" >
             <intent-filter>
                 <action android:name="com.fyt.boot.ACCOFF" >
@@ -298,13 +306,14 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".receivers.UsbReceiver"
+        <!-- Deactivate the USB on receiver. In practice it is not always activated and therefore an unstable method -->
+        <!--<receiver android:name=".receivers.UsbReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
             </intent-filter>
-        </receiver>
+        </receiver> -->
 <!-- ==================================================================================== -->
 <!-- Below are the several broadcast receivers for BTPhone and BTAV for the BT app        -->
 <!-- ==================================================================================== -->
