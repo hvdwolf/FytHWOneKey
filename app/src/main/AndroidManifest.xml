@@ -43,7 +43,7 @@
 <!-- ==================================================================================== -->
 
         <!-- The activity and alias for the BAND button -->
-        <activity android:name=".activities.OneKeyBAND" android:label="@string/band_alias">
+        <activity android:name=".activities.OneKeyBAND" android:label="@string/band_alias" android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
                 <action android:name="android.intent.action.MAIN"/>
@@ -72,7 +72,7 @@
         </activity-alias>
 
         <!-- The activity and alias for the DVD button -->
-        <activity android:name=".activities.OneKeyDVD" android:label="@string/dvd_alias">
+        <activity android:name=".activities.OneKeyDVD" android:label="@string/dvd_alias" android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
                 <action android:name="android.intent.action.MAIN"/>
@@ -100,7 +100,7 @@
         </activity-alias>
 
         <!-- The aliases for the Media button / Music player -->
-        <activity android:name=".activities.OneKeyMedia" android:label="@string/media_alias">
+        <activity android:name=".activities.OneKeyMedia" android:label="@string/media_alias" android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
                 <action android:name="android.intent.action.MAIN"/>
@@ -143,7 +143,7 @@
         </activity-alias>
 
         <!-- The activity and alias for the EQ button -->
-        <activity android:name=".activities.OneKeyEQ" android:label="@string/eq_alias">
+        <activity android:name=".activities.OneKeyEQ" android:label="@string/eq_alias" android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
                 <action android:name="android.intent.action.MAIN"/>
@@ -168,7 +168,7 @@
         </activity-alias>
 
         <!-- The activity and alias for the BT Phone option; derived from the MODE carrousel button -->
-        <activity android:name=".activities.OneKeyBTPhone" android:label="@string/btphone_alias">
+        <activity android:name=".activities.OneKeyBTPhone" android:label="@string/btphone_alias" android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
                 <action android:name="android.intent.action.MAIN"/>
@@ -195,7 +195,7 @@
         </activity-alias>
 
         <!-- The activity and alias for the BT AV option; derived from the MODE carrousel button-->
-        <activity android:name=".activities.OneKeyBTAV" android:label="@string/btav_alias">
+        <activity android:name=".activities.OneKeyBTAV" android:label="@string/btav_alias" android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
                 <action android:name="android.intent.action.MAIN"/>
@@ -214,7 +214,7 @@
         </activity-alias>
 
         <!-- The activity and alias for the Video option; derived from the MODE carrousel button-->
-        <activity android:name=".activities.OneKeyVIDEO" android:label="@string/video_alias">
+        <activity android:name=".activities.OneKeyVIDEO" android:label="@string/video_alias" android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
                 <action android:name="android.intent.action.MAIN"/>
@@ -242,7 +242,7 @@
         </activity-alias>
 
         <!-- The activity and alias for the AV option; derived from the MODE carrousel button-->
-        <activity android:name=".activities.OneKeyAV" android:label="@string/av_alias">
+        <activity android:name=".activities.OneKeyAV" android:label="@string/av_alias" android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
                 <action android:name="android.intent.action.MAIN"/>
@@ -295,6 +295,14 @@
                 </action>
             </intent-filter>
         </receiver>
+        <!-- now make the activity for the Fytaccon.apk -->
+        <activity android:name=".activity.AccOn" >
+            <intent-filter>
+                <action android:name="org.hvdw.fythwonekey.activity.AccOn" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <receiver android:name=".receivers.AccOffReceiver" >
             <intent-filter>
                 <action android:name="com.fyt.boot.ACCOFF" >
