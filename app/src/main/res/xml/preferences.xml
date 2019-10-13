@@ -202,7 +202,7 @@
                 android:summary="@string/accon_syscall_summary"
                 android:defaultValue="" />
     </PreferenceScreen> -->
-    <PreferenceScreen
+<!--    <PreferenceScreen
             android:title="@string/acc_off_settings"
             android:key="acc_off_settings">
         <SwitchPreference
@@ -223,10 +223,12 @@
             android:title="@string/accoff_syscall"
             android:summary="@string/accoff_syscall_summary"
             android:defaultValue="" />
-    </PreferenceScreen>
+    </PreferenceScreen> -->
 
     <!-- Start the options for the USB_ON and USB_OFF settings for the receiver -->
-    <PreferenceScreen
+    <!-- It is very unstable, at least on my system as I get a lot of USB disconnects/reconnects for no obvious reason. 
+         Remove again but leave it in, in case someone smarter can make it work reliable -->
+<!--    <PreferenceScreen
         android:title="@string/usb_on_settings"
         android:key="usb_on_settings">
         <SwitchPreference
@@ -256,7 +258,7 @@
             android:title="@string/usbon_syscall"
             android:summary="@string/usbon_syscall_summary"
             android:defaultValue="" />
-    </PreferenceScreen>
+    </PreferenceScreen> -->
 
 
  <!-- Finally the "preferece screen" to start the lit apps listactivity -->
