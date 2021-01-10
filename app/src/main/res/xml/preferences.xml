@@ -260,6 +260,15 @@
             android:defaultValue="" />
     </PreferenceScreen> -->
 
+    <PreferenceScreen
+        android:title="@string/voice_settings"
+        android:key="voice_settings">
+        <EditTextPreference
+            android:key="voice_packagename_entry"
+            android:title="@string/packagename"
+            android:summary="@string/packagename_summary"
+            android:defaultValue="com.txznet.smartadapter" />
+    </PreferenceScreen>
 
  <!-- Finally the "preferece screen" to start the lit apps listactivity -->
     <Preference
