@@ -42,35 +42,19 @@
 <!-- Below are the several aliases we need for the Joying/FYT apps -->
 <!-- ==================================================================================== -->
 
-        <!-- The activity and alias for the BAND button -->
+        <!-- The activity and alias for the BAND (Radio) button -->
         <activity android:name=".activities.OneKeyBAND" android:label="@string/band_alias" android:theme="@android:style/Theme.NoDisplay">
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
-        <activity-alias android:name="com.syu.radio.act.ActRadio"
+        <activity-alias android:name=".com.syu.radio.Launch"
             android:targetActivity=".activities.OneKeyBAND"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.syu.radio.set"/>
                 <category android:name="android.intent.category.DEFAULT"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="radio"/>
-            </intent-filter>
-        </activity-alias>
-        <activity-alias android:name="com.syu.radio.Launch"
-            android:targetActivity=".activities.OneKeyBAND"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
             <intent-filter>
                 <action android:name="com.syu.radio"/>
@@ -86,8 +70,26 @@
                 <data android:scheme="radio"/>
             </intent-filter>
         </activity-alias>
+        <!-- This one is probably not working -->
+        <!--<activity-alias android:name="com.syu.radio.act.ActRadio"
+            android:targetActivity=".activities.OneKeyBAND"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.syu.radio.set"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="radio"/>
+            </intent-filter>
+        </activity-alias> -->
         <!-- Below alias for carradio ??? -->
-        <activity-alias android:name="com.syu.carradio.ActivityLauncher"
+        <!--<activity-alias android:name="com.syu.carradio.ActivityLauncher"
             android:targetActivity=".activities.OneKeyBAND"
             android:exported="true" >
             <intent-filter>
@@ -95,7 +97,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <action android:name="com.syu.carradio"/>
             </intent-filter>
-        </activity-alias>
+        </activity-alias>-->
 
         <!-- The activity and alias for the DVD button -->
         <activity android:name=".activities.OneKeyDVD" android:label="@string/dvd_alias" android:theme="@android:style/Theme.NoDisplay">
