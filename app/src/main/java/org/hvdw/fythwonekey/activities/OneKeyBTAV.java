@@ -9,7 +9,6 @@ import android.preference.PreferenceManager;
 import android.widget.Toast;
 
 import org.hvdw.fythwonekey.MySettings;
-import org.hvdw.fythwonekey.R;
 import org.hvdw.fythwonekey.Utils;
 
 
@@ -28,12 +27,12 @@ public class OneKeyBTAV extends Activity {
 
         Log.i(TAG, "Started OneKeyBTAV; in OnCreate void");
 
-        String packagename_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTAV_PACKAGENAME_ENTRY, "");
-        //String intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTAV_INTENT_ENTRY, "");
-        //String sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTAV_SYSCALL_ENTRY, "");
+        String key_call_option = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTAV_CALL_OPTION, "");
+        String key_call_entry = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTAV_CALL_ENTRY, "");
 
         Utils myUtils = new Utils();
-        myUtils.checkAndRunOptions(mContext, packagename_call);
+        myUtils.whichActionToPerform(mContext, key_call_option, key_call_entry);
+        //myUtils.checkAndRunOptions(mContext, key_call_option);
 
         finish();
     }

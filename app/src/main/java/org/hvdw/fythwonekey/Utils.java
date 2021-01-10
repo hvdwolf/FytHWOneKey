@@ -6,7 +6,6 @@ import android.content.ComponentName;
 import android.content.pm.PackageManager;
 import android.content.SharedPreferences;
 
-import android.content.res.Resources;
 import android.media.AudioManager;
 import android.preference.PreferenceManager;
 import android.util.Log;

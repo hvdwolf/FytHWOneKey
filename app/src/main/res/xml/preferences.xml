@@ -2,14 +2,20 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceScreen
-            android:title="@string/band_settings"
-            android:key="band_settings">
-            <EditTextPreference
-                android:key="band_packagename_entry"
-                android:title="@string/packagename"
-                android:summary="@string/packagename_summary"
-                android:defaultValue="com.syu.radio" />
-<!--            <EditTextPreference
+        android:title="@string/band_settings"
+        android:key="band_settings">
+        <ListPreference
+            android:key="band_key_call_option"
+            android:entries="@array/key_call_entries"
+            android:entryValues="@array/key_call_values"
+            android:defaultValue="pkgname"
+            android:title="@string/band_key_call_title" />
+        <EditTextPreference
+            android:key="band_call_entry"
+            android:title="@string/band_key_text_title"
+            android:summary="@string/call_method_summary"
+            android:defaultValue="com.syu.radio" />
+            <!--<EditTextPreference
                 android:key="band_intent_entry"
                 android:title="@string/intent"
                 android:summary="@string/intent_summary"
@@ -23,13 +29,19 @@
 
 
     <PreferenceScreen
-            android:title="@string/dvd_settings"
-            android:key="dvd_settings">
-            <EditTextPreference
-                android:key="dvd_packagename_entry"
-                android:title="@string/packagename"
-                android:summary="@string/packagename_summary"
-                android:defaultValue="com.syu.dvd" />
+        android:title="@string/dvd_settings"
+        android:key="dvd_settings">
+        <ListPreference
+            android:key="dvd_key_call_option"
+            android:entries="@array/key_call_entries"
+            android:entryValues="@array/key_call_values"
+            android:defaultValue="pkgname"
+            android:title="@string/dvd_key_call_title" />
+        <EditTextPreference
+            android:key="dvd_call_entry"
+            android:title="@string/dvd_key_text_title"
+            android:summary="@string/call_method_summary"
+            android:defaultValue="com.syu.dvd" />
 <!--            <EditTextPreference
                 android:key="dvd_intent_entry"
                 android:title="@string/intent"
@@ -43,13 +55,19 @@
     </PreferenceScreen>
 
     <PreferenceScreen
-            android:title="@string/media_settings"
-            android:key="media_settings">
-            <EditTextPreference
-                android:key="media_packagename_entry"
-                android:title="@string/packagename"
-                android:summary="@string/packagename_summary"
-                android:defaultValue="com.syu.music" />
+        android:title="@string/media_settings"
+        android:key="media_settings">
+        <ListPreference
+            android:key="media_key_call_option"
+            android:entries="@array/key_call_entries"
+            android:entryValues="@array/key_call_values"
+            android:defaultValue="pkgname"
+            android:title="@string/media_key_call_title" />
+        <EditTextPreference
+            android:key="media_call_entry"
+            android:title="@string/media_key_text_title"
+            android:summary="@string/call_method_summary"
+            android:defaultValue="com.syu.music" />
 <!--            <EditTextPreference
                 android:key="media_intent_entry"
                 android:title="@string/intent"
@@ -63,13 +81,19 @@
     </PreferenceScreen>
 
     <PreferenceScreen
-            android:title="@string/eq_settings"
-            android:key="eq_settings">
-            <EditTextPreference
-                android:key="eq_packagename_entry"
-                android:title="@string/packagename"
-                android:summary="@string/packagename_summary"
-                android:defaultValue="com.syu.eq" />
+        android:title="@string/eq_settings"
+        android:key="eq_settings">
+        <ListPreference
+            android:key="eq_key_call_option"
+            android:entries="@array/key_call_entries"
+            android:entryValues="@array/key_call_values"
+            android:defaultValue="pkgname"
+            android:title="@string/eq_key_call_title" />
+        <EditTextPreference
+            android:key="eq_call_entry"
+            android:title="@string/eq_key_text_title"
+            android:summary="@string/call_method_summary"
+            android:defaultValue="com.syu.eq" />
 <!--            <EditTextPreference
                 android:key="eq_intent_entry"
                 android:title="@string/intent"
@@ -80,26 +104,26 @@
                 android:title="@string/syscall"
                 android:summary="@string/syscall_summary"
                 android:defaultValue="" /> -->
-            <ListPreference
-                android:key="eq_media_key_option"
-                android:entries="@array/media_key_entries"
-                android:entryValues="@array/media_key_values"
-                android:defaultValue="pkgname"
-                android:title="@string/media_key_title" />
     </PreferenceScreen>
 
  <!-- Separate screen for options from the MODE button -->
     <PreferenceScreen
-            android:title="@string/mode_settings"
-            android:key="mode_settings">
+        android:title="@string/mode_settings"
+        android:key="mode_settings">
         <PreferenceScreen
-                android:title="@string/btav_settings"
-                android:key="btav_settings">
-                <EditTextPreference
-                    android:key="btav_packagename_entry"
-                    android:title="@string/packagename"
-                    android:summary="@string/packagename_summary"
-                    android:defaultValue="com.syu.bt" />
+            android:title="@string/btav_settings"
+            android:key="btav_settings">
+            <ListPreference
+                android:key="btav_key_call_option"
+                android:entries="@array/key_call_entries"
+                android:entryValues="@array/key_call_values"
+                android:defaultValue="pkgname"
+                android:title="@string/btav_key_call_title" />
+            <EditTextPreference
+                android:key="btav_call_entry"
+                android:title="@string/btav_key_text_title"
+                android:summary="@string/call_method_summary"
+                android:defaultValue="com.syu.bt" />
 <!--                <EditTextPreference
                     android:key="btav_intent_entry"
                     android:title="@string/intent"
@@ -112,13 +136,19 @@
                     android:defaultValue="" /> -->
         </PreferenceScreen>
         <PreferenceScreen
-                android:title="@string/btphone_settings"
-                android:key="btphone_settings">
-                <EditTextPreference
-                    android:key="btphone_packagename_entry"
-                    android:title="@string/packagename"
-                    android:summary="@string/packagename_summary"
-                    android:defaultValue="com.syu.bt" />
+            android:title="@string/btphone_settings"
+            android:key="btphone_settings">
+            <ListPreference
+                android:key="btphone_key_call_option"
+                android:entries="@array/key_call_entries"
+                android:entryValues="@array/key_call_values"
+                android:defaultValue="pkgname"
+                android:title="@string/btphone_key_call_title" />
+            <EditTextPreference
+                android:key="btphone_call_entry"
+                android:title="@string/btphone_key_text_title"
+                android:summary="@string/call_method_summary"
+                android:defaultValue="com.syu.bt" />
 <!--                <EditTextPreference
                     android:key="btphone_intent_entry"
                     android:title="@string/intent"
@@ -131,13 +161,19 @@
                     android:defaultValue="" /> -->
         </PreferenceScreen>
         <PreferenceScreen
-                android:title="@string/av_settings"
-                android:key="av_settings">
-                <EditTextPreference
-                    android:key="av_packagename_entry"
-                    android:title="@string/packagename"
-                    android:summary="@string/packagename_summary"
-                    android:defaultValue="com.syu.av" />
+            android:title="@string/av_settings"
+            android:key="av_settings">
+            <ListPreference
+                android:key="av_key_call_option"
+                android:entries="@array/key_call_entries"
+                android:entryValues="@array/key_call_values"
+                android:defaultValue="pkgname"
+                android:title="@string/av_key_call_title" />
+            <EditTextPreference
+                android:key="av_call_entry"
+                android:title="@string/av_key_text_title"
+                android:summary="@string/call_method_summary"
+                android:defaultValue="com.syu.av" />
 <!--                <EditTextPreference
                     android:key="av_intent_entry"
                     android:title="@string/intent"
@@ -150,13 +186,19 @@
                     android:defaultValue="" /> -->
         </PreferenceScreen>
         <PreferenceScreen
-                android:title="@string/video_settings"
-                android:key="video_settings">
-                <EditTextPreference
-                    android:key="video_packagename_entry"
-                    android:title="@string/packagename"
-                    android:summary="@string/packagename_summary"
-                    android:defaultValue="com.syu.video" />
+            android:title="@string/video_settings"
+            android:key="video_settings">
+            <ListPreference
+                android:key="video_key_call_option"
+                android:entries="@array/key_call_entries"
+                android:entryValues="@array/key_call_values"
+                android:defaultValue="pkgname"
+                android:title="@string/video_key_call_title" />
+            <EditTextPreference
+                android:key="video_call_entry"
+                android:title="@string/video_key_text_title"
+                android:summary="@string/call_method_summary"
+                android:defaultValue="com.syu.video" />
 <!--                <EditTextPreference
                     android:key="video_intent_entry"
                     android:title="@string/intent"
@@ -187,7 +229,7 @@
                 android:summaryOff="@string/dont_restart_player_during_accon"
                 android:title="@string/restart_player" />
             <EditTextPreference
-                android:key="accon_packagename_entry"
+                android:key="accon_call_entry"
                 android:title="@string/accon_packagename"
                 android:summary="@string/accon_packagename_summary"
                 android:defaultValue="" />
@@ -244,7 +286,7 @@
             android:summaryOff="@string/dont_restart_player_during_usbon"
             android:title="@string/restart_player" />
         <EditTextPreference
-            android:key="usbon_packagename_entry"
+            android:key="usbon_call_entry"
             android:title="@string/usbon_packagename"
             android:summary="@string/usbon_packagename_summary"
             android:defaultValue="" />
@@ -260,17 +302,17 @@
             android:defaultValue="" />
     </PreferenceScreen> -->
 
-    <PreferenceScreen
+<!--    <PreferenceScreen
         android:title="@string/voice_settings"
         android:key="voice_settings">
         <EditTextPreference
-            android:key="voice_packagename_entry"
+            android:key="voice_call_entry"
             android:title="@string/packagename"
             android:summary="@string/packagename_summary"
             android:defaultValue="com.txznet.smartadapter" />
-    </PreferenceScreen>
+    </PreferenceScreen> -->
 
- <!-- Finally the "preferece screen" to start the lit apps listactivity -->
+ <!-- Finally the "preference screen" to start the lit apps listactivity -->
     <Preference
         android:key="listapps"
         android:title="@string/listapps_title"

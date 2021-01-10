@@ -14,9 +14,6 @@ import org.hvdw.fythwonekey.Utils;
 public class OneKeyVoice extends Activity {
     public static final String TAG = "OneKeyVoice";
     public static Context mContext;
-    private static PackageManager pm;
-    Toast mToast;
-
 
 
     @Override
@@ -26,12 +23,11 @@ public class OneKeyVoice extends Activity {
 
         Log.i(TAG, "Started OneKeyVoice; in OnCreate void");
 
-        String packagename_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.VOICE_PACKAGENAME_ENTRY, "");
-        //String intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.AV_INTENT_ENTRY, "");
-        //String sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.AV_SYSCALL_ENTRY, "");
+        String key_call_option = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.VOICE_CALL_OPTION, "");
+        String key_call_entry = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.AV_CALL_ENTRY, "");
 
         Utils myUtils = new Utils();
-        myUtils.checkAndRunOptions(mContext, packagename_call);
+        myUtils.checkAndRunOptions(mContext, key_call_option);
 
         finish();
     }

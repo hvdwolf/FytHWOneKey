@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string-array name="key_call_entries">
+        <item>by package name</item>
+        <item>by intent (package name/intent)</item>
+    <item>by system call (terminal command or script)</item>
+    </string-array>
+    <string-array name="key_call_values">
+        <item>pkgname</item>
+        <item>pkg_intent</item>
+    <item>sys_call</item>
+    </string-array>
+
     <string-array name="media_key_entries">
         <item>No mediakey, use the package name function</item>
         <item>Next button</item>
