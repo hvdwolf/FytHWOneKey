@@ -16,6 +16,11 @@ The apk can be downloaded from the [Releases](https://github.com/hvdwolf/FytHWOn
  - by system call (terminal command(s) or script)
 
 ### 1. Open the "FytHWOneKey" app.<br>
+![main configurescreen](https://github.com/hvdwolf/FytHWOneKey/blob/master/images/configurescreen.jpg)<br><br>
+Select for example the BAND option<br>
+![configurescreen 2](https://github.com/hvdwolf/FytHWOneKey/blob/master/images/configurescreen-2.jpg)<br><br>
+And click the "Call method"<br>
+![configurescreen 3](https://github.com/hvdwolf/FytHWOneKey/blob/master/images/configurescreen-3.jpg)<br><br><br>
 **by package name:** This is NOT the name of the apk but the internal package name. 
 How do you get this "package name"?
  - Use the "List all Installed apps" option in the main screen of the settings. It shows the app icon, the app name and the package name. This package name is what you need. You can select it and copy & paste it into the field.
