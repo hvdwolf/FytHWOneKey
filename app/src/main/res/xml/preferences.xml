@@ -4,12 +4,18 @@
     <PreferenceScreen
             android:title="@string/band_settings"
             android:key="band_settings">
+            <ListPreference
+                    android:key="band_key_call_option"
+                    android:entries="@array/key_call_entries"
+                    android:entryValues="@array/key_call_values"
+                    android:defaultValue="pkgname"
+                    android:title="@string/band_key_call_title" />
             <EditTextPreference
                 android:key="band_packagename_entry"
-                android:title="@string/packagename"
-                android:summary="@string/packagename_summary"
+                android:title="@string/band_key_text_title"
+                android:summary="@string/call_method_summary"
                 android:defaultValue="com.syu.radio" />
-<!--            <EditTextPreference
+            <!--<EditTextPreference
                 android:key="band_intent_entry"
                 android:title="@string/intent"
                 android:summary="@string/intent_summary"
@@ -24,13 +30,14 @@
 
     <PreferenceScreen
             android:title="@string/dvd_settings"
-            android:key="dvd_settings">
+            android:key="dvd_settings"
+            android:summary="dvd_settings_summary">
             <EditTextPreference
                 android:key="dvd_packagename_entry"
                 android:title="@string/packagename"
                 android:summary="@string/packagename_summary"
                 android:defaultValue="com.syu.dvd" />
-<!--            <EditTextPreference
+            <EditTextPreference
                 android:key="dvd_intent_entry"
                 android:title="@string/intent"
                 android:summary="@string/intent_summary"
@@ -39,7 +46,7 @@
                 android:key="dvd_syscall_entry"
                 android:title="@string/syscall"
                 android:summary="@string/syscall_summary"
-                android:defaultValue="" /> -->
+                android:defaultValue="" />
     </PreferenceScreen>
 
     <PreferenceScreen

@@ -51,6 +51,16 @@ public class MySettings {
     public static final String ACTION_MEDIA_SYSCALL_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_MEDIA_SYSCALL_ENTRY_CHANGED";
     public static final String EXTRA_MEDIA_SYSCALL_ENTRY_STRING = "org.hvdw.fythwonekey.extra.PREF_MEDIA_SYSCALL_ENTRY_STRING";
 
+    public static final String VOICE_PACKAGENAME_ENTRY = "voice_packagename_entry";
+    public static final String ACTION_VOICE_PACKAGENAME_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_VOICE_PACKAGENAME_ENTRY_CHANGED";
+    public static final String EXTRA_VOICE_PACKAGENAME_ENTRY_STRING = "org.hvdw.fythwonekey.extra.PREF_VOICE_PACKAGENAME_ENTRY_STRING";
+    public static final String VOICE_INTENT_ENTRY = "voice_intent_entry";
+    public static final String ACTION_VOICE_INTENT_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_VOICE_INTENT_ENTRY_CHANGED";
+    public static final String EXTRA_VOICE_INTENT_ENTRY_STRING = "org.hvdw.fythwonekey.extra.PREF_VOICE_INTENT_ENTRY_STRING";
+    public static final String VOICE_SYSCALL_ENTRY = "voice_syscall_entry";
+    public static final String ACTION_VOICE_SYSCALL_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_VOICE_SYSCALL_ENTRY_CHANGED";
+    public static final String EXTRA_VOICE_SYSCALL_ENTRY_STRING = "org.hvdw.fythwonekey.extra.PREF_VOICE_SYSCALL_ENTRY_STRING";
+
     /* The activites behind the MODE button */
     public static final String AV_PACKAGENAME_ENTRY = "av_packagename_entry";
     public static final String ACTION_AV_PACKAGENAME_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_AV_PACKAGENAME_ENTRY_CHANGED";

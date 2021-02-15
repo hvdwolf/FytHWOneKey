@@ -184,6 +184,18 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
                 intent.setAction(MySettings.ACTION_VIDEO_SYSCALL_ENTRY_CHANGED);
                 intent.putExtra(MySettings.EXTRA_VIDEO_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
+            case MySettings.VOICE_PACKAGENAME_ENTRY:
+                intent.setAction(MySettings.ACTION_VOICE_PACKAGENAME_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_VOICE_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
+            case MySettings.VOICE_INTENT_ENTRY:
+                intent.setAction(MySettings.ACTION_VOICE_INTENT_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_VOICE_INTENT_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
+            case MySettings.VOICE_SYSCALL_ENTRY:
+                intent.setAction(MySettings.ACTION_VOICE_SYSCALL_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_VOICE_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
+                break;
             case MySettings.ACCON_PACKAGENAME_ENTRY:
                 intent.setAction(MySettings.ACTION_ACCON_PACKAGENAME_ENTRY_CHANGED);
                 intent.putExtra(MySettings.EXTRA_ACCON_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));

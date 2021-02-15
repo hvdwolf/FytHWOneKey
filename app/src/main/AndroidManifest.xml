@@ -49,6 +49,34 @@
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
+        <activity-alias android:name="com.syu.radio.act.ActRadio"
+            android:targetActivity=".activities.OneKeyBAND"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.syu.radio.set"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="radio"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name="com.syu.radio.Launch"
+            android:targetActivity=".activities.OneKeyBAND"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.syu.radio"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
         <activity-alias android:name="com.syu.app.AppRadio"
             android:targetActivity=".activities.OneKeyBAND"
             android:exported="true" >
@@ -58,16 +86,14 @@
                 <data android:scheme="radio"/>
             </intent-filter>
         </activity-alias>
-        <activity-alias android:name="com.syu.radio.Launch"
+        <!-- Below alias for carradio ??? -->
+        <activity-alias android:name="com.syu.carradio.ActivityLauncher"
             android:targetActivity=".activities.OneKeyBAND"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.syu.radio"/>
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.syu.carradio"/>
             </intent-filter>
         </activity-alias>
 
@@ -117,17 +143,6 @@
         <activity-alias android:name="com.syu.music.MAct"
             android:targetActivity=".activities.OneKeyMedia"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="http"/>
-                <data android:scheme="content"/>
-                <data android:scheme="file"/>
-                <data android:mimeType="audio/*"/>
-                <data android:mimeType="application/ogg"/>
-                <data android:mimeType="application/x-ogg"/>
-                <data android:mimeType="application/itunes"/>
-            </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.DEFAULT" />
@@ -239,6 +254,18 @@
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:scheme="rtsp"/>
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <data android:scheme="content"/>
+                <data android:scheme="file"/>
+                <data android:mimeType="video/*"/>
+                <data android:mimeType="application/metastream"/>
+                <data android:mimeType="application/x-shockwave-flash"/>
+                <data android:mimeType="application/sdp"/>
+            </intent-filter>
         </activity-alias>
 
         <!-- The activity and alias for the AV option; derived from the MODE carrousel button-->
@@ -268,6 +295,59 @@
             </intent-filter>
         </activity-alias>
 
+<!-- ==================================================================================== -->
+<!-- Below the intent for the voice activation on the Teyes firmware                      -->
+<!-- ==================================================================================== -->
+        <!-- The activity and alias for the AV option; derived from the MODE carrousel button-->
+        <activity android:name=".activities.OneKeyVoice" android:label="@string/voice_alias" android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.DEFAULT" />
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity-alias android:name="com.txznet.smartadapter.ui.MainActivity"
+            android:targetActivity=".activities.OneKeyVoice"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.nuance.vocalizer.VOCALIZER_DATA"/>
+            </intent-filter>
+        </activity-alias>
+        <activity-alias android:name="com.txznet.smartadapter.ui.CommandActivity"
+            android:targetActivity=".activities.OneKeyVoice"
+            android:exported="true" >
+        </activity-alias>
+        <activity-alias android:name="com.txznet.smartadapter.ui.DeviceInfoActivity"
+            android:targetActivity=".activities.OneKeyVoice"
+            android:exported="true" >
+        </activity-alias>
+        <activity-alias android:name="com.txznet.smartadapter.ui.help.HelpActivity"
+            android:targetActivity=".activities.OneKeyVoice"
+            android:exported="true" >
+        </activity-alias>
+        <activity-alias android:name="com.txznet.smartadapter.ui.help.HelpDetailActivity"
+            android:targetActivity=".activities.OneKeyVoice"
+            android:exported="true" >
+        </activity-alias>
+        <activity-alias android:name="com.txznet.smartadapter.ui.AboutActivity"
+            android:targetActivity=".activities.OneKeyVoice"
+            android:exported="true" >
+        </activity-alias>
+        <activity-alias android:name="com.txznet.smartadapter.ui.PolicyActivity"
+            android:targetActivity=".activities.OneKeyVoice"
+            android:exported="true" >
+        </activity-alias>
+        <activity-alias android:name="com.syu.voice"
+            android:targetActivity=".activities.OneKeyVoice"
+            android:exported="true" >
+        </activity-alias>
+        <activity-alias android:name="com.syu.voice.Launch"
+            android:targetActivity=".activities.OneKeyVoice"
+            android:exported="true" >
+        </activity-alias>
+        <activity-alias android:name="com.syu.voice.VoiceLaunch"
+            android:targetActivity=".activities.OneKeyVoice"
+            android:exported="true" >
+        </activity-alias>
 <!-- ==================================================================================== -->
 <!-- Below are the several broadcast receivers we need for ACC_ON/ACC_OFF                 -->
 <!-- ==================================================================================== -->
