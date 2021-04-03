@@ -23,7 +23,7 @@ import java.io.ByteArrayOutputStream;
 import java.util.concurrent.Executor;
 
 
-class Utils {
+public class Utils {
     private static Context mContext = null;
     public static final String TAG = "OneKey-Utils";
     private boolean use_root_access;

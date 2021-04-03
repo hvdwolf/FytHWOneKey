@@ -40,14 +40,14 @@
 <!-- ==================================================================================== -->
 
         <!-- The activity and alias for the BAND button -->
-        <activity android:name=".OneKeyBAND" android:label="@string/band_alias">
+        <activity android:name=".activities.OneKeyBAND" android:label="@string/band_alias">
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
         <activity-alias android:name="com.syu.app.AppRadio"
-            android:targetActivity=".OneKeyBAND"
+            android:targetActivity=".activities.OneKeyBAND"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -56,7 +56,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias android:name="com.syu.radio.Launch"
-            android:targetActivity=".OneKeyBAND"
+            android:targetActivity=".activities.OneKeyBAND"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -69,14 +69,14 @@
         </activity-alias>
 
         <!-- The activity and alias for the DVD button -->
-        <activity android:name=".OneKeyDVD" android:label="@string/dvd_alias">
+        <activity android:name=".activities.OneKeyDVD" android:label="@string/dvd_alias">
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
         <activity-alias android:name="com.syu.dvd.act.ActDvd"
-            android:targetActivity=".OneKeyDVD"
+            android:targetActivity=".activities.OneKeyDVD"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -84,7 +84,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias android:name="com.syu.dvd.ActivityLauncher"
-            android:targetActivity=".OneKeyDVD"
+            android:targetActivity=".activities.OneKeyDVD"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -97,14 +97,14 @@
         </activity-alias>
 
         <!-- The aliases for the Media button / Music player -->
-        <activity android:name=".OneKeyMedia" android:label="@string/media_alias">
+        <activity android:name=".activities.OneKeyMedia" android:label="@string/media_alias">
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
         <activity-alias android:name="com.syu.music.act.Act_Music"
-            android:targetActivity=".OneKeyMedia"
+            android:targetActivity=".activities.OneKeyMedia"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -112,7 +112,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias android:name="com.syu.music.MAct"
-            android:targetActivity=".OneKeyMedia"
+            android:targetActivity=".activities.OneKeyMedia"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
@@ -140,14 +140,14 @@
         </activity-alias>
 
         <!-- The activity and alias for the EQ button -->
-        <activity android:name=".OneKeyEQ" android:label="@string/eq_alias">
+        <activity android:name=".activities.OneKeyEQ" android:label="@string/eq_alias">
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
         <activity-alias android:name="com.syu.eq.Launch"
-            android:targetActivity=".OneKeyEQ"
+            android:targetActivity=".activities.OneKeyEQ"
             android:exported="true" >
             <intent-filter>
                 <action android:name="com.syu.eq"/>
@@ -156,7 +156,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias android:name="com.syu.eq.EQActivity"
-            android:targetActivity=".OneKeyEQ"
+            android:targetActivity=".activities.OneKeyEQ"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -165,14 +165,14 @@
         </activity-alias>
 
         <!-- The activity and alias for the BT Phone option; derived from the MODE carrousel button -->
-        <activity android:name=".OneKeyBTPhone" android:label="@string/btphone_alias">
+        <activity android:name=".activities.OneKeyBTPhone" android:label="@string/btphone_alias">
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
         <activity-alias android:name="com.syu.bt.act.BtAct"
-            android:targetActivity=".OneKeyBTPhone"
+            android:targetActivity=".activities.OneKeyBTPhone"
             android:exported="true" >            
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -180,7 +180,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias android:name="com.syu.bt.BtAct"
-            android:targetActivity=".OneKeyBTPhone"
+            android:targetActivity=".activities.OneKeyBTPhone"
             android:exported="true" >            
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -192,14 +192,14 @@
         </activity-alias>
 
         <!-- The activity and alias for the BT AV option; derived from the MODE carrousel button-->
-        <activity android:name=".OneKeyBTAV" android:label="@string/btav_alias">
+        <activity android:name=".activities.OneKeyBTAV" android:label="@string/btav_alias">
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
         <activity-alias android:name="com.syu.bt.act.ActBtAvStart"
-            android:targetActivity=".OneKeyBTAV"
+            android:targetActivity=".activities.OneKeyBTAV"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -211,14 +211,14 @@
         </activity-alias>
 
         <!-- The activity and alias for the Video option; derived from the MODE carrousel button-->
-        <activity android:name=".OneKeyVIDEO" android:label="@string/video_alias">
+        <activity android:name=".activities.OneKeyVIDEO" android:label="@string/video_alias">
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
         <activity-alias android:name="com.syu.video.main.VideoListActivity"
-            android:targetActivity=".OneKeyVIDEO"
+            android:targetActivity=".activities.OneKeyVIDEO"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -229,7 +229,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias android:name="com.syu.media.act.ActPlayer"
-            android:targetActivity=".OneKeyVIDEO"
+            android:targetActivity=".activities.OneKeyVIDEO"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
@@ -239,14 +239,14 @@
         </activity-alias>
 
         <!-- The activity and alias for the AV option; derived from the MODE carrousel button-->
-        <activity android:name=".OneKeyAV" android:label="@string/av_alias">
+        <activity android:name=".activities.OneKeyAV" android:label="@string/av_alias">
             <intent-filter>
                 <action android:name="android.intent.action.DEFAULT" />
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
         </activity>
         <activity-alias android:name="com.syu.av.ActivityLaunch"
-            android:targetActivity=".OneKeyAV"
+            android:targetActivity=".activities.OneKeyAV"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -257,7 +257,7 @@
             </intent-filter>
         </activity-alias>
         <activity-alias android:name="com.syu.av.act.ActAv"
-            android:targetActivity=".OneKeyAV"
+            android:targetActivity=".activities.OneKeyAV"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -270,7 +270,7 @@
 <!-- ==================================================================================== -->
 
         <!-- Broadcast receivers to catch the ACC_ON and ACC_OFF broadcasts -->
-        <receiver android:name="AccOnReceiver" >
+        <receiver android:name=".receivers.AccOnReceiver" >
 <!--            <intent-filter>
                 <action android:name="android.intent.action.ACTION_MT_COMMAND_SLEEP_OUT" >
                 </action>
@@ -284,7 +284,7 @@
                 </action>
             </intent-filter>
         </receiver>
-        <receiver android:name="AccOffReceiver" >
+        <receiver android:name=".receivers.AccOffReceiver" >
             <intent-filter>
                 <action android:name="com.fyt.boot.ACCOFF" >
                 </action>
@@ -300,7 +300,7 @@
 <!-- ==================================================================================== -->
 
         <!-- Broadcast receivers to catch the BT broadcasts -->
-        <receiver android:name="BTPhoneReceiver" >
+        <receiver android:name=".receivers.BTPhoneReceiver" >
             <intent-filter>
                 <action android:name="com.syu.ms.bt" >
                 </action>
@@ -311,7 +311,7 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name="BTPAVReceiver" >
+        <receiver android:name=".receivers.BTAVReceiver" >
             <intent-filter>
                 <action android:name="com.syu.bt.byav" >
                 </action>
