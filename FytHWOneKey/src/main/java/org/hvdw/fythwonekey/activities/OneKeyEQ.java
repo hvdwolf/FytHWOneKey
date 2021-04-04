@@ -1,14 +1,12 @@
 package org.hvdw.fythwonekey.activities;
 
 import android.app.Activity;
-import android.os.Bundle;
-import android.util.Log;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.widget.Toast;
-
-import android.media.AudioManager;
 
 import org.hvdw.fythwonekey.MySettings;
 import org.hvdw.fythwonekey.R;

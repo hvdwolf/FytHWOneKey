@@ -2,9 +2,6 @@ package org.hvdw.fythwonekey;
 
 import android.app.ListActivity;
 import android.app.ProgressDialog;
-import android.content.ActivityNotFoundException;
-import android.content.Intent;
-//import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
@@ -15,13 +12,15 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
+//import android.content.Context;
 
-public class ListInstalledApps  extends ListActivity {
+
+public class ListInstalledApps extends ListActivity {
 //public class ListInstalledApps  extends ListFragment {
 
     private PackageManager packageManager = null;
-    private List<ApplicationInfo> applist=null;
-    private AppAdapter listAdapter=null;
+    private List<ApplicationInfo> applist = null;
+    private AppAdapter listAdapter = null;
     private ListView list;
     public static final String TAG = "OneKey-LIA";
     @Override
@@ -94,8 +93,8 @@ public class ListInstalledApps  extends ListActivity {
 
         @Override
         protected Void doInBackground(Void... params) {
-            applist = checkForLaunchIntent(packageManager.getInstalledApplications(packageManager.GET_META_DATA));
-            listAdapter=new AppAdapter(ListInstalledApps.this,R.layout.listitem, applist);
+            applist = checkForLaunchIntent(packageManager.getInstalledApplications(PackageManager.GET_META_DATA));
+            listAdapter = new AppAdapter(ListInstalledApps.this, R.layout.listitem, applist);
             return null;
         }
 

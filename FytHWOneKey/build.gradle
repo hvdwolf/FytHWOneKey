@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        release {
+            storeFile file('C:\\Users\\mario\\OneDrive\\Documents\\Android\\Keystore\\keystore.jks')
+            storePassword '221506217'
+            keyAlias 'mariodantas'
+            keyPassword '221506217'
+        }
+    }
     compileSdkVersion 29
     defaultConfig {
         applicationId "org.hvdw.fythwonekey"
