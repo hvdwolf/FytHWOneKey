@@ -12,17 +12,29 @@ android {
     compileSdkVersion 29
     defaultConfig {
         applicationId "org.hvdw.fythwonekey"
-        minSdkVersion 21
-        targetSdkVersion 27
+        minSdkVersion 29
+        targetSdkVersion 29
         versionCode 14
-        versionName "1.4.0"
+        versionName '1.4.1'
+        signingConfig signingConfigs.release
     }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dependenciesInfo {
+        includeInApk true
+        includeInBundle true
+    }
+    buildToolsVersion '29.0.2'
+    ndkVersion '22.0.7026061'
 }
 
 dependencies {
