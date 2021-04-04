@@ -9,16 +9,12 @@ import android.preference.PreferenceManager;
 import android.widget.Toast;
 
 import org.hvdw.fythwonekey.MySettings;
-import org.hvdw.fythwonekey.R;
 import org.hvdw.fythwonekey.Utils;
 
 
 public class OneKeyAV extends Activity {
     public static final String TAG = "OneKeyAV";
     public static Context mContext;
-    private static PackageManager pm;
-    Toast mToast;
-
 
 
     @Override
@@ -28,12 +24,12 @@ public class OneKeyAV extends Activity {
 
         Log.i(TAG, "Started OneKeyAV; in OnCreate void");
 
-        String packagename_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.AV_PACKAGENAME_ENTRY, "");
-        //String intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.AV_INTENT_ENTRY, "");
-        //String sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.AV_SYSCALL_ENTRY, "");
+        String key_call_option = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.AV_CALL_OPTION, "");
+        String key_call_entry = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.AV_CALL_ENTRY, "");
 
         Utils myUtils = new Utils();
-        myUtils.checkAndRunOptions(mContext, packagename_call);
+        myUtils.whichActionToPerform(mContext, key_call_option, key_call_entry);
+        //myUtils.checkAndRunOptions(mContext, key_call_option);
 
         finish();
     }
