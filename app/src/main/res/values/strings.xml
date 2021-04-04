@@ -1,15 +1,15 @@
 <resources>
-    <string name="app_name" translatable="false">FYT HW OneKey</string>
-    <string name="dvd_alias" translatable="false">FYT HW OneKey DVD button</string>
-    <string name="media_alias" translatable="false">FYT HW OneKey Media button</string>
-    <string name="eq_alias" translatable="false">FYT HW OneKey EQ button</string>
-    <string name="band_alias" translatable="false">FYT HW OneKey BAND button</string>
-    <string name="mode_alias" translatable="false">FYT HW OneKey MODE "carrousel" button options</string>
-    <string name="btav_alias" translatable="false">FYT HW OneKey BT AV options (derived from the MODE button)</string>
-    <string name="btphone_alias" translatable="false">FYT HW OneKey BT phone options (derived from the MODE button)</string>
-    <string name="av_alias" translatable="false">FYT HW OneKey AV options (derived from the MODE button)</string>
-    <string name="video_alias" translatable="false">FYT HW OneKey Video options (derived from the MODE button)</string>
-    <string name="voice_alias" translatable="false">FYT HW OneKey Voice option (for T\'eyes firmware)</string>
+    <string name="app_name">FYT HW OneKey</string>
+    <string name="dvd_alias">FYT HW OneKey DVD button</string>
+    <string name="media_alias">FYT HW OneKey Media button</string>
+    <string name="eq_alias">FYT HW OneKey EQ button</string>
+    <string name="band_alias">FYT HW OneKey BAND button</string>
+    <string name="mode_alias">FYT HW OneKey MODE "carrousel" button options</string>
+    <string name="btav_alias">FYT HW OneKey BT AV options (derived from the MODE button)</string>
+    <string name="btphone_alias">FYT HW OneKey BT phone options (derived from the MODE button)</string>
+    <string name="av_alias">FYT HW OneKey AV options (derived from the MODE button)</string>
+    <string name="video_alias">FYT HW OneKey Video options (derived from the MODE button)</string>
+    <string name="voice_alias">FYT HW OneKey Voice option (for T\'eyes firmware)</string>
 
     <string name="settings_screen">FYT HW OneKey Configuration screen</string>
 <!--    <string name="dvd_settings">The several options for the DVD button</string>
