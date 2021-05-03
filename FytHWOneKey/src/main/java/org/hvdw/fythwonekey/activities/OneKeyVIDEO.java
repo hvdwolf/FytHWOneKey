@@ -1,20 +1,19 @@
 package org.hvdw.fythwonekey.activities;
 
 import android.app.Activity;
-import android.os.Bundle;
-import android.util.Log;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.widget.Toast;
 
 import org.hvdw.fythwonekey.MySettings;
-import org.hvdw.fythwonekey.R;
 import org.hvdw.fythwonekey.Utils;
 
 
-public class OneKeyBTPhone extends Activity {
-    public static final String TAG = "OneKeyBTPhone";
+public class OneKeyVIDEO extends Activity {
+    public static final String TAG = "OneKeyVIDEO";
     public static Context mContext;
     private static PackageManager pm;
     Toast mToast;
@@ -26,11 +25,11 @@ public class OneKeyBTPhone extends Activity {
         super.onCreate(savedInstanceState);
         mContext = getApplicationContext();
 
-        Log.i(TAG, "Started OneKeyBTPHONE; in OnCreate void");
+        Log.i(TAG, "Started OneKeyVIDEO; in OnCreate void");
 
-        String packagename_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTPHONE_PACKAGENAME_ENTRY, "");
-        //String intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTPHONE_INTENT_ENTRY, "");
-        //String sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTPHONE_SYSCALL_ENTRY, "");
+        String packagename_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.VIDEO_PACKAGENAME_ENTRY, "");
+        //String intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.VIDEO_INTENT_ENTRY, "");
+        //String sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.VIDEO_SYSCALL_ENTRY, "");
 
         Utils myUtils = new Utils();
         myUtils.checkAndRunOptions(mContext, packagename_call);

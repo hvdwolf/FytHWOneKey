@@ -1,20 +1,19 @@
 package org.hvdw.fythwonekey;
 
-import android.util.Log;
+import android.app.Activity;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
-import android.preference.PreferenceFragment;
-import android.widget.Toast;
-import android.app.Activity;
-import android.content.BroadcastReceiver;
-import android.content.IntentFilter;
-
 import android.os.Handler;
-import android.widget.ProgressBar;
+import android.preference.PreferenceFragment;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
 
 public class SettingsFragment extends PreferenceFragment implements OnSharedPreferenceChangeListener {
@@ -256,7 +255,7 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
 
         Log.i(TAG, "updated key is " + key);
         if (toastText.equals("BOOLEAN_KEY")) {
-            toastText = "You updated boolean key \"" + (String)key + "\" to \"" + String.valueOf(sharedPreferences.getBoolean(key, false)) + "\"";
+            toastText = "You updated boolean key \"" + (String) key + "\" to \"" + sharedPreferences.getBoolean(key, false) + "\"";
         } else {
             Log.i(TAG, "updated string is " + sharedPreferences.getString(key, ""));
             toastText = "You updated key \"" + key + "\" to \"" + sharedPreferences.getString(key, "") + "\"";

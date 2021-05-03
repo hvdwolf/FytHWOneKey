@@ -15,19 +15,20 @@ import java.util.List;
 
 public class AppAdapter extends ArrayAdapter<ApplicationInfo> {
 
-private List<ApplicationInfo> applist = null;
-private Context context;
-private PackageManager packageManager;
-        String appNameV;
-public AppAdapter(Context context, int resource, List<ApplicationInfo> objects) {
-        super(context, resource,  objects);
+    private List<ApplicationInfo> applist = null;
+    private final Context context;
+    private final PackageManager packageManager;
+    String appNameV;
 
-        this.context=context;
-        this.applist=objects;
-        packageManager=context.getPackageManager();
-        }
+    public AppAdapter(Context context, int resource, List<ApplicationInfo> objects) {
+        super(context, resource, objects);
 
-@Override
+        this.context = context;
+        this.applist = objects;
+        packageManager = context.getPackageManager();
+    }
+
+    @Override
 public int getCount() {
         return ((null != applist) ? applist.size() : 0);
         }

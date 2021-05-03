@@ -1,24 +1,23 @@
 package org.hvdw.fythwonekey;
 
-import android.content.Intent;
-import android.content.Context;
 import android.content.ComponentName;
-import android.content.pm.PackageManager;
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
-
-import android.content.res.Resources;
+import android.content.pm.PackageManager;
 import android.media.AudioManager;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.widget.Toast;
 
-/* shellExec and rootExec methods */
+import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.ByteArrayOutputStream;
 import java.util.concurrent.Executor;
+
+/* shellExec and rootExec methods */
 
 
 public class Utils {
@@ -29,16 +28,27 @@ public class Utils {
     private Toast mToast;
 
 
-    public static void init (Context context) {
-        if(mContext != null)
-			return;
-		mContext = context;
-		sharedprefs = PreferenceManager.getDefaultSharedPreferences(mContext);
+    public static void init(Context context) {
+        if (mContext != null)
+            return;
+        mContext = context;
+        sharedprefs = PreferenceManager.getDefaultSharedPreferences(mContext);
     }
 
-/**********************************************************************************************************************************************/
+    private static void executeBroadcast(String input) {
+        StringBuffer output = new StringBuffer();
+        String cmd = "am broadcast -a " + input;
+        try {
+            Process p = Runtime.getRuntime().exec(cmd);
+            Log.i(TAG, cmd);
+        } catch (Exception e) {
+            Log.e(TAG, e.getMessage());
+        }
+    }
 
-    public void whichActionToPerform (Context context, String callMethod, String actionString) {
+    /**********************************************************************************************************************************************/
+
+    public void whichActionToPerform(Context context, String callMethod, String actionString) {
         if (callMethod.equals("pkgname")) {
             //Log.i(TAG, " the callmethond is indeed pkgname");
             startActivityByPackageName(context, actionString);
@@ -57,24 +67,6 @@ public class Utils {
 //            } else {
                 shellExec(cmd);
 //            }
-        }
-    };
-
-    //public void checkAndRunOptions(Context context, String packageName_Call, String intent_call, final String sys_Call) {
-    public void checkAndRunOptions(Context context, String packageName) {
-        if ("".equals(packageName)) {
-            //packagename_call unknown, start setup
-            //Log.i(TAG, Resources.getSystem().getString(R.string.pkg_notconfigured_short));
-            Log.i(TAG, "no package configured");
-            //mToast = Toast.makeText(context, Resources.getSystem().getString(R.string.pkg_notconfigured_long), Toast.LENGTH_SHORT);
-            mToast = Toast.makeText(context, "No package configured, starting Config screen for setup.", mToast.LENGTH_SHORT);
-            mToast.show();
-            startActivityByPackageName(context, "org.hvdw.fythwonekey");
-        } else {
-            //Log.i(TAG, Resources.getSystem().getString(R.string.pkg_configured_short) + " " + packageName);
-            Log.i(TAG, "Configured package : " + packageName);
-            //Start whatever app the user has configured
-            startActivityByPackageName(context, packageName);
         }
     }
 
@@ -183,18 +175,25 @@ public class Utils {
         }
         return baos.toString("UTF-8");
     }
-/* end of shell and su call functions/methods */
+    /* end of shell and su call functions/methods */
 
-    private static void executeBroadcast(String input) {
-        StringBuffer output = new StringBuffer();
-        String cmd = "am broadcast -a " + input;
-        try {
-            Process p = Runtime.getRuntime().exec(cmd);
-            Log.i(TAG, cmd);
-        } catch (Exception e) {
-            Log.e(TAG, e.getMessage());
+    //public void checkAndRunOptions(Context context, String packageName_Call, String intent_call, final String sys_Call) {
+    public void checkAndRunOptions(Context context, String packageName) {
+        if ("".equals(packageName)) {
+            //packagename_call unknown, start setup
+            //Log.i(TAG, Resources.getSystem().getString(R.string.pkg_notconfigured_short));
+            Log.i(TAG, "no package configured");
+            //mToast = Toast.makeText(context, Resources.getSystem().getString(R.string.pkg_notconfigured_long), Toast.LENGTH_SHORT);
+            mToast = Toast.makeText(context, "No package configured, starting Config screen for setup.", Toast.LENGTH_SHORT);
+            mToast.show();
+            startActivityByPackageName(context, "org.hvdw.fythwonekey");
+        } else {
+            //Log.i(TAG, Resources.getSystem().getString(R.string.pkg_configured_short) + " " + packageName);
+            Log.i(TAG, "Configured package : " + packageName);
+            //Start whatever app the user has configured
+            startActivityByPackageName(context, packageName);
         }
-    };
+    }
 
     public void startActivityByIntentName(Context context, String component) {
         Intent sIntent = new Intent(Intent.ACTION_MAIN);

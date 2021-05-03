@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="key_call_entries">
+        <item>par nom de package</item>
+        <item>par intent (nom de package/intent)</item>
+        <item>par appel système (commande shell ou script shell)</item>
+    </string-array>
+
+    <string-array name="media_key_entries">
+        <item>Pas de mediakey, utilisez la fonction du nom de package</item>
+        <item>bouton NEXT</item>
+        <item>bouton PREV</item>
+        <item>bouton PLAY</item>
+        <item>bouton PAUSE</item>
+        <item>bouton d\'intervention entre entre PLAY/PAUSE</item>
+    </string-array>
+
+</resources>
