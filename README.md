@@ -2,7 +2,7 @@
 App to modify the hardware buttons on the FYT (Joying/FunRover/etc.) units.<br>
 This app does not need root!<br>
 It should work on all FYT units running on Android 5.1.1 (Sofia), 6.0.1 (Sofia), 8.0 (PX5) and 8.1 (SC9853i),
-but NOT and 10.0 (UIS7862).
+<br>but NOT on 10.0 (UIS7862).
 
 ![logo](https://github.com/hvdwolf/FytHWOneKey/blob/master/images/logo.png)
 ## Downloads
