@@ -256,7 +256,7 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
 
         Log.i(TAG, "updated key is " + key);
         if (toastText.equals("BOOLEAN_KEY")) {
-            toastText = "You updated boolean key \"" + (String)key + "\" to \"" + String.valueOf(sharedPreferences.getBoolean(key, false)) + "\"";
+            toastText = "You updated boolean key \"" + (String) key + "\" to \"" + String.valueOf(sharedPreferences.getBoolean(key, false)) + "\"";
         } else {
             Log.i(TAG, "updated string is " + sharedPreferences.getString(key, ""));
             toastText = "You updated key \"" + key + "\" to \"" + sharedPreferences.getString(key, "") + "\"";

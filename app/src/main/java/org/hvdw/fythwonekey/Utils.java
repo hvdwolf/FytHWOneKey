@@ -30,10 +30,10 @@ public class Utils {
 
 
     public static void init (Context context) {
-        if(mContext != null)
-			return;
-		mContext = context;
-		sharedprefs = PreferenceManager.getDefaultSharedPreferences(mContext);
+        if (mContext != null)
+		return;
+	mContext = context;
+	sharedprefs = PreferenceManager.getDefaultSharedPreferences(mContext);
     }
 
 /**********************************************************************************************************************************************/
