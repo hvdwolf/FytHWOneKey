@@ -1,8 +1,7 @@
 # Fyt HW OneKey
-App to modify the hardware buttons on the FYT (Joying/FunRover/etc.) units.<br>
+App to modify the hardware buttons on FYT units (Atoto, Ebilaen, Ekiy, Farcar, Funrover, Idoing, Isudar, Joying, Junsun, Mekede, NaviFly, Sinosmart, T'eyes, Winca, Zhan, etcera) units.<br>
 This app does not need root!<br>
-It should work on all FYT units running on Android 5.1.1 (Sofia), 6.0.1 (Sofia), 8.0 (PX5) and 8.1 (SC9853i),
-<br>but NOT on 10.0 (UIS7862).
+It should work on all FYT units running on Android 5.1.1 (Sofia), 6.0.1 (Sofia), 8.0 (PX5), 8.1 (SC9853i) and Android 10.0 (uis7862 and uis8581) (and fake Android 11).
 
 ![logo](https://github.com/hvdwolf/FytHWOneKey/blob/master/images/logo.png)
 ## Downloads

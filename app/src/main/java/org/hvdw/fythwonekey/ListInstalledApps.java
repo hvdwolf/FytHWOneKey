@@ -16,19 +16,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class ListInstalledApps  extends ListActivity {
-//public class ListInstalledApps  extends ListFragment {
+public class ListInstalledApps extends ListActivity {
+//public class ListInstalledApps extends ListFragment {
 
     private PackageManager packageManager = null;
-    private List<ApplicationInfo> applist=null;
-    private AppAdapter listAdapter=null;
+    private List<ApplicationInfo> applist = null;
+    private AppAdapter listAdapter = null;
     private ListView list;
     public static final String TAG = "OneKey-LIA";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        list=(ListView) findViewById(R.id.list);
-        packageManager=getPackageManager();
+        list = (ListView) findViewById(R.id.list);
+        packageManager = getPackageManager();
 
         new LoadApplications().execute();
     }
@@ -56,7 +56,7 @@ public class ListInstalledApps  extends ListActivity {
 
         try{
             Toast.makeText(this, "Launching " + app.loadLabel(packageManager) + "...", Toast.LENGTH_LONG).show();
-//            Intent intent= packageManager.getLeanbackLaunchIntentForPackage(app.packageName);
+//            Intent intent = packageManager.getLeanbackLaunchIntentForPackage(app.packageName);
 
 //            if(intent != null){
 //                startActivity(intent);
@@ -75,7 +75,7 @@ public class ListInstalledApps  extends ListActivity {
     } */
 
     private List<ApplicationInfo> checkForLaunchIntent(List<ApplicationInfo> list){
-        ArrayList<ApplicationInfo> applist=new ArrayList<ApplicationInfo>();
+        ArrayList<ApplicationInfo> applist = new ArrayList<ApplicationInfo>();
 
         for(ApplicationInfo info : list){
             try{
@@ -90,11 +90,11 @@ public class ListInstalledApps  extends ListActivity {
         return  applist;
     }
     private class LoadApplications extends AsyncTask<Void, Void, Void> {
-        private ProgressDialog progress=null;
+        private ProgressDialog progress = null;
 
         @Override
         protected Void doInBackground(Void... params) {
-            applist = checkForLaunchIntent(packageManager.getInstalledApplications(packageManager.GET_META_DATA));
+            applist = checkForLaunchIntent(packageManager.getInstalledApplications(PackageManager.GET_META_DATA));
             listAdapter=new AppAdapter(ListInstalledApps.this,R.layout.listitem, applist);
             return null;
         }
