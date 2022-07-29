@@ -29,8 +29,8 @@ public class OneKeyBTPhone extends Activity {
         Log.i(TAG, "Started OneKeyBTPHONE; in OnCreate void");
 
         String packagename_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTPHONE_PACKAGENAME_ENTRY, "");
-        //String intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTPHONE_INTENT_ENTRY, "");
-        //String sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTPHONE_SYSCALL_ENTRY, "");
+        String intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTPHONE_INTENT_ENTRY, "");
+        String sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTPHONE_SYSCALL_ENTRY, "");
 
         Utils myUtils = new Utils();
         myUtils.checkAndRunOptions(mContext, packagename_call);

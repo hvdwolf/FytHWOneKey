@@ -29,8 +29,8 @@ public class OneKeyVIDEO extends Activity {
         Log.i(TAG, "Started OneKeyVIDEO; in OnCreate void");
 
         String packagename_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.VIDEO_PACKAGENAME_ENTRY, "");
-        //String intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.VIDEO_INTENT_ENTRY, "");
-        //String sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.VIDEO_SYSCALL_ENTRY, "");
+        String intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.VIDEO_INTENT_ENTRY, "");
+        String sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.VIDEO_SYSCALL_ENTRY, "");
 
         Utils myUtils = new Utils();
         myUtils.checkAndRunOptions(mContext, packagename_call);

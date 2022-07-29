@@ -31,8 +31,8 @@ public class OneKeyEQ extends Activity {
         Log.i(TAG, "Started OneKeyEQ; in OnCreate void");
 
         String packagename_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.EQ_PACKAGENAME_ENTRY, "");
-        //intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.EQ_INTENT_ENTRY, "");
-        //sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.EQ_SYSCALL_ENTRY, "");
+        String intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.EQ_INTENT_ENTRY, "");
+        String sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.EQ_SYSCALL_ENTRY, "");
         String media_key_option = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.EQ_MEDIA_KEY_OPTION, "");
 
         Utils myUtils = new Utils();

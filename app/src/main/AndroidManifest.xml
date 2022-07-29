@@ -70,10 +70,6 @@
             android:targetActivity=".activities.OneKeyBAND"
             android:exported="true" >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-            <intent-filter>
                 <action android:name="com.syu.radio"/>
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
@@ -147,10 +143,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity-alias>
         <activity-alias android:name="com.syu.music.MAct"
@@ -361,60 +353,8 @@
             android:targetActivity=".activities.OneKeyVoice"
             android:exported="true" >
         </activity-alias>
-<!-- ==================================================================================== -->
-<!-- Below are the several broadcast receivers we need for ACC_ON/ACC_OFF                 -->
-<!-- ==================================================================================== -->
 
-        <!-- Broadcast receivers to catch the ACC_ON and ACC_OFF broadcasts -->
-        <!--
-            The Acc_ON and ACC_OFF receivers only work on Android 6 and below.
-            It means that we leve this in here as general starter for Android 6.
-            For Android 8.x we create a Fytacc.apk that mimics the "com.yh.devicehelper" by using that package name.
-            which is used on some Chinese FYT units and which is always(!) started on wake-up.
-            My Fytaccon with package name "com.yh.devicehelper" will start the FytHWOnekey apk
-            by its AccOnReciever intent
-        -->
-        <receiver android:name=".receivers.AccOnReceiver"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="com.fyt.boot.ACCON" >
-                </action>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.glsx.boot.ACCON"
-            android:enabled="true"
-            android:exported="true">
-                </action>
-            </intent-filter>
-        </receiver>
-        <!-- now make the activity for the Fytaccon.apk -->
-        <activity android:name=".activity.AccOn" >
-            <intent-filter>
-                <action android:name="org.hvdw.fythwonekey.activity.AccOn" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
 
-        <receiver android:name=".receivers.AccOffReceiver" >
-            <intent-filter>
-                <action android:name="com.fyt.boot.ACCOFF" >
-                </action>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.glsx.boot.ACCOFF" >
-                </action>
-            </intent-filter>
-        </receiver>
-
-        <!-- Deactivate the USB on receiver. In practice it is not always activated and therefore an unstable method -->
-        <!--<receiver android:name=".receivers.UsbReceiver"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
-            </intent-filter>
-        </receiver> -->
 <!-- ==================================================================================== -->
 <!-- Below are the several broadcast receivers for BTPhone and BTAV for the BT app        -->
 <!-- ==================================================================================== -->

@@ -29,8 +29,8 @@ public class OneKeyAV extends Activity {
         Log.i(TAG, "Started OneKeyAV; in OnCreate void");
 
         String packagename_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.AV_PACKAGENAME_ENTRY, "");
-        //String intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.AV_INTENT_ENTRY, "");
-        //String sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.AV_SYSCALL_ENTRY, "");
+        String intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.AV_INTENT_ENTRY, "");
+        String sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.AV_SYSCALL_ENTRY, "");
 
         Utils myUtils = new Utils();
         myUtils.checkAndRunOptions(mContext, packagename_call);

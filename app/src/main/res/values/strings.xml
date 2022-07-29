@@ -12,14 +12,24 @@
     <string name="voice_alias" translatable="false">FYT HW OneKey Voice option (for T\'eyes firmware)</string>
 
     <string name="settings_screen">FYT HW OneKey Configuration screen</string>
-<!--    <string name="dvd_settings">The several options for the DVD button</string>
-    <string name="media_settings">The several options for the Media button</string>
-    <string name="eq_settings">The several options for the EQ button</string>
-    <string name="band_settings">The several options for the BAND button</string> -->
+    <string name="media_key_call_title">Media Key: Call method</string>
+    <string name="media_key_text_title">Media Key: Action string to be used</string>
     <string name="dvd_settings">Configure the DVD button</string>
     <string name="dvd_settings_summary">Only fill in one option. The app will simply take the first "Action string" it finds.</string>
+    <string name="dvd_key_call_title">DVD Key: Call method</string>
+    <string name="dvd_key_text_title">DVD Key: Action string to be used</string>
     <string name="media_settings">Configure the Media button</string>
     <string name="eq_settings">Configure the EQ button</string>
+    <string name="eq_key_call_title">EQ Key: Call method</string>
+    <string name="eq_key_text_title">EQ Key: Action string to be used</string>
+    <string name="btav_key_call_title">BT AV Key: Call method</string>
+    <string name="btav_key_text_title">BT AV Key: Action string to be used</string>
+    <string name="btphone_key_call_title">BT phone Key: Call method</string>
+    <string name="btphone_key_text_title">BT phone Key: Action string to be used</string>
+    <string name="av_key_call_title">AV Key: Call method</string>
+    <string name="av_key_text_title">AV Key: Action string to be used</string>
+    <string name="video_key_call_title">Video Key: Call method</string>
+    <string name="video_key_text_title">Video Key: Action string to be used</string>
     <string name="band_settings">Configure the BAND button</string>
     <string name="band_key_call_title">BAND Key: Call method</string>
     <string name="band_key_text_title">BAND Key: Action string to be used</string>
@@ -29,6 +39,8 @@
     <string name="av_settings">Configure the AV option (derived from the MODE button)</string>
     <string name="video_settings">Configure the Video option (derived from the MODE button)</string>
     <string name="voice_settings">Configure the Voice option</string>
+    <string name="voice_key_call_title">Voice Key: Call method</string>
+    <string name="voice_key_text_title">Voice Key: Action string to be used</string>
 
     <string name="packagename">Start apk by package name.</string>
     <!-- <string name="packagename_summary">Separate multiple package names with a semicolon (;)</string> -->

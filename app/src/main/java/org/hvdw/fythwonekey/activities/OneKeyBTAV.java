@@ -29,8 +29,8 @@ public class OneKeyBTAV extends Activity {
         Log.i(TAG, "Started OneKeyBTAV; in OnCreate void");
 
         String packagename_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTAV_PACKAGENAME_ENTRY, "");
-        //String intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTAV_INTENT_ENTRY, "");
-        //String sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTAV_SYSCALL_ENTRY, "");
+        String intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTAV_INTENT_ENTRY, "");
+        String sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTAV_SYSCALL_ENTRY, "");
 
         Utils myUtils = new Utils();
         myUtils.checkAndRunOptions(mContext, packagename_call);
