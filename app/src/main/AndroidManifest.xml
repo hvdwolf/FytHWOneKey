@@ -355,28 +355,5 @@
         </activity-alias>
 
 
-<!-- ==================================================================================== -->
-<!-- Below are the several broadcast receivers for BTPhone and BTAV for the BT app        -->
-<!-- ==================================================================================== -->
-
-        <!-- Broadcast receivers to catch the BT broadcasts -->
-        <receiver android:name=".receivers.BTPhoneReceiver" >
-            <intent-filter>
-                <action android:name="com.syu.ms.bt" >
-                </action>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.syu.bt.bykey" >
-                </action>
-            </intent-filter>
-        </receiver>
-
-        <receiver android:name=".receivers.BTAVReceiver" >
-            <intent-filter>
-                <action android:name="com.syu.bt.byav" >
-                </action>
-            </intent-filter>
-        </receiver>
-
         </application>
 </manifest>

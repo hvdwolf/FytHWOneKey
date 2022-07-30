@@ -28,13 +28,12 @@ public class OneKeyDVD extends Activity {
 
         Log.i(TAG, "Started OneKeyDVD; in OnCreate void");
 
-        String packagename_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.DVD_PACKAGENAME_ENTRY, "");
-        String intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.DVD_INTENT_ENTRY, "");
-        String sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.DVD_SYSCALL_ENTRY, "");
-
+        String call_option = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.DVD_KEY_CALL_OPTION, "");
+        String actionString = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.DVD_ACTIONSTRING_ENTRY, "");
 
         Utils myUtils = new Utils();
-        myUtils.checkAndRunOptions(mContext, packagename_call);
+        myUtils.whichActionToPerform (mContext, call_option, actionString);
+        //myUtils.checkAndRunOptions(mContext, packagename_call);
 
         finish();
     }

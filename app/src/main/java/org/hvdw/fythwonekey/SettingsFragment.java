@@ -84,121 +84,85 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
         String additionalText = "";
 
         switch (key) {
-            case MySettings.AV_PACKAGENAME_ENTRY:
-                intent.setAction(MySettings.ACTION_AV_PACKAGENAME_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_AV_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
+            case MySettings.AV_KEY_CALL_OPTION:
+                intent.setAction(MySettings.ACTION_AV_CALL_OPTION_CHANGED);
+                intent.putExtra(MySettings.EXTRA_AV_CALL_OPTION_STRING, sharedPreferences.getString(key, ""));
                 break;
-            case MySettings.AV_INTENT_ENTRY:
-                intent.setAction(MySettings.ACTION_AV_INTENT_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_AV_INTENT_ENTRY_STRING, sharedPreferences.getString(key, ""));
+            case MySettings.AV_ACTIONSTRING_ENTRY:
+                intent.setAction(MySettings.ACTION_AV_ACTIONSTRING_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_AV_ACTIONSTRING_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
-            case MySettings.AV_SYSCALL_ENTRY:
-                intent.setAction(MySettings.ACTION_AV_SYSCALL_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_AV_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
+            case MySettings.BAND_KEY_CALL_OPTION:
+                intent.setAction(MySettings.ACTION_BAND_CALL_OPTION_CHANGED);
+                intent.putExtra(MySettings.EXTRA_BAND_CALL_OPTION_STRING, sharedPreferences.getString(key, ""));
                 break;
-            case MySettings.BAND_PACKAGENAME_ENTRY:
-                intent.setAction(MySettings.ACTION_BAND_PACKAGENAME_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_BAND_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
+            case MySettings.BAND_ACTIONSTRING_ENTRY:
+                intent.setAction(MySettings.ACTION_BAND_ACTIONSTRING_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_BAND_ACTIONSTRING_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
-            case MySettings.BAND_INTENT_ENTRY:
-                intent.setAction(MySettings.ACTION_BAND_INTENT_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_BAND_INTENT_ENTRY_STRING, sharedPreferences.getString(key, ""));
+            case MySettings.BTAV_KEY_CALL_OPTION:
+                intent.setAction(MySettings.ACTION_BTAV_CALL_OPTION_CHANGED);
+                intent.putExtra(MySettings.EXTRA_BTAV_CALL_OPTION_STRING, sharedPreferences.getString(key, ""));
                 break;
-            case MySettings.BAND_SYSCALL_ENTRY:
-                intent.setAction(MySettings.ACTION_BAND_SYSCALL_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_BAND_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
+            case MySettings.BTAV_ACTIONSTRING_ENTRY:
+                intent.setAction(MySettings.ACTION_BTAV_ACTIONSTRING_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_BTAV_ACTIONSTRING_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
-            case MySettings.BTAV_PACKAGENAME_ENTRY:
-                intent.setAction(MySettings.ACTION_BTAV_PACKAGENAME_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_BTAV_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
+            case MySettings.BTPHONE_KEY_CALL_OPTION:
+                intent.setAction(MySettings.ACTION_BTPHONE_CALL_OPTION_CHANGED);
+                intent.putExtra(MySettings.EXTRA_BTPHONE_CALL_OPTION_STRING, sharedPreferences.getString(key, ""));
                 break;
-            case MySettings.BTAV_INTENT_ENTRY:
-                intent.setAction(MySettings.ACTION_BTAV_INTENT_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_BTAV_INTENT_ENTRY_STRING, sharedPreferences.getString(key, ""));
+            case MySettings.BTPHONE_ACTIONSTRING_ENTRY:
+                intent.setAction(MySettings.ACTION_BTPHONE_ACTIONSTRING_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_BTPHONE_ACTIONSTRING_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
-            case MySettings.BTAV_SYSCALL_ENTRY:
-                intent.setAction(MySettings.ACTION_BTAV_SYSCALL_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_BTAV_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
+            case MySettings.DVD_KEY_CALL_OPTION:
+                intent.setAction(MySettings.ACTION_DVD_CALL_OPTION_CHANGED);
+                intent.putExtra(MySettings.EXTRA_DVD_CALL_OPTION_STRING, sharedPreferences.getString(key, ""));
                 break;
-            case MySettings.BTPHONE_PACKAGENAME_ENTRY:
-                intent.setAction(MySettings.ACTION_BTPHONE_PACKAGENAME_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_BTPHONE_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
+            case MySettings.DVD_ACTIONSTRING_ENTRY:
+                intent.setAction(MySettings.ACTION_DVD_ACTIONSTRING_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_DVD_ACTIONSTRING_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
-            case MySettings.BTPHONE_INTENT_ENTRY:
-                intent.setAction(MySettings.ACTION_BTPHONE_INTENT_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_BTPHONE_INTENT_ENTRY_STRING, sharedPreferences.getString(key, ""));
+            case MySettings.EQ_KEY_CALL_OPTION:
+                intent.setAction(MySettings.ACTION_EQ_CALL_OPTION_CHANGED);
+                intent.putExtra(MySettings.EXTRA_EQ_CALL_OPTION_STRING, sharedPreferences.getString(key, ""));
                 break;
-            case MySettings.BTPHONE_SYSCALL_ENTRY:
-                intent.setAction(MySettings.ACTION_BTPHONE_SYSCALL_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_BTPHONE_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
-                break;
-            case MySettings.DVD_PACKAGENAME_ENTRY:
-                intent.setAction(MySettings.ACTION_DVD_PACKAGENAME_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_DVD_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
-                break;
-            case MySettings.DVD_INTENT_ENTRY:
-                intent.setAction(MySettings.ACTION_DVD_INTENT_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_DVD_INTENT_ENTRY_STRING, sharedPreferences.getString(key, ""));
-                break;
-            case MySettings.DVD_SYSCALL_ENTRY:
-                intent.setAction(MySettings.ACTION_DVD_SYSCALL_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_DVD_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
-                break;
-            case MySettings.EQ_PACKAGENAME_ENTRY:
-                intent.setAction(MySettings.ACTION_EQ_PACKAGENAME_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_EQ_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
-                break;
-            case MySettings.EQ_INTENT_ENTRY:
-                intent.setAction(MySettings.ACTION_EQ_INTENT_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_EQ_INTENT_ENTRY_STRING, sharedPreferences.getString(key, ""));
-                break;
-            case MySettings.EQ_SYSCALL_ENTRY:
-                intent.setAction(MySettings.ACTION_EQ_SYSCALL_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_EQ_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
+            case MySettings.EQ_ACTIONSTRING_ENTRY:
+                intent.setAction(MySettings.ACTION_EQ_ACTIONSTRING_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_EQ_ACTIONSTRING_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
             case MySettings.EQ_MEDIA_KEY_OPTION:
                 intent.setAction(MySettings.ACTION_EQ_MEDIA_KEY_OPTION_CHANGED);
                 intent.putExtra(MySettings.EXTRA_EQ_MEDIA_KEY_OPTION_STRING, sharedPreferences.getString(key, ""));
                 break;
-            case MySettings.MEDIA_PACKAGENAME_ENTRY:
-                intent.setAction(MySettings.ACTION_MEDIA_PACKAGENAME_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_MEDIA_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
+            case MySettings.MEDIA_KEY_CALL_OPTION:
+                intent.setAction(MySettings.ACTION_MEDIA_CALL_OPTION_CHANGED);
+                intent.putExtra(MySettings.EXTRA_MEDIA_CALL_OPTION_STRING, sharedPreferences.getString(key, ""));
                 break;
-            case MySettings.MEDIA_INTENT_ENTRY:
-                intent.setAction(MySettings.ACTION_MEDIA_INTENT_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_MEDIA_INTENT_ENTRY_STRING, sharedPreferences.getString(key, ""));
+            case MySettings.MEDIA_ACTIONSTRING_ENTRY:
+                intent.setAction(MySettings.ACTION_MEDIA_ACTIONSTRING_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_MEDIA_ACTIONSTRING_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
-            case MySettings.MEDIA_SYSCALL_ENTRY:
-                intent.setAction(MySettings.ACTION_MEDIA_SYSCALL_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_MEDIA_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
+            case MySettings.VIDEO_KEY_CALL_OPTION:
+                intent.setAction(MySettings.ACTION_VIDEO_CALL_OPTION_CHANGED);
+                intent.putExtra(MySettings.EXTRA_VIDEO_CALL_OPTION_STRING, sharedPreferences.getString(key, ""));
                 break;
-            case MySettings.VIDEO_PACKAGENAME_ENTRY:
-                intent.setAction(MySettings.ACTION_VIDEO_PACKAGENAME_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_VIDEO_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
+            case MySettings.VIDEO_ACTIONSTRING_ENTRY:
+                intent.setAction(MySettings.ACTION_VIDEO_ACTIONSTRING_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_VIDEO_ACTIONSTRING_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
-            case MySettings.VIDEO_INTENT_ENTRY:
-                intent.setAction(MySettings.ACTION_VIDEO_INTENT_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_VIDEO_INTENT_ENTRY_STRING, sharedPreferences.getString(key, ""));
+            case MySettings.VOICE_KEY_CALL_OPTION:
+                intent.setAction(MySettings.ACTION_VOICE_CALL_OPTION_CHANGED);
+                intent.putExtra(MySettings.EXTRA_VOICE_CALL_OPTION_STRING, sharedPreferences.getString(key, ""));
                 break;
-            case MySettings.VIDEO_SYSCALL_ENTRY:
-                intent.setAction(MySettings.ACTION_VIDEO_SYSCALL_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_VIDEO_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
+            case MySettings.VOICE_ACTIONSTRING_ENTRY:
+                intent.setAction(MySettings.ACTION_VOICE_ACTIONSTRING_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_VOICE_ACTIONSTRING_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
-            case MySettings.VOICE_PACKAGENAME_ENTRY:
-                intent.setAction(MySettings.ACTION_VOICE_PACKAGENAME_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_VOICE_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
-                break;
-            case MySettings.VOICE_INTENT_ENTRY:
-                intent.setAction(MySettings.ACTION_VOICE_INTENT_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_VOICE_INTENT_ENTRY_STRING, sharedPreferences.getString(key, ""));
-                break;
-            case MySettings.VOICE_SYSCALL_ENTRY:
-                intent.setAction(MySettings.ACTION_VOICE_SYSCALL_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_VOICE_SYSCALL_ENTRY_STRING, sharedPreferences.getString(key, ""));
-                break;
-            case MySettings.ACCON_PACKAGENAME_ENTRY:
-                intent.setAction(MySettings.ACTION_ACCON_PACKAGENAME_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_ACCON_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
+            case MySettings.ACCON_ACTIONSTRING_ENTRY:
+                intent.setAction(MySettings.ACTION_ACCON_ACTIONSTRING_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_ACCON_ACTIONSTRING_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
             case MySettings.ACCON_INTENT_ENTRY:
                 intent.setAction(MySettings.ACTION_ACCON_INTENT_ENTRY_CHANGED);
@@ -211,9 +175,9 @@ public class SettingsFragment extends PreferenceFragment implements OnSharedPref
             /* USB ON settings. This is when ACC_ON is generated. Available usb devices are reconnected, which gives the
             usb device attached broadcast. We can't use ACC_ON on Android >=7.0
              */
-            case MySettings.USBON_PACKAGENAME_ENTRY:
-                intent.setAction(MySettings.ACTION_USBON_PACKAGENAME_ENTRY_CHANGED);
-                intent.putExtra(MySettings.EXTRA_USBON_PACKAGENAME_ENTRY_STRING, sharedPreferences.getString(key, ""));
+            case MySettings.USBON_ACTIONSTRING_ENTRY:
+                intent.setAction(MySettings.ACTION_USBON_ACTIONSTRING_ENTRY_CHANGED);
+                intent.putExtra(MySettings.EXTRA_USBON_ACTIONSTRING_ENTRY_STRING, sharedPreferences.getString(key, ""));
                 break;
             case MySettings.USBON_INTENT_ENTRY:
                 intent.setAction(MySettings.ACTION_USBON_INTENT_ENTRY_CHANGED);

@@ -28,12 +28,12 @@ public class OneKeyMedia extends Activity {
 
         Log.i(TAG, "Started OneKeyMedia; in OnCreate void");
 
-        String packagename_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.MEDIA_PACKAGENAME_ENTRY, "");
-        String intent_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.MEDIA_INTENT_ENTRY, "");
-        String sys_call = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.MEDIA_SYSCALL_ENTRY, "");
+        String call_option = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.MEDIA_KEY_CALL_OPTION, "");
+        String actionString = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.MEDIA_ACTIONSTRING_ENTRY, "");
 
         Utils myUtils = new Utils();
-        myUtils.checkAndRunOptions(mContext, packagename_call);
+        myUtils.whichActionToPerform (mContext, call_option, actionString);
+        //myUtils.checkAndRunOptions(mContext, packagename_call);
 
         finish();
     }

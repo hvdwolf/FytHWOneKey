@@ -47,46 +47,14 @@ public class Utils {
             startActivityByIntentName(context, actionString);
         }
         if (callMethod.equals("sys_call")) {
-            //SharedPreferences sharedprefs = new SharedPreferences("org.hvdw.fytfunctionalityextender");
-            //sharedprefs.makeWorldReadable();
-//            use_root_access = sharedprefs.getBoolean(MySettings.USE_ROOT_ACCESS, true);
+
             //executeSystemCall(actionString);
             String[] cmd = actionString.split(";");
-//            if (use_root_access == true) {
-//                rootExec(cmd);
-//            } else {
-                shellExec(cmd);
-//            }
+            shellExec(cmd);
         }
     };
 
-    //public void checkAndRunOptions(Context context, String packageName_Call, String intent_call, final String sys_Call) {
-    public void checkAndRunOptions(Context context, String packageName) {
-        if ("".equals(packageName)) {
-            //packagename_call unknown, start setup
-            //Log.i(TAG, Resources.getSystem().getString(R.string.pkg_notconfigured_short));
-            Log.i(TAG, "no package configured");
-            //mToast = Toast.makeText(context, Resources.getSystem().getString(R.string.pkg_notconfigured_long), Toast.LENGTH_SHORT);
-            mToast = Toast.makeText(context, "No package configured, starting Config screen for setup.", mToast.LENGTH_SHORT);
-            mToast.show();
-            startActivityByPackageName(context, "org.hvdw.fythwonekey");
-        } else {
-            //Log.i(TAG, Resources.getSystem().getString(R.string.pkg_configured_short) + " " + packageName);
-            Log.i(TAG, "Configured package : " + packageName);
-            //Start whatever app the user has configured
-            startActivityByPackageName(context, packageName);
-        }
-    }
 
-    /*public static void executeSystemCall(String input) {
-        //String cmd = input;
-        try {
-            Process p = Runtime.getRuntime().exec(input);
-            Log.i(TAG, input);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }*/
     public static void executeSystemCall(String input) {
         final String cmd = input;
         Log.i(TAG, "Do a executeSystemCall with : " + cmd);

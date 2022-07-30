@@ -11,7 +11,7 @@
                 android:defaultValue="pkgname"
                 android:title="@string/band_key_call_title" />
             <EditTextPreference
-                android:key="band_packagename_entry"
+                android:key="band_actionstring_entry"
                 android:title="@string/band_key_text_title"
                 android:summary="@string/call_method_summary"
                 android:defaultValue="com.syu.radio" />
@@ -28,7 +28,7 @@
                 android:defaultValue="pkgname"
                 android:title="@string/dvd_key_call_title" />
             <EditTextPreference
-                android:key="dvd_packagename_entry"
+                android:key="dvd_actionstring_entry"
                 android:title="@string/dvd_key_text_title"
                 android:summary="@string/call_method_summary"
                 android:defaultValue="com.syu.dvd" />
@@ -44,7 +44,7 @@
                 android:defaultValue="pkgname"
                 android:title="@string/media_key_call_title" />
             <EditTextPreference
-                android:key="media_packagename_entry"
+                android:key="media_actionstring_entry"
                 android:title="@string/media_key_text_title"
                 android:summary="@string/call_method_summary"
                 android:defaultValue="com.syu.music" />
@@ -60,7 +60,7 @@
                 android:defaultValue="pkgname"
                 android:title="@string/eq_key_call_title" />
             <EditTextPreference
-                android:key="eq_packagename_entry"
+                android:key="eq_actionstring_entry"
                 android:title="@string/eq_key_text_title"
                 android:summary="@string/call_method_summary"
                 android:defaultValue="com.syu.eq" />
@@ -80,7 +80,7 @@
                     android:defaultValue="pkgname"
                     android:title="@string/btav_key_call_title" />
                 <EditTextPreference
-                    android:key="btav_packagename_entry"
+                    android:key="btav_actionstring_entry"
                     android:title="@string/btav_key_text_title"
                     android:summary="@string/call_method_summary"
                     android:defaultValue="com.syu.bt" />
@@ -95,7 +95,7 @@
                     android:defaultValue="pkgname"
                     android:title="@string/btphone_key_call_title" />
                 <EditTextPreference
-                    android:key="btphone_packagename_entry"
+                    android:key="btphone_actionstring_entry"
                     android:title="@string/btphone_key_text_title"
                     android:summary="@string/call_method_summary"
                     android:defaultValue="com.syu.bt" />
@@ -110,7 +110,7 @@
                     android:defaultValue="pkgname"
                     android:title="@string/av_key_call_title" />
                 <EditTextPreference
-                    android:key="av_packagename_entry"
+                    android:key="av_actionstring_entry"
                     android:title="@string/av_key_text_title"
                     android:summary="@string/call_method_summary"
                     android:defaultValue="com.syu.av" />
@@ -125,7 +125,7 @@
                     android:defaultValue="pkgname"
                     android:title="@string/video_key_call_title" />
                 <EditTextPreference
-                    android:key="video_packagename_entry"
+                    android:key="video_actionstring_entry"
                     android:title="@string/video_key_text_title"
                     android:summary="@string/call_method_summary"
                     android:defaultValue="com.syu.video" />
@@ -149,9 +149,9 @@
                 android:summaryOff="@string/dont_restart_player_during_accon"
                 android:title="@string/restart_player" />
             <EditTextPreference
-                android:key="accon_packagename_entry"
-                android:title="@string/accon_packagename"
-                android:summary="@string/accon_packagename_summary"
+                android:key="accon_actionstring_entry"
+                android:title="@string/accon_actionstring"
+                android:summary="@string/accon_actionstring_summary"
                 android:defaultValue="" />
             <EditTextPreference
                 android:key="accon_intent_entry"
@@ -179,7 +179,7 @@
             android:summaryOn="@string/pause_player_during_accoff"
             android:summaryOff="@string/dont_pause_player_during_accoff"
             android:title="@string/pause_player" />
-        /* We will not start apks by packagename or intent when the unit switches off. We might need an extra system call though */
+        /* We will not start apks by actionstring or intent when the unit switches off. We might need an extra system call though */
         <EditTextPreference
             android:key="accoff_syscall_entry"
             android:title="@string/accoff_syscall"
@@ -206,9 +206,9 @@
             android:summaryOff="@string/dont_restart_player_during_usbon"
             android:title="@string/restart_player" />
         <EditTextPreference
-            android:key="usbon_packagename_entry"
-            android:title="@string/usbon_packagename"
-            android:summary="@string/usbon_packagename_summary"
+            android:key="usbon_actionstring_entry"
+            android:title="@string/usbon_actionstring"
+            android:summary="@string/usbon_actionstring_summary"
             android:defaultValue="" />
         <EditTextPreference
             android:key="usbon_intent_entry"
@@ -232,7 +232,7 @@
             android:defaultValue="pkgname"
             android:title="@string/voice_key_call_title" />
         <EditTextPreference
-            android:key="voice_packagename_entry"
+            android:key="voice_actionstring_entry"
                     android:title="@string/voice_key_text_title"
                     android:summary="@string/call_method_summary"
             android:defaultValue="com.txznet.smartadapter" />
