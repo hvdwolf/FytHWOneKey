@@ -34,7 +34,7 @@ public class OneKeyEQ extends Activity {
         String actionString = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.EQ_ACTIONSTRING_ENTRY, "");
 
         Utils myUtils = new Utils();
-        myUtils.whichActionToPerform (mContext, call_option, actionString);
+        myUtils.whichActionToPerform (mContext, call_option, actionString, "EQ");
         //myUtils.checkAndRunOptions(mContext, packagename_call);
 
         finish();

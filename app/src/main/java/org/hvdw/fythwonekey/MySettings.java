@@ -113,6 +113,9 @@ public class MySettings {
     public static final String ACTION_ACCOFF_SYSCALL_ENTRY_CHANGED = "org.hvdw.fythwonekey.action.ACTION_ACCOFF_SYSCALL_ENTRY_CHANGED";
     public static final String EXTRA_ACCOFF_SYSCALL_ENTRY_STRING = "org.hvdw.fythwonekey.extra.PREF_ACCOFF_SYSCALL_ENTRY_STRING";
 
+    public static final String AUTOMATE_DELAYED_PRESS_TO_CALLBACK_ID = "automate_delayed_press_to_callback_id";
+    public static final String AUTOMATE_LAST_BUTTON_CALL_TIME = "automate_last_button_call_time";
+
     /* End of all the necessary variables */
 
 }
