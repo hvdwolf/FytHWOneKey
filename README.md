@@ -38,8 +38,7 @@ Another example is the Joying Bluetooth apk having intents for the dialer (defau
  5. "input key event 126" => (re)start last used media player.
  6. "am start com.syu.radio/com.syu.radio.Launch" => Start the radio app with the default launch intent (or better use "by package name": com.syu.radio; Or use "by intent": com.syu.radio/com.syu.radio.Launch)
 
-**by Automate Flow URI:** Every Flow in [Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate) has a URI you can find in its `Flow Beginning` block.
-
+**by Automate Flow URI:** Every Flow in [Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate) has a URI you can find in its `Flow Beginning` block.<br/>
 For example: `content://com.llamalab.automate.provider/flows/7/statements/1`.
 
 If you want to start one Flow on a short button press and a different Flow on a long button press, you can set the value to be the short press Flow URI, followed by a new line with the maximum time to wait for a second button press in milliseconds, followed by a new line with the long press Flow URI.
