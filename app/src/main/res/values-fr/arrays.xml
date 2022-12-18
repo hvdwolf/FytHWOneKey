@@ -5,7 +5,7 @@
         <item>par nom de package</item>
         <item>par intent (nom de package/intent)</item>
         <item>par appel système (commande shell ou script shell)</item>
-        <item>par Automate Flow URI</item>
+        <item>par LlamaLab Automate Flow URI</item>
     </string-array>
     <string-array name="key_call_values">
         <item>pkgname</item>
