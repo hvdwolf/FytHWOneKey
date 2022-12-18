@@ -32,8 +32,9 @@ public class OneKeyBTPhone extends Activity {
         String actionString = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.BTPHONE_ACTIONSTRING_ENTRY, "");
 
         Utils myUtils = new Utils();
-        myUtils.whichActionToPerform (mContext, call_option, actionString);
+        myUtils.whichActionToPerform (mContext, call_option, actionString, "BTPhone");
         //myUtils.checkAndRunOptions(mContext, packagename_call);
+
         finish();
     }
 

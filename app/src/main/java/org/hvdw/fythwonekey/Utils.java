@@ -6,7 +6,6 @@ import android.content.ComponentName;
 import android.content.pm.PackageManager;
 import android.content.SharedPreferences;
 
-import android.content.res.Resources;
 import android.media.AudioManager;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -38,7 +37,7 @@ public class Utils {
 
 /**********************************************************************************************************************************************/
 
-    public void whichActionToPerform (Context context, String callMethod, String actionString) {
+    public void whichActionToPerform (Context context, String callMethod, String actionString, String buttonName) {
         if (callMethod.equals("pkgname")) {
             //Log.i(TAG, " the callmethond is indeed pkgname");
             startActivityByPackageName(context, actionString);
@@ -51,6 +50,10 @@ public class Utils {
             //executeSystemCall(actionString);
             String[] cmd = actionString.split(";");
             shellExec(cmd);
+        }
+        if (callMethod.equals("automate_flow_uri")) {
+            String[] parts = actionString.split("\n");
+            AutomateHandler.startAutomateFlow(context, parts, buttonName);
         }
     };
 

@@ -5,11 +5,13 @@
         <item>par nom de package</item>
         <item>par intent (nom de package/intent)</item>
         <item>par appel système (commande shell ou script shell)</item>
+        <item>par Automate Flow URI</item>
     </string-array>
     <string-array name="key_call_values">
         <item>pkgname</item>
         <item>pkg_intent</item>
-    <item>sys_call</item>
+        <item>sys_call</item>
+        <item>automate_flow_uri</item>
     </string-array>
 
     <string-array name="media_key_entries">

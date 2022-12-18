@@ -32,7 +32,7 @@ public class OneKeyAV extends Activity {
         String actionString = PreferenceManager.getDefaultSharedPreferences(mContext).getString(MySettings.AV_ACTIONSTRING_ENTRY, "");
 
         Utils myUtils = new Utils();
-        myUtils.whichActionToPerform (mContext, call_option, actionString);
+        myUtils.whichActionToPerform (mContext, call_option, actionString, "AV");
         //myUtils.checkAndRunOptions(mContext, packagename_call);
 
         finish();
