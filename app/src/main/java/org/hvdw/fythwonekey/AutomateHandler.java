@@ -48,7 +48,7 @@ public class AutomateHandler {
             delayedPressToCallbackIdEditor.remove(buttonName);
             delayedPressToCallbackIdEditor.commit();
 
-            Log.i(TAG, "longPress: button:" + buttonName + " timeForPress:" + timeForLongPress);
+            Log.i(TAG, "[longPress] button:" + buttonName + " timeForLongPress:" + timeForLongPress);
             startAutomateFlowUri(context, longPressUri);
 
             SharedPreferences lastButtonCallTime = getPreferences(context, MySettings.AUTOMATE_LAST_BUTTON_CALL_TIME);
@@ -72,7 +72,7 @@ public class AutomateHandler {
             lastButtonCallTimeEditor.putLong(buttonName, System.currentTimeMillis());
             lastButtonCallTimeEditor.commit();
 
-            Log.i(TAG, "shortPress: button:" + buttonName + " callbackId:" + delayedCallbackId + " timeForPress:" + timeForLongPress);
+            Log.i(TAG, "[shortPress] button:" + buttonName + " callbackId:" + delayedCallbackId + " timeForLongPress:" + timeForLongPress);
 
             if (timeForLongPress >= 0) {
                 handler.postDelayed(new Runnable() {
