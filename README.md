@@ -49,7 +49,7 @@ If you want to start one Flow on a short button press and a different Flow on a 
 > 2000
 > content://com.llamalab.automate.provider/flows/8/statements/1
 > ```
-> When you press the button the app will wait 2000 milliseconds (2 seconds) and then start the Flow URI `content://com.llamalab.automate.provider/flows/7/statements/1`.
+> When you press the button the app will wait 2000 milliseconds (2 seconds) and then start the Flow URI `content://com.llamalab.automate.provider/flows/7/statements/1`.<br />
 > If another button press is detected before the 2000 milliseconds are up, the app will then immediately start the Flow URI `content://com.llamalab.automate.provider/flows/8/statements/1` instead.
 
 If you remove the time from the configuration, the app will show you a toast of how much time has passed since the first button press, which should help you measure how much time is considered a long press for the particular button in your car. You should try to set this value to be as low as you can, so a short button press won't be delayed too much.
@@ -60,7 +60,7 @@ If you remove the time from the configuration, the app will show you a toast of 
 > 
 > content://com.llamalab.automate.provider/flows/8/statements/1
 > ```
-> When you press the button nothing will happen.
+> When you press the button nothing will happen.<br />
 > When another button press is detected, the app will show a toast of how much time has passed since the first button press and trigger the long press Automate Flow.
 
 Starting an Automate Flow URI can be used to trigger Siri on CarPlay, since long pressing the dashboard button on the bottom left side of the screen triggers Siri, so you can setup an Automate flow to long press this button on the screen for you.
