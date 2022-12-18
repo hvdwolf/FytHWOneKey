@@ -10,10 +10,11 @@ The apk can be downloaded from the [Releases](https://github.com/hvdwolf/FytHWOn
 ## How does it work?
 *(Upon install the package installer will probably mention that it can not check the app, so it thinks that it might not be safe to install.That is of course for you to decide ;)<br>Upon install the app buttons are configured for the apps that are normally started by the button)*<br><br>
 
-**Currently there are 3 options to "start something" with the "Call method"**
+**Currently there are 4 options to "start something" with the "Call method"**
  - by package name
  - by intent (package name / intent)
  - by system call (terminal command(s) or script)
+ - by LlamaLab Automate Flow URI (Automate various tasks; Added by giladgd (Gilad S.)
 
 ### 1. Open the "FytHWOneKey" app.<br>
 ![main configurescreen](https://github.com/hvdwolf/FytHWOneKey/blob/master/images/configurescreen.jpg)<br><br>
@@ -38,7 +39,7 @@ Another example is the Joying Bluetooth apk having intents for the dialer (defau
  5. "input key event 126" => (re)start last used media player.
  6. "am start com.syu.radio/com.syu.radio.Launch" => Start the radio app with the default launch intent (or better use "by package name": com.syu.radio; Or use "by intent": com.syu.radio/com.syu.radio.Launch)
 
-**by Automate Flow URI:** Every Flow in [Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate) has a URI you can find in its `Flow Beginning` block.<br/>
+**by Automate Flow URI:** Every Flow in [LlamaLab Automate](https://play.google.com/store/apps/details?id=com.llamalab.automate) has a URI you can find in its `Flow Beginning` block.<br/>
 For example: `content://com.llamalab.automate.provider/flows/7/statements/1`.
 
 If you want to start one Flow on a short button press and a different Flow on a long button press, you can set the value to be the short press Flow URI, followed by a new line with the maximum time to wait for a second button press in milliseconds, followed by a new line with the long press Flow URI.
